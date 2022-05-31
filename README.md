@@ -1,5 +1,15 @@
 ### Hi there 👋
 
+
+My name is Abhijith
+I'm a Senior Software Engineer with background in various programming languages and currently I'm specializing in Apex and Javascript and advocating for functional programming (the good parts!). 
+
+
+
+- 🔭 I’m currently working on Developing a full stack application for Ecommerce platform
+- 🌱 I’m currently learning Python , R (KDD and modelling of models)
+- ⚡ Fun fact: **_World is all of about Mind and matter if we don't mind it doesn't matter_**
+- 
 <!--
 **eabhijith/eabhijith** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
