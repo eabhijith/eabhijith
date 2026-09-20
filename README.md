@@ -6,10 +6,6 @@
 </a>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=3000&pause=800&color=A78BFA&center=true&vCenter=true&width=700&lines=orchestrator%40abheos%3A~%24+agent+deploy+eabhijith;Senior+AI+%26+Automation+Specialist;Building+Multi-Agent+Systems;Pydantic-AI+%C2%B7+LangGraph+%C2%B7+Bedrock;Functional+%C2%B7+Minimal+%C2%B7+Ship+it" alt="Typing SVG"/>
-</p>
-
-<p align="center">
   <a href="https://www.linkedin.com/in/eabhijith/">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
   </a>
@@ -26,8 +22,15 @@
     status      = "DEPLOYED · ACTIVE",
 )
 class Abhijith(BaseAgent):
+    """
+    Builds systems where agents are first-class citizens.
 
-    mission = "Multi-agent systems · LLM orchestration · Production AI tooling"
+    Not interested in wrapping APIs. Interested in what agents
+    can do when they have real memory, real tools, and an OS
+    built for them from scratch. abheos is that OS.
+
+    Agents are the interface. The rest is scaffolding.
+    """
 
     capabilities = [
         "Pydantic-AI", "LangGraph", "AWS Bedrock", "Google ADK",
@@ -42,6 +45,34 @@ class Abhijith(BaseAgent):
 
     philosophy = "Functional · Minimal · Ship it"
     fun_fact   = "World is all about mind and matter — if we don't mind, it doesn't matter"
+```
+
+---
+
+```
+$ git log --oneline --career
+
+a4f9c21  2026  shipped abheos — personal AI OS built for myself
+7db3e1f  2025  first multi-agent system in production
+c1a3b55  2024  LangGraph + Pydantic-AI become the stack
+9e2f810  2023  deep into Salesforce Apex + enterprise automation
+3d5c901  2021  React + FastAPI, full-stack transition
+b77f2c3  2017  first commit  ·  never looked back
+```
+
+---
+
+```
+SYSTEM.log — abheos runtime
+
+[2026-09-20]  INFO   abheos v2.3 · 28 slash commands · 0 cloud deps
+[2026-07-01]  INFO   shipped archify — diagram-as-code renderer
+[2026-04-01]  INFO   multi-agent system reaches production
+[2026-03-01]  INFO   Pydantic-AI + LangGraph become core stack
+[2025-11-01]  INFO   agent platform work begins
+[2025-06-01]  WARN   abandoned ChromaDB — git is the graph
+[2024-01-01]  INFO   first agentic loop written
+[2017-01-01]  BOOT   system initialised · Berlin
 ```
 
 ---
@@ -80,7 +111,7 @@ class Abhijith(BaseAgent):
 ---
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/eabhijith/">
-    <img src="https://img.shields.io/badge/Let's_connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
-  </a>
+  <a href="https://github.com/eabhijith/eabhijith/blob/main/AGENTS.md">→ How to work with me</a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://www.linkedin.com/in/eabhijith/">LinkedIn</a>
 </p>

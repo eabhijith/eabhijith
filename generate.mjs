@@ -30,6 +30,15 @@ const JET_X_START = 35;
 const JET_X_END = 478;
 const LOOP_DUR = 20; // seconds, one full there-and-back pass
 const MAX_TARGETS = 12; // how many "busiest" days the jet fires on
+
+// Annotate specific date ranges with labels above the grid
+// Format: { weekOf: "YYYY-MM-DD" (monday of that week), label: "..." }
+const SPIKE_LABELS = [
+  { weekOf: "2026-07-01", label: "archify sprint" },
+  { weekOf: "2026-03-01", label: "agent stack" },
+  { weekOf: "2025-11-01", label: "agents v1" },
+];
+
 const FLASH_COLOR = "#39d353";
 const BULLET_COLOR = "#7ee787";
 const BLAST_COLOR = "#56d364";
@@ -215,6 +224,24 @@ function buildJet() {
 </g>`;
 }
 
+function buildLabels(weeks) {
+  let out = "";
+  const recentWeeks = weeks.slice(-COLS);
+  const padCount = COLS - recentWeeks.length;
+
+  SPIKE_LABELS.forEach(({ weekOf, label }) => {
+    const idx = recentWeeks.findIndex(w =>
+      w.contributionDays.some(d => d.date && d.date.startsWith(weekOf.slice(0, 7)))
+    );
+    if (idx === -1) return;
+    const col = padCount + idx;
+    const x = GRID_X + col * STEP + CELL / 2;
+    out += `<text x="${x.toFixed(1)}" y="11" text-anchor="middle" font-family="monospace" font-size="7" fill="#8b949e" opacity="0.75">${label}</text>\n`;
+    out += `<line x1="${x.toFixed(1)}" y1="12.5" x2="${x.toFixed(1)}" y2="${GRID_Y}" stroke="#8b949e" stroke-width="0.5" opacity="0.4"/>\n`;
+  });
+  return out;
+}
+
 function buildSvg(weeks) {
   const cells = buildCells(weeks);
   const targets = pickTargets(cells);
@@ -223,6 +250,8 @@ function buildSvg(weeks) {
   return `<svg viewBox="0 0 ${WIDTH} ${HEIGHT}" xmlns="http://www.w3.org/2000/svg">
 <rect x="0" y="0" width="${WIDTH}" height="${HEIGHT}" fill="#0d1117"/>
 ${buildStars()}
+<g id="labels">
+${buildLabels(weeks)}</g>
 <g id="grid">
 ${buildGrid(cells, targets)}</g>
 <g id="bullets">
