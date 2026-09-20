@@ -465,7 +465,7 @@
   </g>
   <g clip-path="url(#tc2)">
     <text x="524" y="90" font-family="'Courier New',monospace" font-size="14px">
-      <tspan fill="#6272A4">  </tspan><tspan fill="#BD93F9" font-weight="bold">designation</tspan><tspan fill="#6272A4"> ......... </tspan><tspan fill="#F8F8F2">Senior AI & Automation Specialist</tspan>
+      <tspan fill="#6272A4">  </tspan><tspan fill="#BD93F9" font-weight="bold">designation</tspan><tspan fill="#6272A4"> ......... </tspan><tspan fill="#F8F8F2">Senior AI &amp; Automation Specialist</tspan>
     </text>
   </g>
   <g clip-path="url(#tc3)">
@@ -560,11 +560,9 @@
     <path class="brk" pathLength="1" d="M14,464 L14,494 L40,494"/>
     <path class="brk" pathLength="1" d="M476,494 L502,494 L502,464"/>
   </g>
-  </rect>
-</g>
 
-<!-- scan sweep -->
-<!-- full-card scan sweep removed -->
+</g><!-- end translate(0,38) -->
+<!-- scan sweep removed -->
 
 <!-- manifesto line -->
 <text x="590" y="593" text-anchor="middle" class="manifesto">Agents are the interface. The rest is scaffolding.</text>
