@@ -30,14 +30,14 @@ export const CARD = {
 };
 
 export const PORTRAIT = {
-  cx: 258,
-  cy: 262,
-  r:  148,
+  cx: 244,
+  cy: 268,
+  r:  200,
   cols:          52,
   rows:          46,
   lineH:         9.2,
   fontSize:      8,
-  useTextLength: false,
+  useTextLength: false,  // tspans already have textLength="400" baked in
   scanDur:       "3.5s",
 };
 

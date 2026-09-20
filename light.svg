@@ -14,10 +14,10 @@
     <stop offset="100%" stop-color="#047857"/>
   </linearGradient>
   <clipPath id="portraitClip">
-    <circle cx="258" cy="262" r="148"/>
+    <circle cx="244" cy="268" r="200"/>
   </clipPath>
   <clipPath id="scanClip">
-    <circle cx="258" cy="262" r="148"/>
+    <circle cx="244" cy="268" r="200"/>
   </clipPath>
 </defs>
 <rect width="1180" height="610" rx="18" fill="url(#bgGrad)"/>
@@ -46,49 +46,58 @@
       font-family="'Courier New',Consolas,monospace"
       font-size="8px"
       letter-spacing="-0.2px"
-      fill="url(#asciiGrad)"><tspan x="110" y="122">       @@@@@@@@@#@@%-=@##@@@@@@@@@@@@@@@@%=@@@@@@@@@@@@      </tspan>
-<tspan x="110" y="130">       @@@@@@@@@= .      .+#@@@@@@@@#@@#@#-@@@@@@@@@@@@      </tspan>
-<tspan x="110" y="138">      @@@@@@@@%.             -@@@@@@@@@@@#-@@@@@@######@     </tspan>
-<tspan x="110" y="146">     @@@@@@@%                 +@@@@@@@@#@*-%######@@@@@@@    </tspan>
-<tspan x="110" y="154">     @@@@@@%                  .#######@@@%-#@@@@@@@@@@@@@    </tspan>
-<tspan x="110" y="162">    @@@@@@@       ..     ...   *@@@@@@@@@@-#@@@@@@@@@@@@@@   </tspan>
-<tspan x="110" y="170">    @@@@@@@%  ...  -====-  -.   @@@@@@@@@@.%@@@@@@@@@@@@@@   </tspan>
-<tspan x="110" y="178">   *@@@@@@@@  .  -=++++++=-+-  .@@@@@@@@@@ #@@@@@@@@@@@@@@@  </tspan>
-<tspan x="110" y="186">   *@@@@@@@@  ..... ==.....-==  @@@@@@@@@@-#@@@@@@@@@@@@@@@  </tspan>
-<tspan x="110" y="194">   *@@@@@@@@  ....  .... .    .=@@@@*@@#@@ %@@@@@@@@@@@@@@@  </tspan>
-<tspan x="110" y="202">  @*@@@@@@@@--   .. . . . ..- .*@@@@*#@@@@ %@@@@@@@@@@@@##%% </tspan>
-<tspan x="110" y="210">  @%@@@@@@@@@+ ..  .-%=+===+++=  @@@@@@@#% +%%%%%%%%%*%%%%%% </tspan>
-<tspan x="110" y="218">  @*@@@@@@@@@  -==  +%*+-+*+++- +%%%%%%%#%-###@@@@@@@@@@@@@@ </tspan>
-<tspan x="110" y="226">  *+######%%#+. - . . . - ---=-=#@@@@@@@@#-#@@@@@@@@@%####%@ </tspan>
-<tspan x="110" y="234"> @%%@@@@@@@@@@.. ..   ..   -  -%@@##@@@@@* =###@%@@@@#@@@@@@@</tspan>
-<tspan x="110" y="242"> @%*@@@@@@@@@%  ..    -- . =-   =#@@@@@@@@.*@@@@@@@@@@@@@@@@@</tspan>
-<tspan x="110" y="250"> @%%@%@@@@@@*    ....  -=- - .    .%@@@#@@.*@@@@*@@=*@@@@@@@*</tspan>
-<tspan x="110" y="258"> @##@@@@@@@@          .  .....      .+@*@@ =@@@@%#@*#@@@@@@@#</tspan>
-<tspan x="110" y="266"> #*#@@@@@@@.          ....  .-+         @@.=@@@@@@@@@@@@@@@@@</tspan>
-<tspan x="110" y="274"> +-@@@@@@@                 . =@@     .   * =@@@@@@@@@@@@@@@@@</tspan>
-<tspan x="110" y="282"> @*@@@@@-..      .        .   @@#       ...=#@@@@@@@@@@@@@@@@</tspan>
-<tspan x="110" y="290"> @*@#-......     %%.   ..  - +@@@%      ... =++@@@@@@@@@@@@@@</tspan>
-<tspan x="110" y="298"> @*+..........   +@@@+ ... .-@@@@@          ..-@%%@@#@@@@@@@@</tspan>
-<tspan x="110" y="306"> @.............  .@@@@@@@##@@@@@@@           ..=*%@@%@@@@@@@@</tspan>
-<tspan x="110" y="314">  ............... .@@@@@@@@@@@@@@@.      .    ....@*=*@@@@@@ </tspan>
-<tspan x="110" y="322">  ... ......     ...@@@@@@@@@@@@@@*         . ...-@@@@@@@@@@ </tspan>
-<tspan x="110" y="330">  ....      .......  @@@@@@@@@@@+*-.    .   . .  .%@@@@@@@@@ </tspan>
-<tspan x="110" y="338">  .....            .  @@@@@@@@%.-%              .. **++##### </tspan>
-<tspan x="110" y="346">   .....           .. .@@@@@@##@@               ....-#@@@@@  </tspan>
-<tspan x="110" y="354">   .....            .. %@@@@*-%@+ ...   .      .......@@@@@  </tspan>
-<tspan x="110" y="362">   ......           ..  @@@% -==- ..-   .      ..... ..*###  </tspan>
-<tspan x="110" y="370">    .....            . .@@@@#+++=  -.         ..........**   </tspan>
-<tspan x="110" y="378">    @@@@@############@@#@@@@@@@@@@@@@#########@@@@@@@@@@@@   </tspan>
-<tspan x="110" y="386">     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@    </tspan>
-<tspan x="110" y="394">     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@    </tspan>
-<tspan x="110" y="402">      @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@     </tspan>
-<tspan x="110" y="410">       @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@      </tspan>
+      fill="url(#asciiGrad)"><tspan x="44" y="66" textLength="400" lengthAdjust="spacingAndGlyphs">               .:.:::..:.::::...:--=:-              </tspan>
+<tspan x="44" y="75" textLength="400" lengthAdjust="spacingAndGlyphs">              ....::::..::::::..::-=-:-             </tspan>
+<tspan x="44" y="84" textLength="400" lengthAdjust="spacingAndGlyphs">            ::.......::.-:.:.:::::-+-::::           </tspan>
+<tspan x="44" y="93" textLength="400" lengthAdjust="spacingAndGlyphs">           .::::::......::::::::::-+-:::.:          </tspan>
+<tspan x="44" y="102" textLength="400" lengthAdjust="spacingAndGlyphs">         :..::...:.......:::::::::-+-:::....        </tspan>
+<tspan x="44" y="112" textLength="400" lengthAdjust="spacingAndGlyphs">        ......:..::::::..:::::-:::-+-:::.....       </tspan>
+<tspan x="44" y="121" textLength="400" lengthAdjust="spacingAndGlyphs">       ......::::::::::::::::::::::+-:........      </tspan>
+<tspan x="44" y="130" textLength="400" lengthAdjust="spacingAndGlyphs">       ......::::...::..::::::....:+-::.....::      </tspan>
+<tspan x="44" y="139" textLength="400" lengthAdjust="spacingAndGlyphs">      .:::..::-..==:::...::::::.:::+-:::..:::::     </tspan>
+<tspan x="44" y="148" textLength="400" lengthAdjust="spacingAndGlyphs">     :...:::::==*%###*=:.:::::-::::+-::----:::.:    </tspan>
+<tspan x="44" y="158" textLength="400" lengthAdjust="spacingAndGlyphs">     .....::.-*%%%%%%##**:.:::----:+-:::::----:-    </tspan>
+<tspan x="44" y="167" textLength="400" lengthAdjust="spacingAndGlyphs">    :.:..:.:=#%%%%%%%%%#%+::::::::-+----------:--   </tspan>
+<tspan x="44" y="176" textLength="400" lengthAdjust="spacingAndGlyphs">   ::::.::.+%%%%%%%%%%%%%#-:-------+=-----::::::::  </tspan>
+<tspan x="44" y="185" textLength="400" lengthAdjust="spacingAndGlyphs">   --.:.:.=%%%%%%%%##%%%%#+------::+=:::::::::::::  </tspan>
+<tspan x="44" y="194" textLength="400" lengthAdjust="spacingAndGlyphs">   --:::::*%%%%##*****##%%*::::::::+=:::::::::.:::  </tspan>
+<tspan x="44" y="204" textLength="400" lengthAdjust="spacingAndGlyphs">  :=-:::::=%###**++++***#%#::::::::+=:::-:-:::.:::: </tspan>
+<tspan x="44" y="213" textLength="400" lengthAdjust="spacingAndGlyphs">  :--..::.:##***++++++++*%#::::::::+=::::.:.:..::.. </tspan>
+<tspan x="44" y="222" textLength="400" lengthAdjust="spacingAndGlyphs">  .--.:::.:##***+++++**++##-::::..:+-::...::::.::-: </tspan>
+<tspan x="44" y="231" textLength="400" lengthAdjust="spacingAndGlyphs"> ::--.:-...*#####*+###**+*#::::::::+=::::.::.:::::-:</tspan>
+<tspan x="44" y="240" textLength="400" lengthAdjust="spacingAndGlyphs"> -:--.::..:*#######*##****+::.-=:-:+=::::.-:::::::::</tspan>
+<tspan x="44" y="250" textLength="400" lengthAdjust="spacingAndGlyphs"> ..--.:...:+*#####***##***+:::---::+=::::::------===</tspan>
+<tspan x="44" y="259" textLength="400" lengthAdjust="spacingAndGlyphs"> ..--.:....-+*#***=+++++++**::::---+=---========-==-</tspan>
+<tspan x="44" y="268" textLength="400" lengthAdjust="spacingAndGlyphs"> ..--::....-**++*+==++==++*+=======+=-------------:-</tspan>
+<tspan x="44" y="277" textLength="400" lengthAdjust="spacingAndGlyphs"> ::=--------**+*#*+++*+++++=-------+---::-:------:.:</tspan>
+<tspan x="44" y="286" textLength="400" lengthAdjust="spacingAndGlyphs"> --=--------+#**#%##*+****+---::::-+=---::::--------</tspan>
+<tspan x="44" y="296" textLength="400" lengthAdjust="spacingAndGlyphs"> ::=-:::::::=#*#####******+-----:--++---=:-:-:::-:::</tspan>
+<tspan x="44" y="305" textLength="400" lengthAdjust="spacingAndGlyphs"> ::=---:::-:+###%#*++**++*%*--::.::+=:-::.::::::::--</tspan>
+<tspan x="44" y="314" textLength="400" lengthAdjust="spacingAndGlyphs"> ::=--:...:=%%####**++***#%%#+:-:-:+=::-=:-=-:::::==</tspan>
+<tspan x="44" y="323" textLength="400" lengthAdjust="spacingAndGlyphs"> ::-:-:::::#%%%%####*****#@%##*=:=-++:::=--=-:::::=-</tspan>
+<tspan x="44" y="332" textLength="400" lengthAdjust="spacingAndGlyphs">  :=--:::.=%%%%%%##***##**%%%###*+:++::-::::::.:::: </tspan>
+<tspan x="44" y="342" textLength="400" lengthAdjust="spacingAndGlyphs">  +=:-::.:#%%%%%%%%#####*-=%%%##%#-++:::::::::..::: </tspan>
+<tspan x="44" y="351" textLength="400" lengthAdjust="spacingAndGlyphs">  -=::::-*%#%%%%%%%%%%#**=.+#%%###**+:::::.:::...:: </tspan>
+<tspan x="44" y="360" textLength="400" lengthAdjust="spacingAndGlyphs">   =:-:=*###%%%*%%%%%#***=.-*%%###**+-::::::::...:  </tspan>
+<tspan x="44" y="369" textLength="400" lengthAdjust="spacingAndGlyphs">   =-+##*###%%%==####****-.:=%%###***++-::::::...:  </tspan>
+<tspan x="44" y="378" textLength="400" lengthAdjust="spacingAndGlyphs">   =+*#**#####%=.-+*##**+...=%%%#####**-=-:--:...:  </tspan>
+<tspan x="44" y="388" textLength="400" lengthAdjust="spacingAndGlyphs">    *#**#######+...:=++=. ..-%%%%%%%###+--:--::::   </tspan>
+<tspan x="44" y="397" textLength="400" lengthAdjust="spacingAndGlyphs">     **#########-...........-%%%#%##%##**+-+=:::    </tspan>
+<tspan x="44" y="406" textLength="400" lengthAdjust="spacingAndGlyphs">     ###########*:.........::#%%%%##%####+:=--::    </tspan>
+<tspan x="44" y="415" textLength="400" lengthAdjust="spacingAndGlyphs">      %#####%%###+..........:+%%%##%%#%##+:::::     </tspan>
+<tspan x="44" y="424" textLength="400" lengthAdjust="spacingAndGlyphs">       %@@%####*#%=.. .. .:++*%@%##%####%*----      </tspan>
+<tspan x="44" y="434" textLength="400" lengthAdjust="spacingAndGlyphs">       %%%%@%@@@##%:.....-++=+#@@%%%#%#%#*+===      </tspan>
+<tspan x="44" y="443" textLength="400" lengthAdjust="spacingAndGlyphs">        %%%%%@@@%*#*....:---+#%@@%%%#%%%#**+-       </tspan>
+<tspan x="44" y="452" textLength="400" lengthAdjust="spacingAndGlyphs">         %%%%@@@%###:..:-=.-##*%@%%%%%%#####        </tspan>
+<tspan x="44" y="461" textLength="400" lengthAdjust="spacingAndGlyphs">           %%%@%@#*%+::-++=+*#*#@###%%%###          </tspan>
+<tspan x="44" y="470" textLength="400" lengthAdjust="spacingAndGlyphs">            %%%%%%*%+:.:++++*#*#%###%@###           </tspan>
+<tspan x="44" y="480" textLength="400" lengthAdjust="spacingAndGlyphs">              %%%%##*:. -===+++%%##%%%#             </tspan>
     </text>
   </g>
 
   <!-- scan sweep: glow layer -->
   <g clip-path="url(#scanClip)">
-    <rect x="110" y="68" width="296" height="18"
+    <rect x="44" y="68" width="400" height="18"
       fill="#0369A1" opacity="0.10">
       <animateTransform attributeName="transform" type="translate"
         from="0,0" to="0,400"
@@ -97,7 +106,7 @@
         values="0 0;0 400;0 400"/>
     </rect>
     <!-- bright scan line -->
-    <rect x="110" y="75" width="296" height="2"
+    <rect x="44" y="75" width="400" height="2"
       fill="#0369A1" opacity="0.85">
       <animateTransform attributeName="transform" type="translate"
         from="0,0" to="0,400"
@@ -108,38 +117,38 @@
   </g>
 
   <!-- pulsing ring -->
-  <circle cx="258" cy="262" r="164" fill="none"
+  <circle cx="244" cy="268" r="216" fill="none"
     stroke="#0369A1" stroke-width="1" opacity="0.4">
     <animate attributeName="r"
-      values="164;174;164" dur="3s" repeatCount="indefinite"/>
+      values="216;226;216" dur="3s" repeatCount="indefinite"/>
     <animate attributeName="opacity"
       values="0.4;0.1;0.4" dur="3s" repeatCount="indefinite"/>
   </circle>
 
   <!-- rotating dashed outer ring -->
-  <circle cx="258" cy="262" r="180" fill="none"
+  <circle cx="244" cy="268" r="232" fill="none"
     stroke="#047857" stroke-width="0.8"
     stroke-dasharray="6 4" opacity="0.3">
     <animateTransform attributeName="transform" type="rotate"
-      from="0 258 262" to="360 258 262"
+      from="0 244 268" to="360 244 268"
       dur="12s" repeatCount="indefinite"/>
   </circle>
 
   <!-- crisp border ring -->
-  <circle cx="258" cy="262" r="148" fill="none"
+  <circle cx="244" cy="268" r="200" fill="none"
     stroke="#0369A1" stroke-width="2.5" opacity="0.9"/>
 
   <!-- presence dot -->
-  <circle cx="366" cy="370"
+  <circle cx="390" cy="414"
     r="10" fill="#047857" stroke="#F8FAFC" stroke-width="3">
     <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
   </circle>
 
   <!-- identity label -->
-  <text x="258" y="436" text-anchor="middle"
+  <text x="244" y="494" text-anchor="middle"
     font-family="'JetBrains Mono','Fira Code',monospace"
     font-size="15px" fill="#0369A1" font-weight="700" letter-spacing="3px">eabhijith</text>
-  <text x="258" y="454" text-anchor="middle"
+  <text x="244" y="512" text-anchor="middle"
     font-family="'Courier New',monospace"
     font-size="10px" fill="#0369A1" opacity="0.45" letter-spacing="2px">agent · deployed · active</text>
 
