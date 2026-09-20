@@ -1,112 +1,101 @@
 /**
- * card/components/portrait.mjs
- * Left panel — computed from first principles, all values verified:
- *
- *  Card 1180×610, titlebar 38px → content 572px
- *  Left panel:  x=14,  y=10, w=488, h=536 → bottom=546
- *  Circle:      cx=258, cy=242, r=200
- *    top  = cy-r = 42  (panel_y+title_h = 10+32)
- *    bottom = cy+r = 442
- *    label1 = cy+r+18 = 460
- *    label2 = cy+r+34 = 476
- *    panel bottom = 546  → labels inside ✓
+ * card/components/portrait.mjs — rebuilt using ds/
  */
-
-import { PORTRAIT, THEMES } from "../config.mjs";
+import { color, font, text as textSize } from "../../ds/tokens.mjs";
+import { leftPanel, circle, scan } from "../../ds/layout.mjs";
+import { panelBox, panelTitle } from "../../ds/components.mjs";
+import { PORTRAIT } from "../config.mjs";
 import fs   from "node:fs";
 import path from "node:path";
 
+// Export scan for info-panel.mjs
 export const SCAN = {
-  CYCLE:    8.0,
-  SCAN_DUR: 5.0,
+  CYCLE:    scan.CYCLE,
+  SCAN_DUR: scan.SCAN_DUR,
   HOLD_DUR: 2.0,
   FADE_DUR: 0.5,
-  FACE_TOP: 68,
-  FACE_H:   374,  // cy+r - FACE_TOP = 442-68
+  FACE_TOP: scan.FACE_TOP,
+  FACE_H:   scan.FACE_H,
 };
 
 export function buildPortrait(theme, tspanFile) {
-  const t  = THEMES[theme];
-  const { cx, cy, r } = PORTRAIT;
+  const dark  = theme === "dark";
+  const ring1 = dark ? color.cyan   : "#0369A1";
+  const ring2 = dark ? color.green  : "#047857";
+  const pFill = dark ? color.bg2    : "#E8F4FD";
+  const pStroke = "url(#borderGrad)";
+  const pDot  = dark ? color.green  : "#047857";
+  const bg    = dark ? color.bg1    : "#F8FAFC";
+  const ptCol = dark ? color.cyan   : "#0369A1";
+
+  const { cx, cy, r }  = circle;
+  const { x, y, w, h, r: lpr, b, titleY, lineY } = leftPanel;
+  const { FACE_TOP, FACE_H, SCAN_DUR, CYCLE } = SCAN;
+  const scanFrac = (SCAN_DUR / CYCLE).toFixed(3);
 
   let tspans = "";
   const tp = path.resolve(import.meta.dirname, "..", tspanFile);
   if (fs.existsSync(tp)) tspans = fs.readFileSync(tp, "utf8").trim();
 
-  const { SCAN_DUR, CYCLE, FACE_TOP, FACE_H } = SCAN;
-  const scanFrac = (SCAN_DUR / CYCLE).toFixed(3);
-
-  // Panel dimensions (match config exactly)
-  const PX = 14, PY = 10, PW = 488, PH = 536;
-
   return `
-  <!-- ═══ LEFT PANEL x=${PX} y=${PY} w=${PW} h=${PH} bottom=${PY+PH} ═══ -->
-  <rect x="${PX}" y="${PY}" width="${PW}" height="${PH}" rx="8"
-    fill="${t.bg[1]}" fill-opacity="0.4"
-    stroke="url(#borderGrad)" stroke-width="1" opacity="0.5"/>
+  ${panelBox({ x, y, w, h, rx: 8, fillColor: pFill, strokeColor: pStroke })}
+  ${panelTitle({ label: "VISUAL.ID", x: x + 16, titleY, lineY, lineX2: lpr, titleColor: ptCol, lineColor: ptCol })}
 
-  <!-- title inside panel, 16px from top -->
-  <text x="${PX+16}" y="${PY+20}"
-    font-family="'Courier New',monospace" font-size="11px"
-    fill="${t.panelTitle}" letter-spacing="2px" opacity="0.6">VISUAL.ID</text>
-  <line x1="${PX}" y1="${PY+28}" x2="${PX+PW}" y2="${PY+28}"
-    stroke="${t.panelTitle}" stroke-width="0.5" opacity="0.2"/>
-
-  <!-- ASCII portrait: tspans use x=44 textLength=400 from working commit -->
+  <!-- Portrait: ASCII clipped to circle -->
   <g clip-path="url(#portraitClip)">
     <text x="0" y="0"
-      font-family="'Courier New',Consolas,monospace"
-      font-size="${PORTRAIT.fontSize}px"
-      letter-spacing="-0.2px"
-      fill="url(#asciiGrad)">${tspans}
+      font-family="${font.ascii}" font-size="${PORTRAIT.fontSize}px"
+      letter-spacing="-0.2px" fill="url(#asciiGrad)">${tspans}
     </text>
   </g>
 
-  <!-- scan sweep clipped to portrait circle -->
+  <!-- Scan sweep (loop) -->
   <g clip-path="url(#scanClip)">
-    <rect x="${cx-r}" y="${FACE_TOP}" width="${r*2}" height="18"
-      fill="${t.scanLine}" opacity="0.10">
+    <rect x="${cx-r}" y="${FACE_TOP}" width="${r*2}" height="16"
+      fill="${ring1}" opacity="0.08">
       <animateTransform attributeName="transform" type="translate"
         from="0,0" to="0,${FACE_H}" dur="${CYCLE}s" repeatCount="indefinite"
         calcMode="linear" keyTimes="0;${scanFrac};1" values="0 0;0 ${FACE_H};0 ${FACE_H}"/>
     </rect>
-    <rect x="${cx-r}" y="${FACE_TOP+7}" width="${r*2}" height="2"
-      fill="${t.scanLine}" opacity="0.85">
+    <rect x="${cx-r}" y="${FACE_TOP+6}" width="${r*2}" height="2"
+      fill="${ring1}" opacity="0.8">
       <animateTransform attributeName="transform" type="translate"
         from="0,0" to="0,${FACE_H}" dur="${CYCLE}s" repeatCount="indefinite"
         calcMode="linear" keyTimes="0;${scanFrac};1" values="0 0;0 ${FACE_H};0 ${FACE_H}"/>
     </rect>
   </g>
 
-  <!-- pulsing ring -->
+  <!-- Pulsing ring -->
   <circle cx="${cx}" cy="${cy}" r="${r+16}" fill="none"
-    stroke="${t.ring1}" stroke-width="1" opacity="0.4">
+    stroke="${ring1}" stroke-width="1" opacity="0.35">
     <animate attributeName="r" values="${r+16};${r+24};${r+16}" dur="3s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.4;0.1;0.4" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.35;0.08;0.35" dur="3s" repeatCount="indefinite"/>
   </circle>
 
-  <!-- rotating dashed outer ring -->
-  <circle cx="${cx}" cy="${cy}" r="${r+30}" fill="none"
-    stroke="${t.ring2}" stroke-width="0.8" stroke-dasharray="6 4" opacity="0.25">
+  <!-- Rotating dashed ring -->
+  <circle cx="${cx}" cy="${cy}" r="${r+28}" fill="none"
+    stroke="${ring2}" stroke-width="0.8" stroke-dasharray="6 4" opacity="0.2">
     <animateTransform attributeName="transform" type="rotate"
-      from="0 ${cx} ${cy}" to="360 ${cx} ${cy}" dur="12s" repeatCount="indefinite"/>
+      from="0 ${cx} ${cy}" to="360 ${cx} ${cy}" dur="14s" repeatCount="indefinite"/>
   </circle>
 
-  <!-- crisp portrait border -->
+  <!-- Portrait border -->
   <circle cx="${cx}" cy="${cy}" r="${r}" fill="none"
-    stroke="${t.ring1}" stroke-width="2" opacity="0.9"/>
+    stroke="${ring1}" stroke-width="2" opacity="0.9"/>
 
-  <!-- presence dot: cx+r*0.7 ≈ 398, cy+r*0.7 ≈ 382 — inside panel (502) ✓ -->
-  <circle cx="${Math.round(cx+r*0.7)}" cy="${Math.round(cy+r*0.7)}"
-    r="8" fill="${t.presenceDot}" stroke="${t.bg[1]}" stroke-width="3">
-    <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+  <!-- Presence dot -->
+  <circle cx="${Math.round(cx+r*0.68)}" cy="${Math.round(cy+r*0.68)}"
+    r="7" fill="${pDot}" stroke="${bg}" stroke-width="3">
+    <animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite"/>
   </circle>
 
-  <!-- identity labels: cy+r+18=460, cy+r+34=476 — inside panel bottom 546 ✓ -->
-  <text x="${cx}" y="${cy+r+18}" text-anchor="middle"
-    font-family="'JetBrains Mono','Fira Code',monospace"
-    font-size="14px" fill="${t.ring1}" font-weight="700" letter-spacing="3px">eabhijith</text>
-  <text x="${cx}" y="${cy+r+34}" text-anchor="middle"
-    font-family="'Courier New',monospace"
-    font-size="9px" fill="${t.ring1}" opacity="0.4" letter-spacing="2px">agent · deployed · active</text>`;
+  <!-- Name: circle.nameY=${circle.nameY}, inside panel bottom ${b} ✓ -->
+  <text x="${cx}" y="${circle.nameY}" text-anchor="middle"
+    font-family="${font.code}" font-size="${textSize.lg}px"
+    fill="${ring1}" font-weight="700" letter-spacing="2px">Abhijith Eanuga</text>
+
+  <!-- Subtitle: circle.subY=${circle.subY} < panel bottom ${b} ✓ -->
+  <text x="${cx}" y="${circle.subY}" text-anchor="middle"
+    font-family="${font.mono}" font-size="${textSize.xs}px"
+    fill="${ring1}" opacity="0.4" letter-spacing="1px">Senior AI &amp; Automation Specialist · Berlin</text>`;
 }
