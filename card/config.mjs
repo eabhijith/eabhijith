@@ -42,9 +42,9 @@ export const CARD = {
 
 // ── Portrait circle ──────────────────────────────────────────────────────────
 export const PORTRAIT = {
-  cx: 258,
-  cy: 262,   // local coords (inside translate(0,38))
-  r:  148,
+  cx: 244,
+  cy: 268,   // local coords (inside translate(0,38))
+  r:  200,
   // ASCII grid
   cols:      52,
   rows:      46,

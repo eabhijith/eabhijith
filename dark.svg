@@ -14,10 +14,10 @@
     <stop offset="100%" stop-color="#00FF9F"/>
   </linearGradient>
   <clipPath id="portraitClip">
-    <circle cx="258" cy="262" r="148"/>
+    <circle cx="244" cy="268" r="200"/>
   </clipPath>
   <clipPath id="scanClip">
-    <circle cx="258" cy="262" r="148"/>
+    <circle cx="244" cy="268" r="200"/>
   </clipPath>
 </defs>
 <rect width="1180" height="610" rx="18" fill="url(#bgGrad)"/>
@@ -34,109 +34,121 @@
 
   <!-- ── LEFT PANEL ────────────────────────────────── -->
   <rect x="14" y="26" width="488" height="468" rx="14"
-    fill="#0A0E1A" fill-opacity="0.5"
+    fill="#0A0E1A" fill-opacity="0.4"
     stroke="url(#borderGrad)" stroke-width="1" opacity="0.5"/>
-  <text x="30" y="24" font-family="'Courier New',monospace" font-size="11px" fill="#00D4FF" letter-spacing="2px" opacity="0.6">AGENT.VISUAL</text>
+  <text x="30" y="24"
+    font-family="'Courier New',monospace" font-size="11px"
+    fill="#00D4FF" letter-spacing="2px" opacity="0.6">AGENT.VISUAL</text>
 
-  <!-- portrait: ASCII clipped to circle -->
+  <!-- ASCII portrait clipped to circle -->
   <g clip-path="url(#portraitClip)">
     <text x="0" y="0"
       font-family="'Courier New',Consolas,monospace"
       font-size="8px"
       letter-spacing="-0.2px"
-      fill="url(#asciiGrad)"><tspan x="60" y="60">               .:.:::..:.::::...:--=:-              </tspan>
-<tspan x="60" y="69">              ....::::..::::::..::-=-:-             </tspan>
-<tspan x="60" y="78">            ::.......::.-:.:.:::::-+-::::           </tspan>
-<tspan x="60" y="87">           .::::::......::::::::::-+-:::.:          </tspan>
-<tspan x="60" y="96">         :..::...:.......:::::::::-+-:::....        </tspan>
-<tspan x="60" y="106">        ......:..::::::..:::::-:::-+-:::.....       </tspan>
-<tspan x="60" y="115">       ......::::::::::::::::::::::+-:........      </tspan>
-<tspan x="60" y="124">       ......::::...::..::::::....:+-::.....::      </tspan>
-<tspan x="60" y="133">      .:::..::-..==:::...::::::.:::+-:::..:::::     </tspan>
-<tspan x="60" y="142">     :...:::::==*%###*=:.:::::-::::+-::----:::.:    </tspan>
-<tspan x="60" y="152">     .....::.-*%%%%%%##**:.:::----:+-:::::----:-    </tspan>
-<tspan x="60" y="161">    :.:..:.:=#%%%%%%%%%#%+::::::::-+----------:--   </tspan>
-<tspan x="60" y="170">   ::::.::.+%%%%%%%%%%%%%#-:-------+=-----::::::::  </tspan>
-<tspan x="60" y="179">   --.:.:.=%%%%%%%%##%%%%#+------::+=:::::::::::::  </tspan>
-<tspan x="60" y="188">   --:::::*%%%%##*****##%%*::::::::+=:::::::::.:::  </tspan>
-<tspan x="60" y="198">  :=-:::::=%###**++++***#%#::::::::+=:::-:-:::.:::: </tspan>
-<tspan x="60" y="207">  :--..::.:##***++++++++*%#::::::::+=::::.:.:..::.. </tspan>
-<tspan x="60" y="216">  .--.:::.:##***+++++**++##-::::..:+-::...::::.::-: </tspan>
-<tspan x="60" y="225"> ::--.:-...*#####*+###**+*#::::::::+=::::.::.:::::-:</tspan>
-<tspan x="60" y="234"> -:--.::..:*#######*##****+::.-=:-:+=::::.-:::::::::</tspan>
-<tspan x="60" y="244"> ..--.:...:+*#####***##***+:::---::+=::::::------===</tspan>
-<tspan x="60" y="253"> ..--.:....-+*#***=+++++++**::::---+=---========-==-</tspan>
-<tspan x="60" y="262"> ..--::....-**++*+==++==++*+=======+=-------------:-</tspan>
-<tspan x="60" y="271"> ::=--------**+*#*+++*+++++=-------+---::-:------:.:</tspan>
-<tspan x="60" y="280"> --=--------+#**#%##*+****+---::::-+=---::::--------</tspan>
-<tspan x="60" y="290"> ::=-:::::::=#*#####******+-----:--++---=:-:-:::-:::</tspan>
-<tspan x="60" y="299"> ::=---:::-:+###%#*++**++*%*--::.::+=:-::.::::::::--</tspan>
-<tspan x="60" y="308"> ::=--:...:=%%####**++***#%%#+:-:-:+=::-=:-=-:::::==</tspan>
-<tspan x="60" y="317"> ::-:-:::::#%%%%####*****#@%##*=:=-++:::=--=-:::::=-</tspan>
-<tspan x="60" y="326">  :=--:::.=%%%%%%##***##**%%%###*+:++::-::::::.:::: </tspan>
-<tspan x="60" y="336">  +=:-::.:#%%%%%%%%#####*-=%%%##%#-++:::::::::..::: </tspan>
-<tspan x="60" y="345">  -=::::-*%#%%%%%%%%%%#**=.+#%%###**+:::::.:::...:: </tspan>
-<tspan x="60" y="354">   =:-:=*###%%%*%%%%%#***=.-*%%###**+-::::::::...:  </tspan>
-<tspan x="60" y="363">   =-+##*###%%%==####****-.:=%%###***++-::::::...:  </tspan>
-<tspan x="60" y="372">   =+*#**#####%=.-+*##**+...=%%%#####**-=-:--:...:  </tspan>
-<tspan x="60" y="382">    *#**#######+...:=++=. ..-%%%%%%%###+--:--::::   </tspan>
-<tspan x="60" y="391">     **#########-...........-%%%#%##%##**+-+=:::    </tspan>
-<tspan x="60" y="400">     ###########*:.........::#%%%%##%####+:=--::    </tspan>
-<tspan x="60" y="409">      %#####%%###+..........:+%%%##%%#%##+:::::     </tspan>
-<tspan x="60" y="418">       %@@%####*#%=.. .. .:++*%@%##%####%*----      </tspan>
-<tspan x="60" y="428">       %%%%@%@@@##%:.....-++=+#@@%%%#%#%#*+===      </tspan>
-<tspan x="60" y="437">        %%%%%@@@%*#*....:---+#%@@%%%#%%%#**+-       </tspan>
-<tspan x="60" y="446">         %%%%@@@%###:..:-=.-##*%@%%%%%%#####        </tspan>
-<tspan x="60" y="455">           %%%@%@#*%+::-++=+*#*#@###%%%###          </tspan>
-<tspan x="60" y="464">            %%%%%%*%+:.:++++*#*#%###%@###           </tspan>
-<tspan x="60" y="474">              %%%%##*:. -===+++%%##%%%#             </tspan>
+      fill="url(#asciiGrad)"><tspan x="46" y="66">               .:.:::..:.::::...:--=:-              </tspan>
+<tspan x="46" y="75">              ....::::..::::::..::-=-:-             </tspan>
+<tspan x="46" y="84">            ::.......::.-:.:.:::::-+-::::           </tspan>
+<tspan x="46" y="93">           .::::::......::::::::::-+-:::.:          </tspan>
+<tspan x="46" y="102">         :..::...:.......:::::::::-+-:::....        </tspan>
+<tspan x="46" y="112">        ......:..::::::..:::::-:::-+-:::.....       </tspan>
+<tspan x="46" y="121">       ......:::::.::::::::::::::::+-:........      </tspan>
+<tspan x="46" y="130">       ......::::...:...::::::....:+-::.....::      </tspan>
+<tspan x="46" y="139">      .:::...:-..==:::....:::::.:::+-:::..:::::     </tspan>
+<tspan x="46" y="148">     :...:::::==*%###*=:.:::::-::::+-::----:::.:    </tspan>
+<tspan x="46" y="158">     .....::.-*%%%%%%##**:.:::----:+-:::::----:-    </tspan>
+<tspan x="46" y="167">    :.:..:.:=#%%%%%%%%%#%+::::::::-+----------:--   </tspan>
+<tspan x="46" y="176">   ::::.::.+%%%%%%%%%%%%%#-:-------+=-----::::::::  </tspan>
+<tspan x="46" y="185">   --.:.:.=%%%%%%%%##%%%%#+------::+=:::::::::::::  </tspan>
+<tspan x="46" y="194">   --:::::*%%%%##*****##%%*::::::::+=:::::::::.:::  </tspan>
+<tspan x="46" y="204">  :=-:::::=%###**++++***#%#::::::::+=:::-:-:::.:::: </tspan>
+<tspan x="46" y="213">  .--..::.:##***++++++++*%#::::::::+=::::.:.:..::.. </tspan>
+<tspan x="46" y="222">  .--.:::.:##***+++++**++##:::::..:+-::...::::.:::: </tspan>
+<tspan x="46" y="231"> ::--.:-...*#####*+###**+*#::::::::+=::::.::.:::::-:</tspan>
+<tspan x="46" y="240"> -:--.::..:*#######*##****+::.-=:-:+=::::.-:::::::::</tspan>
+<tspan x="46" y="250"> ..--.:...:+*#####***##*+*+:::--:::+=::::::------===</tspan>
+<tspan x="46" y="259"> ..--.:....-+*#***=+++++++**::::---+=---========-==-</tspan>
+<tspan x="46" y="268"> ..--::....-**++*+==++==++*+=======+=-------------:-</tspan>
+<tspan x="46" y="277"> ::=--------**+*#*+++*+++++=-------+---::::------:.:</tspan>
+<tspan x="46" y="286"> --=--------+#**#%##*+****+---::::-+=--:::::--------</tspan>
+<tspan x="46" y="296"> ::=-:::::::=#*#####***+**+-----:--++---=:-:-:::-:::</tspan>
+<tspan x="46" y="305"> ::=--::::-:+###%#*++**++*%*--::.::+=:-::.::::::::--</tspan>
+<tspan x="46" y="314"> ::=--:...:=%%####**++***#%%#+:-:-:+=::-=:-=::::::==</tspan>
+<tspan x="46" y="323"> ::-:-:::::#%%%%####*****#@%##*=:=-++:::=--=-:::::=-</tspan>
+<tspan x="46" y="332">  :=:::::.=%%%%%%##***##**%%%###*+:++::-::::::..::: </tspan>
+<tspan x="46" y="342">  +=:-::.:#%%%%%%%%#####*-=%%%##%#-++:::::::::..::: </tspan>
+<tspan x="46" y="351">  -=::::-*%#%%%%%%%%%%#**=.+#%%###**+:::::.:::...:: </tspan>
+<tspan x="46" y="360">   =:::=*###%%%*%%%%%#***=.-*%%###**+-::::::::...:  </tspan>
+<tspan x="46" y="369">   =-+##*###%%%==####**+*-.:=%%###***++-::::::...:  </tspan>
+<tspan x="46" y="378">   =+*#**#####%=.-+*##**+...=%%%#####**-=-:--:...:  </tspan>
+<tspan x="46" y="388">    *#**#######+...:=++=. ..-%%%%%%%###+--:--::::   </tspan>
+<tspan x="46" y="397">     **#########-...........-%%%#%##%##**+-+=:::    </tspan>
+<tspan x="46" y="406">     ###########*:.........::#%%%%##%####+:=--::    </tspan>
+<tspan x="46" y="415">      %#####%%###+..........:+%%%##%%#%##+:::::     </tspan>
+<tspan x="46" y="424">       %@@%####*#%=.. .. .:++*%@%##%#####*-:--      </tspan>
+<tspan x="46" y="434">       %%%%%%%@@##%:.....-++=+#@%%%%#%#%#*+===      </tspan>
+<tspan x="46" y="443">        %%%%%@@@%*#*....:---+#%@@%%%#%%%#**+-       </tspan>
+<tspan x="46" y="452">         %%%%@@@%###:..:-=.-##*%@%%%%%%#####        </tspan>
+<tspan x="46" y="461">           %%%@%@#*%+::-++=+*#*#@###%%%###          </tspan>
+<tspan x="46" y="470">            %%%%%%*%+:.:++++*#*#%###%@###           </tspan>
+<tspan x="46" y="480">              %%%%##*:. -===+++%%##%%%#             </tspan>
     </text>
   </g>
 
-  <!-- scan sweep clipped to portrait circle -->
+  <!-- scan sweep: glow layer -->
   <g clip-path="url(#scanClip)">
-    <rect x="110" y="114" width="296" height="12"
-      fill="#00D4FF" opacity="0.12">
+    <rect x="44" y="68" width="400" height="18"
+      fill="#00D4FF" opacity="0.10">
       <animateTransform attributeName="transform" type="translate"
-        from="0,0" to="0,296" dur="3.5s"
-        repeatCount="indefinite" calcMode="linear"/>
+        from="0,0" to="0,400"
+        dur="8s" repeatCount="indefinite" calcMode="linear"
+        keyTimes="0;0.625;1"
+        values="0 0;0 400;0 400"/>
     </rect>
-    <rect x="110" y="118" width="296" height="2"
-      fill="#00D4FF" opacity="0.75">
+    <!-- bright scan line -->
+    <rect x="44" y="75" width="400" height="2"
+      fill="#00D4FF" opacity="0.85">
       <animateTransform attributeName="transform" type="translate"
-        from="0,0" to="0,296" dur="3.5s"
-        repeatCount="indefinite" calcMode="linear"/>
+        from="0,0" to="0,400"
+        dur="8s" repeatCount="indefinite" calcMode="linear"
+        keyTimes="0;0.625;1"
+        values="0 0;0 400;0 400"/>
     </rect>
   </g>
 
   <!-- pulsing ring -->
-  <circle cx="258" cy="262" r="162" fill="none"
-    stroke="#00D4FF" stroke-width="1" opacity="0.45">
-    <animate attributeName="r" values="162;172;162" dur="3s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.45;0.12;0.45" dur="3s" repeatCount="indefinite"/>
+  <circle cx="244" cy="268" r="216" fill="none"
+    stroke="#00D4FF" stroke-width="1" opacity="0.4">
+    <animate attributeName="r"
+      values="216;226;216" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity"
+      values="0.4;0.1;0.4" dur="3s" repeatCount="indefinite"/>
   </circle>
 
-  <!-- scanning orbit ring -->
-  <circle cx="258" cy="262" r="176" fill="none"
-    stroke="#00FF9F" stroke-width="0.8" stroke-dasharray="6 4" opacity="0.3">
+  <!-- rotating dashed outer ring -->
+  <circle cx="244" cy="268" r="232" fill="none"
+    stroke="#00FF9F" stroke-width="0.8"
+    stroke-dasharray="6 4" opacity="0.3">
     <animateTransform attributeName="transform" type="rotate"
-      from="0 258 262" to="360 258 262"
+      from="0 244 268" to="360 244 268"
       dur="12s" repeatCount="indefinite"/>
   </circle>
 
-  <!-- crisp border over portrait -->
-  <circle cx="258" cy="262" r="148" fill="none"
+  <!-- crisp border ring -->
+  <circle cx="244" cy="268" r="200" fill="none"
     stroke="#00D4FF" stroke-width="2.5" opacity="0.9"/>
 
   <!-- presence dot -->
-  <circle cx="366" cy="370" r="10"
-    fill="#00FF9F" stroke="#0A0E1A" stroke-width="3"/>
+  <circle cx="390" cy="414"
+    r="10" fill="#00FF9F" stroke="#0A0E1A" stroke-width="3">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
 
-  <!-- label -->
-  <text x="258" y="436" text-anchor="middle"
+  <!-- identity label -->
+  <text x="244" y="494" text-anchor="middle"
     font-family="'JetBrains Mono','Fira Code',monospace"
     font-size="15px" fill="#00D4FF" font-weight="700" letter-spacing="3px">eabhijith</text>
-  <text x="258" y="454" text-anchor="middle"
+  <text x="244" y="512" text-anchor="middle"
     font-family="'Courier New',monospace"
     font-size="10px" fill="#00D4FF" opacity="0.45" letter-spacing="2px">agent · deployed · active</text>
 
@@ -144,34 +156,40 @@
   <rect x="508" y="10" width="655" height="500" rx="14"
     fill="#11141F" fill-opacity="0.85"
     stroke="#BD93F9" stroke-width="1" opacity="0.7"/>
-  <text x="524" y="24" font-family="'Courier New',monospace" font-size="11px" fill="#00D4FF" letter-spacing="2px" opacity="0.6">AGENT.MANIFEST</text>
-  <!-- ruled line under panel title -->
-  <line x1="508" y1="30" x2="1163" y2="30" stroke="#BD93F9" stroke-width="0.5" opacity="0.3"/>
-  <!-- section dividers -->
-  <line x1="524" y1="170" x2="1155" y2="170" stroke="#6272A4" stroke-width="0.4" opacity="0.4"/>
-  <line x1="524" y1="300" x2="1155" y2="300" stroke="#6272A4" stroke-width="0.4" opacity="0.4"/>
-  <line x1="524" y1="390" x2="1155" y2="390" stroke="#6272A4" stroke-width="0.4" opacity="0.4"/>
-  <text x="524" y="46" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#6272A4">guest@</tspan><tspan fill="#50FA7B" font-weight="bold">eabhijith</tspan><tspan fill="#6272A4">:~$ </tspan><tspan fill="#F8F8F2">cat profile.md</tspan></text>
-  <text x="524" y="68" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#6272A4">  </tspan><tspan fill="#BD93F9" font-weight="bold">agent_id</tspan><tspan fill="#6272A4"> .. </tspan><tspan fill="#F8F8F2">eabhijith</tspan></text>
-  <text x="524" y="90" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#6272A4">  </tspan><tspan fill="#BD93F9" font-weight="bold">designation</tspan><tspan fill="#6272A4"> .. </tspan><tspan fill="#F8F8F2">Senior AI &amp; Automation Specialist</tspan></text>
-  <text x="524" y="112" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#6272A4">  </tspan><tspan fill="#BD93F9" font-weight="bold">base</tspan><tspan fill="#6272A4"> .. </tspan><tspan fill="#F8F8F2">Berlin, Germany</tspan></text>
-  <text x="524" y="134" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#6272A4">  </tspan><tspan fill="#BD93F9" font-weight="bold">mission</tspan><tspan fill="#6272A4"> .. </tspan><tspan fill="#F8F8F2">Multi-Agent · LLM Orchestration</tspan></text>
-  <text x="524" y="156" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#6272A4">  </tspan><tspan fill="#BD93F9" font-weight="bold">status</tspan><tspan fill="#6272A4"> .. </tspan><tspan fill="#50FA7B" font-weight="bold">DEPLOYED · ACTIVE</tspan></text>
-  <text x="524" y="200" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#6272A4">  </tspan><tspan fill="#BD93F9" font-weight="bold">capabilities</tspan><tspan fill="#50FA7B"> ────────────────────</tspan></text>
-  <text x="524" y="222" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#6272A4">    </tspan><tspan fill="#F8F8F2">▸ Pydantic-AI · LangGraph · Bedrock</tspan></text>
-  <text x="524" y="244" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#6272A4">    </tspan><tspan fill="#F8F8F2">▸ Python · JavaScript · Apex · React</tspan></text>
-  <text x="524" y="266" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#6272A4">    </tspan><tspan fill="#F8F8F2">▸ AWS · Databricks · Salesforce</tspan></text>
-  <text x="524" y="310" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#6272A4">  </tspan><tspan fill="#BD93F9" font-weight="bold">side_projects</tspan><tspan fill="#50FA7B"> ────────────────────</tspan></text>
-  <text x="524" y="332" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#6272A4">    </tspan><tspan fill="#F8F8F2">▸ personal AI OS</tspan></text>
-  <text x="524" y="354" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#6272A4">    </tspan><tspan fill="#F8F8F2">▸ archify — diagram renderer</tspan></text>
-  <text x="524" y="398" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#6272A4">  </tspan><tspan fill="#BD93F9" font-weight="bold">philosophy</tspan><tspan fill="#6272A4"> .. </tspan><tspan fill="#F8F8F2">Functional · Minimal · Ship it</tspan></text>
-  <text x="524" y="420" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#6272A4">  </tspan><tspan fill="#BD93F9" font-weight="bold">uptime</tspan><tspan fill="#6272A4"> .. </tspan><tspan fill="#F8F8F2">since 2017 · Berlin</tspan></text>
-  <text x="524" y="464" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#6272A4">  </tspan><tspan fill="#BD93F9" font-weight="bold">linkedin</tspan><tspan fill="#6272A4"> .. </tspan><tspan fill="#F8F8F2">linkedin.com/in/eabhijith</tspan></text>
-  <text x="524" y="486" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#6272A4">  </tspan><tspan fill="#BD93F9" font-weight="bold">github</tspan><tspan fill="#6272A4"> .. </tspan><tspan fill="#F8F8F2">github.com/eabhijith</tspan></text>
-  <text x="524" y="508" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#6272A4">  </tspan><tspan fill="#BD93F9" font-weight="bold">website</tspan><tspan fill="#6272A4"> .. </tspan><tspan fill="#8BE9FD">eabhijith.vercel.app</tspan></text>
-  <text x="524" y="530" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#BD93F9" font-weight="bold">$ _</tspan></text>
-  <rect x="524" y="516" width="8" height="14" fill="#BD93F9" opacity="0.85">
-    <animate attributeName="opacity" values="0.85;0;0.85;0;0.85;0" dur="1.4s" repeatCount="indefinite"/>
+  <text x="524" y="24"
+    font-family="'Courier New',monospace" font-size="11px"
+    fill="#00D4FF" letter-spacing="2px" opacity="0.6">AGENT.MANIFEST</text>
+  <line x1="508" y1="30" x2="1163" y2="30"
+    stroke="#BD93F9" stroke-width="0.5" opacity="0.3"/>
+  <line x1="524" y1="172" x2="1155" y2="172"
+    stroke="#6272A4" stroke-width="0.4" opacity="0.3"/>
+  <line x1="524" y1="278" x2="1155" y2="278"
+    stroke="#6272A4" stroke-width="0.4" opacity="0.3"/>
+  <line x1="524" y1="346" x2="1155" y2="346"
+    stroke="#6272A4" stroke-width="0.4" opacity="0.3"/>
+  <text x="524" y="46" opacity="0" font-family="'Courier New',monospace" font-size="13px"><animate attributeName="opacity" dur="8s" repeatCount="indefinite" keyTimes="0;0.006;0.044;0.875;0.938;1" values="0;0;1;1;0;0"/><tspan fill="#6272A4">guest@</tspan><tspan fill="#50FA7B" font-weight="bold">eabhijith</tspan><tspan fill="#6272A4">:~$ </tspan><tspan fill="#F8F8F2">cat profile.md</tspan></text>
+  <text x="524" y="68" opacity="0" font-family="'Courier New',monospace" font-size="13px"><animate attributeName="opacity" dur="8s" repeatCount="indefinite" keyTimes="0;0.050;0.087;0.875;0.938;1" values="0;0;1;1;0;0"/><tspan fill="#6272A4">  </tspan><tspan fill="#BD93F9" font-weight="bold">agent_id</tspan><tspan fill="#6272A4"> .. </tspan><tspan fill="#F8F8F2">eabhijith</tspan></text>
+  <text x="524" y="90" opacity="0" font-family="'Courier New',monospace" font-size="13px"><animate attributeName="opacity" dur="8s" repeatCount="indefinite" keyTimes="0;0.097;0.134;0.875;0.938;1" values="0;0;1;1;0;0"/><tspan fill="#6272A4">  </tspan><tspan fill="#BD93F9" font-weight="bold">designation</tspan><tspan fill="#6272A4"> .. </tspan><tspan fill="#F8F8F2">Senior AI &amp; Automation Specialist</tspan></text>
+  <text x="524" y="112" opacity="0" font-family="'Courier New',monospace" font-size="13px"><animate attributeName="opacity" dur="8s" repeatCount="indefinite" keyTimes="0;0.144;0.181;0.875;0.938;1" values="0;0;1;1;0;0"/><tspan fill="#6272A4">  </tspan><tspan fill="#BD93F9" font-weight="bold">base</tspan><tspan fill="#6272A4"> .. </tspan><tspan fill="#F8F8F2">Berlin, Germany</tspan></text>
+  <text x="524" y="134" opacity="0" font-family="'Courier New',monospace" font-size="13px"><animate attributeName="opacity" dur="8s" repeatCount="indefinite" keyTimes="0;0.191;0.228;0.875;0.938;1" values="0;0;1;1;0;0"/><tspan fill="#6272A4">  </tspan><tspan fill="#BD93F9" font-weight="bold">mission</tspan><tspan fill="#6272A4"> .. </tspan><tspan fill="#F8F8F2">Multi-Agent · LLM Orchestration</tspan></text>
+  <text x="524" y="156" opacity="0" font-family="'Courier New',monospace" font-size="13px"><animate attributeName="opacity" dur="8s" repeatCount="indefinite" keyTimes="0;0.237;0.275;0.875;0.938;1" values="0;0;1;1;0;0"/><tspan fill="#6272A4">  </tspan><tspan fill="#BD93F9" font-weight="bold">status</tspan><tspan fill="#6272A4"> .. </tspan><tspan fill="#50FA7B" font-weight="bold">DEPLOYED · ACTIVE</tspan></text>
+  <text x="524" y="178" opacity="0" font-family="'Courier New',monospace" font-size="13px"><animate attributeName="opacity" dur="8s" repeatCount="indefinite" keyTimes="0;0.300;0.337;0.875;0.938;1" values="0;0;1;1;0;0"/><tspan fill="#6272A4">  </tspan><tspan fill="#BD93F9" font-weight="bold">capabilities</tspan><tspan fill="#50FA7B"> ────────────────────</tspan></text>
+  <text x="524" y="200" opacity="0" font-family="'Courier New',monospace" font-size="13px"><animate attributeName="opacity" dur="8s" repeatCount="indefinite" keyTimes="0;0.347;0.384;0.875;0.938;1" values="0;0;1;1;0;0"/><tspan fill="#6272A4">    </tspan><tspan fill="#F8F8F2">▸ Pydantic-AI · LangGraph · Bedrock</tspan></text>
+  <text x="524" y="222" opacity="0" font-family="'Courier New',monospace" font-size="13px"><animate attributeName="opacity" dur="8s" repeatCount="indefinite" keyTimes="0;0.394;0.431;0.875;0.938;1" values="0;0;1;1;0;0"/><tspan fill="#6272A4">    </tspan><tspan fill="#F8F8F2">▸ Python · JavaScript · Apex · React</tspan></text>
+  <text x="524" y="244" opacity="0" font-family="'Courier New',monospace" font-size="13px"><animate attributeName="opacity" dur="8s" repeatCount="indefinite" keyTimes="0;0.441;0.478;0.875;0.938;1" values="0;0;1;1;0;0"/><tspan fill="#6272A4">    </tspan><tspan fill="#F8F8F2">▸ AWS · Databricks · Salesforce</tspan></text>
+  <text x="524" y="266" opacity="0" font-family="'Courier New',monospace" font-size="13px"><animate attributeName="opacity" dur="8s" repeatCount="indefinite" keyTimes="0;0.472;0.509;0.875;0.938;1" values="0;0;1;1;0;0"/><tspan fill="#6272A4">  </tspan><tspan fill="#BD93F9" font-weight="bold">side_projects</tspan><tspan fill="#50FA7B"> ────────────────────</tspan></text>
+  <text x="524" y="288" opacity="0" font-family="'Courier New',monospace" font-size="13px"><animate attributeName="opacity" dur="8s" repeatCount="indefinite" keyTimes="0;0.503;0.541;0.875;0.938;1" values="0;0;1;1;0;0"/><tspan fill="#6272A4">    </tspan><tspan fill="#F8F8F2">▸ personal AI OS</tspan></text>
+  <text x="524" y="310" opacity="0" font-family="'Courier New',monospace" font-size="13px"><animate attributeName="opacity" dur="8s" repeatCount="indefinite" keyTimes="0;0.534;0.572;0.875;0.938;1" values="0;0;1;1;0;0"/><tspan fill="#6272A4">    </tspan><tspan fill="#F8F8F2">▸ archify — diagram renderer</tspan></text>
+  <text x="524" y="332" opacity="0" font-family="'Courier New',monospace" font-size="13px"><animate attributeName="opacity" dur="8s" repeatCount="indefinite" keyTimes="0;0.566;0.603;0.875;0.938;1" values="0;0;1;1;0;0"/><tspan fill="#6272A4">  </tspan><tspan fill="#BD93F9" font-weight="bold">philosophy</tspan><tspan fill="#6272A4"> .. </tspan><tspan fill="#F8F8F2">Functional · Minimal · Ship it</tspan></text>
+  <text x="524" y="354" opacity="0" font-family="'Courier New',monospace" font-size="13px"><animate attributeName="opacity" dur="8s" repeatCount="indefinite" keyTimes="0;0.589;0.627;0.875;0.938;1" values="0;0;1;1;0;0"/><tspan fill="#6272A4">  </tspan><tspan fill="#BD93F9" font-weight="bold">uptime</tspan><tspan fill="#6272A4"> .. </tspan><tspan fill="#F8F8F2">since 2017 · Berlin</tspan></text>
+  <text x="524" y="376" opacity="0" font-family="'Courier New',monospace" font-size="13px"><animate attributeName="opacity" dur="8s" repeatCount="indefinite" keyTimes="0;0.605;0.642;0.875;0.938;1" values="0;0;1;1;0;0"/><tspan fill="#6272A4">  </tspan><tspan fill="#BD93F9" font-weight="bold">linkedin</tspan><tspan fill="#6272A4"> .. </tspan><tspan fill="#F8F8F2">linkedin.com/in/eabhijith</tspan></text>
+  <text x="524" y="398" opacity="0" font-family="'Courier New',monospace" font-size="13px"><animate attributeName="opacity" dur="8s" repeatCount="indefinite" keyTimes="0;0.616;0.653;0.875;0.938;1" values="0;0;1;1;0;0"/><tspan fill="#6272A4">  </tspan><tspan fill="#BD93F9" font-weight="bold">github</tspan><tspan fill="#6272A4"> .. </tspan><tspan fill="#F8F8F2">github.com/eabhijith</tspan></text>
+  <text x="524" y="420" opacity="0" font-family="'Courier New',monospace" font-size="13px"><animate attributeName="opacity" dur="8s" repeatCount="indefinite" keyTimes="0;0.625;0.662;0.875;0.938;1" values="0;0;1;1;0;0"/><tspan fill="#6272A4">  </tspan><tspan fill="#BD93F9" font-weight="bold">website</tspan><tspan fill="#6272A4"> .. </tspan><tspan fill="#8BE9FD">eabhijith.vercel.app</tspan></text>
+  <rect x="524" y="428" width="8" height="14" fill="#BD93F9" opacity="0">
+    <animate attributeName="opacity" dur="8s" repeatCount="indefinite"
+      keyTimes="0;0.625;0.875;0.938;1" values="0;1;1;0;0"/>
+    <animate attributeName="opacity" values="1;0;1" dur="0.6s" repeatCount="indefinite"
+      begin="5s"/>
   </rect>
 </g>
 
