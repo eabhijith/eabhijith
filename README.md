@@ -19,6 +19,10 @@
   <img src="https://komarev.com/ghpvc/?username=eabhijith&color=00D4FF&style=for-the-badge&label=PROFILE+VIEWS"/>
 </p>
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/eabhijith/eabhijith/main/agents-card.svg" width="100%" alt="Agent Roster"/>
+</p>
+
 ---
 
 ### GitHub Stats
