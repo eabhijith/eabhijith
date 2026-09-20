@@ -21,41 +21,6 @@
 
 ---
 
-```python
-@agent(
-    id          = "eabhijith",
-    designation = "Senior AI & Automation Specialist",
-    base        = "Berlin, Germany",
-    status      = "DEPLOYED · ACTIVE",
-)
-class Abhijith(BaseAgent):
-    """
-    Builds systems where agents are first-class citizens.
-
-    Not interested in wrapping APIs. Interested in what agents
-    can do when they have real memory, real tools, and an OS
-    built for them. abheos is that OS.
-
-    Agents are the interface. The rest is scaffolding.
-    """
-
-    capabilities = [
-        "Pydantic-AI", "LangGraph", "AWS Bedrock", "Google ADK",
-        "Python", "JavaScript", "Apex", "React", "FastAPI",
-        "AWS", "Databricks", "Salesforce",
-    ]
-
-    side_projects = {
-        "abheos"  : "Personal AI OS — file-based, git-backed, 26 slash commands, zero cloud deps",
-        "archify" : "Diagram-as-code renderer — architecture, dataflow, sequence from JSON",
-    }
-
-    philosophy = "Functional · Minimal · Ship it"
-    fun_fact   = "World is all about mind and matter — if we don't mind, it doesn't matter"
-```
-
----
-
 ### GitHub Stats
 
 <p align="center">
