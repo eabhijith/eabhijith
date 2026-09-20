@@ -1,360 +1,371 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 360" width="1180" height="360">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 420" width="1180" height="420">
 <defs>
-  <radialGradient id="bg" cx="50%" cy="50%" r="70%">
+  <radialGradient id="bg" cx="50%" cy="0%" r="80%">
     <stop offset="0%" stop-color="#0F1E3A"/><stop offset="100%" stop-color="#0A0E1A"/>
   </radialGradient>
   <linearGradient id="borderG" x1="0%" y1="0%" x2="100%" y2="0%">
     <stop offset="0%" stop-color="#00D4FF"/><stop offset="50%" stop-color="#00FF9F"/>
     <stop offset="100%" stop-color="#FF6B00"/>
   </linearGradient>
-  <filter id="gc"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-  <filter id="gg"><feGaussianBlur stdDeviation="9"  result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-  <filter id="ga"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-  <filter id="gv"><feGaussianBlur stdDeviation="9"  result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-  <filter id="gr"><feGaussianBlur stdDeviation="7"  result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-  <filter id="pk"><feGaussianBlur stdDeviation="4"  result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-
-  <style>
-    .lbl{font-family:"JetBrains Mono","Fira Code",monospace;font-size:12px;letter-spacing:1px;font-weight:700}
-    .sub{font-family:"JetBrains Mono","Fira Code",monospace;font-size:9px;letter-spacing:0.5px;fill:#334155}
-    .ptitle{font-family:"Courier New",monospace;font-size:11px;fill:#00D4FF;letter-spacing:2px;opacity:0.6}
-    .pktlbl{font-family:"Courier New",monospace;font-size:8px;fill:#1E3A5F;letter-spacing:1px}
-    /* transform-box so 50% 50% always means shape centre */
-    .b1,.b1e,.b2,.b2h,.b2e,.b3,.b3e,.b4,.b4e,.b5,.b5e,
-    .sl,.sr{transform-box:fill-box;transform-origin:50% 50%}
-
-    /* ── ORCHESTRATOR (blob/cyan) 20s: idle→working→waiting→done→idle ── */
-    @keyframes oc{
-      0%,19%{transform:translateY(0)}
-      3%{transform:translateY(-7px)} 6%{transform:translateY(0)}
-      11%{transform:translateY(-5px)} 18%{transform:translateY(0)}
-      20%{transform:rotate(2.5deg) scaleX(1.1) scaleY(0.9)}
-      21.5%{transform:rotate(-2.5deg) scaleX(0.9) scaleY(1.1)}
-      23%{transform:rotate(2.5deg) scaleX(1.13) scaleY(0.87)}
-      24.5%{transform:rotate(-2.5deg) scaleX(0.87) scaleY(1.13)}
-      26%{transform:rotate(2.5deg) scaleX(1.1) scaleY(0.9)}
-      27.5%{transform:rotate(-2.5deg) scaleX(0.9) scaleY(1.1)}
-      34%{transform:rotate(0)}
-      35%,74%{transform:translateY(-3px) rotate(-4deg)}
-      75%{transform:scaleX(1.22) scaleY(0.78)}
-      76%{transform:scaleX(0.94) scaleY(1.06)}
-      77.5%{transform:scaleX(1.04) scaleY(0.96)}
-      79%,88%{transform:scaleX(1) scaleY(1)}
-      91%{transform:translateY(-6px)} 95%{transform:translateY(0)}
-      100%{transform:translateY(0)}
-    }
-    @keyframes oce{
-      0%,19%{transform:scaleX(1) scaleY(1) rotate(0) translateY(0)}
-      3%{transform:scaleX(1) scaleY(0.07)}
-      5%{transform:scaleX(1) scaleY(1)}
-      20%,34%{transform:scaleX(1.24) scaleY(0.62)}
-      35%,74%{transform:scaleX(1.1) scaleY(0.22) rotate(-13deg) translateX(4px)}
-      75%,88%{transform:scaleX(1.06) scaleY(0.72) rotate(-15deg)}
-      90%{transform:scaleX(1) scaleY(0.07) rotate(0)}
-      92%,100%{transform:scaleX(1) scaleY(1) rotate(0)}
-    }
-
-    /* ── RESEARCHER (hexagon/green) 20s: idle→thinking→working→done→idle ── */
-    @keyframes rs{
-      0%,29%{transform:translateY(0)}
-      5%{transform:translateY(-6px)} 10%{transform:translateY(0)}
-      17%{transform:translateY(-5px)} 22%{transform:translateY(0)}
-      30%,49%{transform:translateY(-2px)}
-      50%{transform:rotate(2.5deg) scaleX(1.12) scaleY(0.88)}
-      51.5%{transform:rotate(-2.5deg) scaleX(0.88) scaleY(1.12)}
-      53%{transform:rotate(2.5deg) scaleX(1.1) scaleY(0.9)}
-      54.5%{transform:rotate(-2.5deg) scaleX(0.9) scaleY(1.1)}
-      56%{transform:rotate(2.5deg) scaleX(1.08) scaleY(0.92)}
-      58%{transform:rotate(0deg) scaleX(1) scaleY(1)}
-      64%{transform:rotate(0)}
-      65%{transform:scaleX(1.2) scaleY(0.8)}
-      66%{transform:scaleX(0.94) scaleY(1.06)}
-      68%{transform:scaleX(1.03) scaleY(0.97)}
-      70%,79%{transform:scaleX(1) scaleY(1)}
-      84%{transform:translateY(-6px)} 88%{transform:translateY(0)}
-      93%{transform:translateY(-5px)} 97%{transform:translateY(0)}
-    }
-    @keyframes rsh{
-      0%,29%,50%,100%{transform:scale(1)}
-      30%,49%{transform:scale(0.68)}
-    }
-    @keyframes rse{
-      0%,29%{transform:scaleX(1) scaleY(1) translateX(0)}
-      8%{transform:scaleX(1) scaleY(0.07)}
-      10%{transform:scaleX(1) scaleY(1)}
-      30%,49%{transform:scaleX(0.9) scaleY(0.82)}
-      35%{transform:scaleX(0.9) scaleY(0.82) translateX(5px)}
-      40%{transform:scaleX(0.9) scaleY(0.82) translateX(-5px)}
-      45%{transform:scaleX(0.9) scaleY(0.82) translateX(5px)}
-      50%,64%{transform:scaleX(1.24) scaleY(0.62) translateX(0)}
-      65%,79%{transform:scaleX(1.06) scaleY(0.72) rotate(-15deg)}
-      80%{transform:scaleX(1) scaleY(0.07) rotate(0)}
-      82%,100%{transform:scaleX(1) scaleY(1)}
-    }
-    @keyframes rsl{
-      0%,29%,50%,100%{transform:translate(0,0);opacity:0}
-      30%{opacity:0.8} 34%{transform:translate(-34px,0);opacity:0.8}
-      37%{transform:translate(-26px,-16px)} 40%{transform:translate(-34px,0)}
-      43%{transform:translate(-26px,-16px)} 46%{transform:translate(-34px,0)}
-      49%{opacity:0.8} 50%{opacity:0;transform:translate(0,0)}
-    }
-    @keyframes rsr{
-      0%,29%,50%,100%{transform:translate(0,0);opacity:0}
-      30%{opacity:0.55} 34%{transform:translate(34px,0);opacity:0.55}
-      37%{transform:translate(26px,16px)} 40%{transform:translate(34px,0)}
-      43%{transform:translate(26px,16px)} 46%{transform:translate(34px,0)}
-      49%{opacity:0.55} 50%{opacity:0;transform:translate(0,0)}
-    }
-
-    /* ── BUILDER (squircle/amber) 20s: idle→working→done→idle ── */
-    @keyframes bl{
-      0%,49%{transform:translateY(0)}
-      6%{transform:translateY(-7px)} 11%{transform:translateY(0)}
-      18%{transform:translateY(-6px)} 23%{transform:translateY(0)}
-      31%{transform:translateY(-7px)} 36%{transform:translateY(0)}
-      43%{transform:translateY(-5px)} 48%{transform:translateY(0)}
-      50%{transform:rotate(2.5deg) scaleX(1.13) scaleY(0.87)}
-      51%{transform:rotate(-2.5deg) scaleX(0.87) scaleY(1.13)}
-      52%{transform:rotate(2.5deg) scaleX(1.15) scaleY(0.85)}
-      53%{transform:rotate(-2.5deg) scaleX(0.85) scaleY(1.15)}
-      54%{transform:rotate(2.5deg) scaleX(1.13) scaleY(0.87)}
-      55%{transform:rotate(-2.5deg) scaleX(0.87) scaleY(1.13)}
-      56%{transform:rotate(2.5deg) scaleX(1.1) scaleY(0.9)}
-      57%{transform:rotate(-2.5deg) scaleX(0.9) scaleY(1.1)}
-      58%{transform:rotate(2.5deg) scaleX(1.08) scaleY(0.92)}
-      59%{transform:rotate(-2.5deg) scaleX(0.92) scaleY(1.08)}
-      60%{transform:rotate(1.5deg) scaleX(1.06) scaleY(0.94)}
-      63%{transform:rotate(0deg) scaleX(1) scaleY(1)}
-      64%,69%{transform:translateY(-2px)}
-      70%{transform:scaleX(1.22) scaleY(0.78)}
-      71%{transform:scaleX(0.93) scaleY(1.07)}
-      72.5%{transform:scaleX(1.04) scaleY(0.96)}
-      74%,84%{transform:scaleX(1) scaleY(1)}
-      89%{transform:translateY(-6px)} 93%{transform:translateY(0)}
-      97%{transform:translateY(-5px)} 100%{transform:translateY(0)}
-    }
-    @keyframes ble{
-      0%,49%{transform:scaleX(1) scaleY(1) rotate(0)}
-      12%{transform:scaleX(1) scaleY(0.07)} 14%{transform:scaleX(1) scaleY(1)}
-      35%{transform:scaleX(1) scaleY(0.07)} 37%{transform:scaleX(1) scaleY(1)}
-      50%,69%{transform:scaleX(1.24) scaleY(0.62)}
-      70%,84%{transform:scaleX(1.06) scaleY(0.72) rotate(-15deg)}
-      85%{transform:scaleX(1) scaleY(0.07) rotate(0)}
-      87%,100%{transform:scaleX(1) scaleY(1)}
-    }
-
-    /* ── MEMORY (teardrop/violet) 20s: idle→working→done→idle ── */
-    @keyframes mm{
-      0%,64%{transform:translateY(0)}
-      4%{transform:translateY(-6px)} 8%{transform:translateY(0)}
-      16%{transform:translateY(-5px)} 21%{transform:translateY(0)}
-      28%{transform:translateY(-6px)} 33%{transform:translateY(0)}
-      41%{transform:translateY(-5px)} 46%{transform:translateY(0)}
-      53%{transform:translateY(-6px)} 58%{transform:translateY(0)}
-      65%{transform:rotate(2deg) scaleX(1.1) scaleY(0.9)}
-      66.5%{transform:rotate(-2deg) scaleX(0.9) scaleY(1.1)}
-      68%{transform:rotate(2deg) scaleX(1.08) scaleY(0.92)}
-      69.5%{transform:rotate(-2deg) scaleX(0.92) scaleY(1.08)}
-      71%{transform:rotate(1deg) scaleX(1.05) scaleY(0.95)}
-      73%,79%{transform:rotate(0) scaleX(1) scaleY(1) translateY(-2px)}
-      80%{transform:scaleX(1.25) scaleY(0.75)}
-      81%{transform:scaleX(0.92) scaleY(1.08)}
-      82.5%{transform:scaleX(1.05) scaleY(0.95)}
-      84%,94%{transform:scaleX(1) scaleY(1) translateY(-3px)}
-      98%{transform:translateY(-5px)} 100%{transform:translateY(0)}
-    }
-    @keyframes mme{
-      0%,64%{transform:scaleX(1) scaleY(1) rotate(0)}
-      10%{transform:scaleX(1) scaleY(0.07)} 12%{transform:scaleX(1) scaleY(1)}
-      38%{transform:scaleX(1) scaleY(0.07)} 40%{transform:scaleX(1) scaleY(1)}
-      65%,79%{transform:scaleX(1.24) scaleY(0.62)}
-      80%,94%{transform:scaleX(1.06) scaleY(0.72) rotate(-15deg)}
-      95%{transform:scaleX(1) scaleY(0.07) rotate(0)}
-      97%,100%{transform:scaleX(1) scaleY(1)}
-    }
-
-    /* ── GUARDIAN (triangle/red) continuous alert ── */
-    @keyframes gd{
-      0%,100%{transform:translateX(0)}
-      20%{transform:translateX(2.5px)} 40%{transform:translateX(-2.5px)}
-      60%{transform:translateX(2px)} 80%{transform:translateX(-2px)}
-    }
-    @keyframes gde{
-      0%,100%{transform:scaleX(0.86) scaleY(0.5) rotate(16deg)}
-      38%{transform:scaleX(0.86) scaleY(0.07) rotate(16deg)}
-      42%{transform:scaleX(0.86) scaleY(0.5) rotate(16deg)}
-    }
-    @keyframes alert{0%,100%{r:42;opacity:0.18}50%{r:52;opacity:0.04}}
-
-    .b1{animation:oc  20s ease-in-out infinite}
-    .b1e{animation:oce 20s ease-in-out infinite}
-    .b2{animation:rs  20s ease-in-out infinite}
-    .b2h{animation:rsh 20s ease-in-out infinite}
-    .b2e{animation:rse 20s ease-in-out infinite}
-    .sl{animation:rsl 20s ease-in-out infinite}
-    .sr{animation:rsr 20s ease-in-out infinite}
-    .b3{animation:bl  20s ease-in-out infinite}
-    .b3e{animation:ble 20s ease-in-out infinite}
-    .b4{animation:mm  20s ease-in-out infinite}
-    .b4e{animation:mme 20s ease-in-out infinite}
-    .b5{animation:gd  0.45s ease-in-out infinite;animation-delay:1.5s}
-    .b5e{animation:gde 1.2s ease-in-out infinite}
-    .ar{animation:alert 1.5s ease-in-out infinite}
-  </style>
+  <clipPath id="cp0"><rect x="60" y="56" width="0" height="18">
+  <animate attributeName="width" dur="32s" repeatCount="indefinite"
+    keyTimes="0;0.0031;0.0141;0.8750;1" values="0;0;500;500;0" calcMode="spline"
+    keySplines="0 0 1 1;0.4 0 0.2 1;0 0 1 1;0 0 1 1"/>
+</rect></clipPath>
+  <clipPath id="cp1"><rect x="60" y="78" width="0" height="18">
+  <animate attributeName="width" dur="32s" repeatCount="indefinite"
+    keyTimes="0;0.0250;0.0359;0.8750;1" values="0;0;460;460;0" calcMode="spline"
+    keySplines="0 0 1 1;0.4 0 0.2 1;0 0 1 1;0 0 1 1"/>
+</rect></clipPath>
+  <clipPath id="cp2"><rect x="60" y="100" width="0" height="18">
+  <animate attributeName="width" dur="32s" repeatCount="indefinite"
+    keyTimes="0;0.0500;0.0609;0.8750;1" values="0;0;440;440;0" calcMode="spline"
+    keySplines="0 0 1 1;0.4 0 0.2 1;0 0 1 1;0 0 1 1"/>
+</rect></clipPath>
+  <clipPath id="cp3"><rect x="60" y="122" width="0" height="18">
+  <animate attributeName="width" dur="32s" repeatCount="indefinite"
+    keyTimes="0;0.0719;0.0828;0.8750;1" values="0;0;430;430;0" calcMode="spline"
+    keySplines="0 0 1 1;0.4 0 0.2 1;0 0 1 1;0 0 1 1"/>
+</rect></clipPath>
+  <clipPath id="cp4"><rect x="60" y="158" width="0" height="18">
+  <animate attributeName="width" dur="32s" repeatCount="indefinite"
+    keyTimes="0;0.1313;0.1422;0.8750;1" values="0;0;440;440;0" calcMode="spline"
+    keySplines="0 0 1 1;0.4 0 0.2 1;0 0 1 1;0 0 1 1"/>
+</rect></clipPath>
+  <clipPath id="cp5"><rect x="60" y="178" width="0" height="18">
+  <animate attributeName="width" dur="32s" repeatCount="indefinite"
+    keyTimes="0;0.1594;0.1703;0.8750;1" values="0;0;440;440;0" calcMode="spline"
+    keySplines="0 0 1 1;0.4 0 0.2 1;0 0 1 1;0 0 1 1"/>
+</rect></clipPath>
+  <clipPath id="cp6"><rect x="60" y="198" width="0" height="18">
+  <animate attributeName="width" dur="32s" repeatCount="indefinite"
+    keyTimes="0;0.1875;0.1984;0.8750;1" values="0;0;440;440;0" calcMode="spline"
+    keySplines="0 0 1 1;0.4 0 0.2 1;0 0 1 1;0 0 1 1"/>
+</rect></clipPath>
+  <clipPath id="cp7"><rect x="60" y="218" width="0" height="18">
+  <animate attributeName="width" dur="32s" repeatCount="indefinite"
+    keyTimes="0;0.2156;0.2266;0.8750;1" values="0;0;440;440;0" calcMode="spline"
+    keySplines="0 0 1 1;0.4 0 0.2 1;0 0 1 1;0 0 1 1"/>
+</rect></clipPath>
+  <clipPath id="cp8"><rect x="60" y="238" width="0" height="18">
+  <animate attributeName="width" dur="32s" repeatCount="indefinite"
+    keyTimes="0;0.2437;0.2547;0.8750;1" values="0;0;440;440;0" calcMode="spline"
+    keySplines="0 0 1 1;0.4 0 0.2 1;0 0 1 1;0 0 1 1"/>
+</rect></clipPath>
+  <clipPath id="cp9"><rect x="60" y="264" width="0" height="18">
+  <animate attributeName="width" dur="32s" repeatCount="indefinite"
+    keyTimes="0;0.2813;0.2922;0.8750;1" values="0;0;480;480;0" calcMode="spline"
+    keySplines="0 0 1 1;0.4 0 0.2 1;0 0 1 1;0 0 1 1"/>
+</rect></clipPath>
 </defs>
 
-<rect width="1180" height="360" rx="16" fill="url(#bg)"/>
-<rect width="1180" height="360" rx="16" fill="none" stroke="url(#borderG)" stroke-width="1.5" opacity="0.4"/>
-<text x="590" y="26" text-anchor="middle" class="ptitle">AGENT.ROSTER  ·  20s dispatch cycle</text>
-<line x1="40" y1="34" x2="1140" y2="34" stroke="#00D4FF" stroke-width="0.5" opacity="0.1"/>
+<!-- background -->
+<rect width="1180" height="420" rx="16" fill="url(#bg)"/>
+<rect width="1180" height="420" rx="16" fill="none" stroke="url(#borderG)" stroke-width="1.5" opacity="0.4"/>
 
-<!-- ── CONNECTION LANES ── -->
-<!-- forward: y=188 -->
-<line x1="208" y1="188" x2="335" y2="188" stroke="#00D4FF" stroke-width="1.2" opacity="0.3"/>
-<line x1="458" y1="188" x2="585" y2="188" stroke="#00FF9F" stroke-width="1.2" opacity="0.3"/>
-<line x1="708" y1="188" x2="835" y2="188" stroke="#FF6B00" stroke-width="1.2" opacity="0.3"/>
-<!-- arrowheads forward -->
-<polygon points="333,184 342,188 333,192" fill="#00D4FF" opacity="0.5"/>
-<polygon points="583,184 592,188 583,192" fill="#00FF9F" opacity="0.5"/>
-<polygon points="833,184 842,188 833,192" fill="#FF6B00" opacity="0.5"/>
-<!-- return: y=202 -->
-<line x1="335" y1="202" x2="208" y2="202" stroke="#7C3AED" stroke-width="0.8" opacity="0.2"/>
-<line x1="585" y1="202" x2="458" y2="202" stroke="#7C3AED" stroke-width="0.8" opacity="0.2"/>
-<line x1="835" y1="202" x2="708" y2="202" stroke="#7C3AED" stroke-width="0.8" opacity="0.2"/>
-<!-- arrowheads return -->
-<polygon points="210,198 200,202 210,206" fill="#7C3AED" opacity="0.35"/>
-<polygon points="460,198 450,202 460,206" fill="#7C3AED" opacity="0.35"/>
-<polygon points="710,198 700,202 710,206" fill="#7C3AED" opacity="0.35"/>
-<!-- lane labels -->
-<text x="271" y="181" text-anchor="middle" class="pktlbl">task →</text>
-<text x="521" y="181" text-anchor="middle" class="pktlbl">context →</text>
-<text x="771" y="181" text-anchor="middle" class="pktlbl">result →</text>
-<text x="271" y="218" text-anchor="middle" class="pktlbl">← done</text>
-<text x="521" y="218" text-anchor="middle" class="pktlbl">← done</text>
-<text x="771" y="218" text-anchor="middle" class="pktlbl">← done</text>
-<!-- guardian dashed arcs -->
-<path d="M 1040,120 Q 860,148 642,178" fill="none" stroke="#FF4444" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.22"/>
-<path d="M 1055,120 Q 970,145 895,178" fill="none" stroke="#FF4444" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.22"/>
+<!-- terminal panel left -->
+<rect x="20" y="20" width="580" height="380" rx="12" fill="#11141F" fill-opacity="0.7" stroke="#6272A4" stroke-width="0.8" opacity="0.5"/>
+<!-- titlebar dots -->
+<circle cx="42" cy="38" r="5" fill="#FF4444"><animate attributeName="opacity" values="1;0.4;1" dur="4s" repeatCount="indefinite"/></circle>
+<circle cx="60" cy="38" r="5" fill="#FF6B00"><animate attributeName="opacity" values="1;0.4;1" dur="4s" begin="0.3s" repeatCount="indefinite"/></circle>
+<circle cx="78" cy="38" r="5" fill="#00FF9F"><animate attributeName="opacity" values="1;0.4;1" dur="4s" begin="0.6s" repeatCount="indefinite"/></circle>
+<text x="310" y="43" text-anchor="middle" font-family="'JetBrains Mono','Fira Code',monospace" font-size="11px" fill="#1E3A5F" letter-spacing="1px">abheos · agent launcher</text>
+<line x1="20" y1="52" x2="600" y2="52" stroke="#1E3A5F" stroke-width="0.5" opacity="0.4"/>
 
-<!-- ── SMIL DATA PACKETS ── -->
-<!-- fwd 1→2: 20-35% of 20s -->
-<circle cy="188" r="5" fill="#00D4FF" filter="url(#pk)">
-  <animate attributeName="opacity" dur="20s" repeatCount="indefinite"
-    keyTimes="0;0.195;0.20;0.35;0.355;1" values="0;0;1;1;0;0"/>
-  <animate attributeName="cx"    dur="20s" repeatCount="indefinite"
-    keyTimes="0;0.20;0.35;1"       values="210;210;334;334"/>
-</circle>
-<!-- fwd 2→3: 50-65% of 20s -->
-<circle cy="188" r="5" fill="#00FF9F" filter="url(#pk)">
-  <animate attributeName="opacity" dur="20s" repeatCount="indefinite"
-    keyTimes="0;0.495;0.50;0.65;0.655;1" values="0;0;1;1;0;0"/>
-  <animate attributeName="cx"    dur="20s" repeatCount="indefinite"
-    keyTimes="0;0.50;0.65;1"       values="460;460;584;584"/>
-</circle>
-<!-- fwd 3→4: 55-70% of 20s -->
-<circle cy="188" r="5" fill="#FF6B00" filter="url(#pk)">
-  <animate attributeName="opacity" dur="20s" repeatCount="indefinite"
-    keyTimes="0;0.545;0.55;0.70;0.705;1" values="0;0;1;1;0;0"/>
-  <animate attributeName="cx"    dur="20s" repeatCount="indefinite"
-    keyTimes="0;0.55;0.70;1"       values="710;710;834;834"/>
-</circle>
-<!-- return: 75-93% of 20s, violet, travels right→left -->
-<circle cy="202" r="5" fill="#7C3AED" filter="url(#pk)">
-  <animate attributeName="opacity" dur="20s" repeatCount="indefinite"
-    keyTimes="0;0.745;0.75;0.93;0.935;1" values="0;0;1;1;0;0"/>
-  <animate attributeName="cx"    dur="20s" repeatCount="indefinite"
-    keyTimes="0;0.75;0.93;1"       values="834;834;210;210"/>
-</circle>
+<!-- terminal lines -->
+<text x="60" y="70" font-family="'JetBrains Mono','Fira Code',monospace" font-size="12px" clip-path="url(#cp0)"><tspan fill="#6272A4">$ </tspan><tspan fill="#50FA7B" font-weight="bold">abheos --launch --runtime production</tspan></text>
+<text x="60" y="92" font-family="'JetBrains Mono','Fira Code',monospace" font-size="12px" clip-path="url(#cp1)"><tspan fill="#6272A4">  initialising agent runtime</tspan><tspan fill="#00D4FF">...........</tspan></text>
+<text x="60" y="114" font-family="'JetBrains Mono','Fira Code',monospace" font-size="12px" clip-path="url(#cp2)"><tspan fill="#6272A4">  loading manifest</tspan><tspan fill="#00D4FF">..................</tspan></text>
+<text x="60" y="136" font-family="'JetBrains Mono','Fira Code',monospace" font-size="12px" clip-path="url(#cp3)"><tspan fill="#6272A4">  spawning agents</tspan><tspan fill="#00D4FF">.................</tspan></text>
+<text x="60" y="172" font-family="'JetBrains Mono','Fira Code',monospace" font-size="12px" clip-path="url(#cp4)"><tspan fill="#6272A4">  ✓ </tspan><tspan fill="#00D4FF" font-weight="bold">harvester</tspan><tspan fill="#6272A4">   [blob]     </tspan><tspan fill="#00FF9F" font-weight="bold">ONLINE</tspan></text>
+<text x="60" y="192" font-family="'JetBrains Mono','Fira Code',monospace" font-size="12px" clip-path="url(#cp5)"><tspan fill="#6272A4">  ✓ </tspan><tspan fill="#FF6B00" font-weight="bold">archify</tspan><tspan fill="#6272A4">     [hexagon]  </tspan><tspan fill="#00FF9F" font-weight="bold">ONLINE</tspan></text>
+<text x="60" y="212" font-family="'JetBrains Mono','Fira Code',monospace" font-size="12px" clip-path="url(#cp6)"><tspan fill="#6272A4">  ✓ </tspan><tspan fill="#00FF9F" font-weight="bold">coach</tspan><tspan fill="#6272A4">       [teardrop] </tspan><tspan fill="#00FF9F" font-weight="bold">ONLINE</tspan></text>
+<text x="60" y="232" font-family="'JetBrains Mono','Fira Code',monospace" font-size="12px" clip-path="url(#cp7)"><tspan fill="#6272A4">  ✓ </tspan><tspan fill="#BD93F9" font-weight="bold">wiki</tspan><tspan fill="#6272A4">        [squircle] </tspan><tspan fill="#00FF9F" font-weight="bold">ONLINE</tspan></text>
+<text x="60" y="252" font-family="'JetBrains Mono','Fira Code',monospace" font-size="12px" clip-path="url(#cp8)"><tspan fill="#6272A4">  ✓ </tspan><tspan fill="#FF4444" font-weight="bold">enforcer</tspan><tspan fill="#6272A4">   [triangle]  </tspan><tspan fill="#00FF9F" font-weight="bold">ONLINE</tspan></text>
+<text x="60" y="278" font-family="'JetBrains Mono','Fira Code',monospace" font-size="12px" clip-path="url(#cp9)"><tspan fill="#00FF9F" font-weight="bold">[ RUNTIME ACTIVE · 5 AGENTS · DEPLOYED ]</tspan></text>
 
-<!-- ══════════════════════════════════════════════════
-     BOT 1 — ORCHESTRATOR — BLOB — cyan — cx=140,cy=195
-══════════════════════════════════════════════════ -->
-<g class="b1">
-  <ellipse cx="140" cy="195" rx="52" ry="56" fill="#00D4FF" filter="url(#gc)">
-    <animate attributeName="rx" values="52;56;50;54;52;48;56;52" dur="2.8s" repeatCount="indefinite"/>
-    <animate attributeName="ry" values="56;52;58;54;56;60;52;56" dur="2.8s" repeatCount="indefinite"/>
-  </ellipse>
-  <ellipse cx="123" cy="175" rx="17" ry="11" fill="rgba(255,255,255,0.22)" transform="rotate(-24 123 175)"/>
+<rect x="60" y="148" width="0" height="10" rx="3" fill="#00D4FF" opacity="0.8">
+  <animate attributeName="width" dur="32s" repeatCount="indefinite"
+    keyTimes="0;0.0781;0.1031;0.8750;0.9375;1"
+    values="0;0;280;280;0;0" calcMode="spline"
+    keySplines="0 0 1 1;0.4 0 0.4 1;0 0 1 1;0 0 1 1;0 0 1 1"/>
+</rect>
+<text x="60" y="157" font-family="'JetBrains Mono','Fira Code',monospace" font-size="10px" fill="#6272A4" opacity="0">
+  <animate attributeName="opacity" dur="32s" repeatCount="indefinite"
+    keyTimes="0;0.0781;0.1031;0.8750;1" values="0;0;0.6;0.6;0"/>
+  [████████████] 100%
+</text>
+
+<!-- vertical divider -->
+<line x1="620" y1="20" x2="620" y2="400" stroke="#1E3A5F" stroke-width="0.5" opacity="0.3"/>
+
+<!-- flow lines -->
+
+<g opacity="0">
+  <animate attributeName="opacity" dur="32s" repeatCount="indefinite"
+    keyTimes="0;0.2813;0.2906;0.8750;1"
+    values="0;0;0.6;0;0"/>
+  <line x1="735" y1="160" x2="815" y2="160" stroke="#00D4FF" stroke-width="1" opacity="0.4"/>
+  <text x="775" y="154" text-anchor="middle" font-family="'JetBrains Mono','Fira Code',monospace" font-size="8px" fill="#00D4FF" opacity="0.6">task</text>
+  <!-- packet -->
+  <circle r="4" fill="#00D4FF" opacity="0.9">
+    <animate attributeName="cx" values="735;815" dur="1.8s" begin="9.5s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="160;160" dur="1.8s" begin="9.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.9;1" dur="1.8s" begin="9.5s" repeatCount="indefinite"/>
+  </circle>
 </g>
-<g class="b1e" style="transform-origin:140px 195px">
-  <rect x="123" y="185" width="11" height="22" rx="5" fill="#0A0E1A"/>
-  <rect x="146" y="185" width="11" height="22" rx="5" fill="#0A0E1A"/>
-</g>
-<circle cx="183" cy="235" r="6" fill="#00FF9F" stroke="#0A0E1A" stroke-width="2"/>
-<text x="140" y="272" text-anchor="middle" class="lbl" fill="#00D4FF">orchestrator</text>
-<text x="140" y="287" text-anchor="middle" class="sub">blob · directs</text>
 
-<!-- ══════════════════════════════════════════════════
-     BOT 2 — RESEARCHER — HEXAGON — green — cx=390,cy=195
-══════════════════════════════════════════════════ -->
-<!-- satellites (thinking state) -->
-<circle class="sl" cx="390" cy="195" r="10" fill="#00FF9F"/>
-<circle class="sr" cx="390" cy="195" r="8"  fill="#00FF9F"/>
-<g class="b2">
-  <g class="b2h">
-    <g transform="translate(340,145)">
-      <path d="M50 3 L89 25 Q93 27 93 32 V68 Q93 73 89 75 L50 97 Q50 98 46 96 L11 75 Q7 73 7 68 V32 Q7 27 11 25 L46 4 Q48 3 50 3 Z" fill="#00FF9F" filter="url(#gg)"/>
-      <ellipse cx="25" cy="25" rx="14" ry="9" fill="rgba(255,255,255,0.20)" transform="rotate(-24 25 25)"/>
+<g opacity="0">
+  <animate attributeName="opacity" dur="32s" repeatCount="indefinite"
+    keyTimes="0;0.2813;0.2906;0.8750;1"
+    values="0;0;0.6;0;0"/>
+  <line x1="885" y1="160" x2="965" y2="160" stroke="#FF6B00" stroke-width="1" opacity="0.4"/>
+  <text x="925" y="154" text-anchor="middle" font-family="'JetBrains Mono','Fira Code',monospace" font-size="8px" fill="#FF6B00" opacity="0.6">context</text>
+  <!-- packet -->
+  <circle r="4" fill="#FF6B00" opacity="0.9">
+    <animate attributeName="cx" values="885;965" dur="1.8s" begin="9.8s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="160;160" dur="1.8s" begin="9.8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.9;1" dur="1.8s" begin="9.8s" repeatCount="indefinite"/>
+  </circle>
+</g>
+
+<g opacity="0">
+  <animate attributeName="opacity" dur="32s" repeatCount="indefinite"
+    keyTimes="0;0.2813;0.2906;0.8750;1"
+    values="0;0;0.6;0;0"/>
+  <line x1="850" y1="195" x2="800" y2="275" stroke="#BD93F9" stroke-width="1" opacity="0.4"/>
+  <text x="825" y="229" text-anchor="middle" font-family="'JetBrains Mono','Fira Code',monospace" font-size="8px" fill="#BD93F9" opacity="0.6">result</text>
+  <!-- packet -->
+  <circle r="4" fill="#BD93F9" opacity="0.9">
+    <animate attributeName="cx" values="850;800" dur="1.8s" begin="10.1s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="195;275" dur="1.8s" begin="10.1s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.9;1" dur="1.8s" begin="10.1s" repeatCount="indefinite"/>
+  </circle>
+</g>
+
+<g opacity="0">
+  <animate attributeName="opacity" dur="32s" repeatCount="indefinite"
+    keyTimes="0;0.2813;0.2906;0.8750;1"
+    values="0;0;0.6;0;0"/>
+  <line x1="1000" y1="195" x2="900" y2="275" stroke="#00FF9F" stroke-width="1" opacity="0.4"/>
+  <text x="950" y="229" text-anchor="middle" font-family="'JetBrains Mono','Fira Code',monospace" font-size="8px" fill="#00FF9F" opacity="0.6">insight</text>
+  <!-- packet -->
+  <circle r="4" fill="#00FF9F" opacity="0.9">
+    <animate attributeName="cx" values="1000;900" dur="1.8s" begin="10.4s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="195;275" dur="1.8s" begin="10.4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.9;1" dur="1.8s" begin="10.4s" repeatCount="indefinite"/>
+  </circle>
+</g>
+
+<g opacity="0">
+  <animate attributeName="opacity" dur="32s" repeatCount="indefinite"
+    keyTimes="0;0.2813;0.2906;0.8750;1"
+    values="0;0;0.6;0;0"/>
+  <line x1="775" y1="275" x2="700" y2="195" stroke="#BD93F9" stroke-width="1" opacity="0.4"/>
+  <text x="737.5" y="229" text-anchor="middle" font-family="'JetBrains Mono','Fira Code',monospace" font-size="8px" fill="#BD93F9" opacity="0.6">done</text>
+  <!-- packet -->
+  <circle r="4" fill="#BD93F9" opacity="0.9">
+    <animate attributeName="cx" values="775;700" dur="1.8s" begin="11s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="275;195" dur="1.8s" begin="11s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.9;1" dur="1.8s" begin="11s" repeatCount="indefinite"/>
+  </circle>
+</g>
+
+<!-- enforcer alert ring -->
+<circle cx="925" cy="310" r="48" fill="none" stroke="#FF4444" stroke-width="1" opacity="0">
+  <animate attributeName="opacity" dur="32s" repeatCount="indefinite"
+    keyTimes="0;0.2437;0.2562;0.8750;0.9375;1" values="0;0;1;1;0;0" calcMode="spline"
+    keySplines="0 0 1 1;0.4 0 0.2 1;0 0 1 1;0 0 1 1;0 0 1 1"/>
+  <animate attributeName="r" values="48;58;48" dur="1.5s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0.18;0.04;0.18" dur="1.5s" repeatCount="indefinite"/>
+</circle>
+
+<!-- agents -->
+
+<defs>
+  <filter id="gfharvester" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<g opacity="0" style="transform-origin:700px 160px">
+  <animate attributeName="opacity" dur="32s" repeatCount="indefinite"
+    keyTimes="0;0.1313;0.1438;0.8750;0.9375;1" values="0;0;1;1;0;0" calcMode="spline"
+    keySplines="0 0 1 1;0.4 0 0.2 1;0 0 1 1;0 0 1 1;0 0 1 1"/>
+  <!-- agent body -->
+  <g style="transform-box:fill-box;transform-origin:50% 50%">
+    <animateTransform attributeName="transform" type="translate" additive="sum"
+      values="0,0;0,0;0,0" dur="2.8s" repeatCount="indefinite"/>
+    <g transform="translate(665,125)">
+      <ellipse cx="35" cy="35" fill="#00D4FF" filter="url(#gfharvester)">
+  <animate attributeName="rx" values="33;37;31;35;33" dur="2.8s" repeatCount="indefinite"/>
+  <animate attributeName="ry" values="35;31;37;33;35" dur="2.8s" repeatCount="indefinite"/>
+</ellipse>
+      <!-- highlight -->
+      <ellipse cx="25.2" cy="23.8" rx="12.6" ry="8.4"
+        fill="rgba(255,255,255,0.22)" transform="rotate(-24 25.2 23.8)"/>
+      <!-- eyes -->
+      <g style="transform-box:fill-box;transform-origin:50% 50%">
+        <rect x="20.650000000000002" y="28" width="6.3" height="14" rx="3.15" fill="#0A0E1A" >
+          <animate attributeName="scaleY" values="1;0.07;1" dur="3.4s" repeatCount="indefinite" calcMode="discrete"/>
+        </rect>
+        <rect x="37.449999999999996" y="28" width="6.3" height="14" rx="3.15" fill="#0A0E1A" >
+          <animate attributeName="scaleY" values="1;0.07;1" dur="3.4s" begin="0.1s" repeatCount="indefinite" calcMode="discrete"/>
+        </rect>
+      </g>
     </g>
   </g>
+  <!-- presence dot -->
+  <circle cx="736.4" cy="196.4" r="6" fill="#00D4FF" stroke="#0A0E1A" stroke-width="2" opacity="0.9"/>
+  <!-- label -->
+  <text x="700" y="215" text-anchor="middle" font-family="'JetBrains Mono','Fira Code',monospace" font-size="11px" font-weight="700" fill="#00D4FF" letter-spacing="1px">harvester</text>
+  <text x="700" y="229" text-anchor="middle" font-family="'JetBrains Mono','Fira Code',monospace" font-size="9px" fill="#1E3A5F">blob · fetches</text>
 </g>
-<g class="b2e" style="transform-origin:390px 195px">
-  <rect x="372" y="188" width="10" height="18" rx="5" fill="#0A0E1A"/>
-  <rect x="397" y="190" width="10" height="18" rx="5" fill="#0A0E1A"/>
-</g>
-<text x="390" y="272" text-anchor="middle" class="lbl" fill="#00FF9F">researcher</text>
-<text x="390" y="287" text-anchor="middle" class="sub">hexagon · queries</text>
 
-<!-- ══════════════════════════════════════════════════
-     BOT 3 — BUILDER — SQUIRCLE — amber — cx=640,cy=195
-══════════════════════════════════════════════════ -->
-<g class="b3">
-  <g transform="translate(590,145)">
-    <path d="M28 4H72A24 24 0 0 1 96 28V72A24 24 0 0 1 72 96H28A24 24 0 0 1 4 72V28A24 24 0 0 1 28 4Z" fill="#FF6B00" filter="url(#ga)"/>
-    <ellipse cx="25" cy="24" rx="16" ry="10" fill="rgba(255,255,255,0.22)" transform="rotate(-24 25 24)"/>
+<defs>
+  <filter id="gfarchify" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<g opacity="0" style="transform-origin:850px 160px">
+  <animate attributeName="opacity" dur="32s" repeatCount="indefinite"
+    keyTimes="0;0.1594;0.1719;0.8750;0.9375;1" values="0;0;1;1;0;0" calcMode="spline"
+    keySplines="0 0 1 1;0.4 0 0.2 1;0 0 1 1;0 0 1 1;0 0 1 1"/>
+  <!-- agent body -->
+  <g style="transform-box:fill-box;transform-origin:50% 50%">
+    <animateTransform attributeName="transform" type="translate" additive="sum"
+      values="0,0;0,0;0,0" dur="0.42s" repeatCount="indefinite"/>
+    <g transform="translate(815,125)">
+      <path d="M50 3 L89 25 Q93 27 93 32 V68 Q93 73 89 75 L50 97 Q50 98 46 96 L11 75 Q7 73 7 68 V32 Q7 27 11 25 L46 4 Q48 3 50 3 Z" fill="#FF6B00" filter="url(#gfarchify)" transform="scale(0.7) translate(15.049999999999999,15.049999999999999)"/>
+      <!-- highlight -->
+      <ellipse cx="25.2" cy="23.8" rx="12.6" ry="8.4"
+        fill="rgba(255,255,255,0.22)" transform="rotate(-24 25.2 23.8)"/>
+      <!-- eyes -->
+      <g style="transform-box:fill-box;transform-origin:50% 50%">
+        <rect x="20.650000000000002" y="28" width="6.3" height="14" rx="3.15" fill="#0A0E1A" transform="scaleX(1.3) scaleY(0.6)" style="transform-box:fill-box;transform-origin:50% 50%">
+          <animate attributeName="scaleY" values="1;0.07;1" dur="1.8s" repeatCount="indefinite" calcMode="discrete"/>
+        </rect>
+        <rect x="37.449999999999996" y="28" width="6.3" height="14" rx="3.15" fill="#0A0E1A" transform="scaleX(1.3) scaleY(0.6)" style="transform-box:fill-box;transform-origin:50% 50%">
+          <animate attributeName="scaleY" values="1;0.07;1" dur="1.8s" begin="0.1s" repeatCount="indefinite" calcMode="discrete"/>
+        </rect>
+      </g>
+    </g>
   </g>
+  <!-- presence dot -->
+  <circle cx="886.4" cy="196.4" r="6" fill="#FF6B00" stroke="#0A0E1A" stroke-width="2" opacity="0.9"/>
+  <!-- label -->
+  <text x="850" y="215" text-anchor="middle" font-family="'JetBrains Mono','Fira Code',monospace" font-size="11px" font-weight="700" fill="#FF6B00" letter-spacing="1px">archify</text>
+  <text x="850" y="229" text-anchor="middle" font-family="'JetBrains Mono','Fira Code',monospace" font-size="9px" fill="#1E3A5F">hexagon · renders</text>
 </g>
-<g class="b3e" style="transform-origin:640px 195px">
-  <rect x="622" y="188" width="12" height="16" rx="4" fill="#0A0E1A"/>
-  <rect x="648" y="185" width="12" height="21" rx="4" fill="#0A0E1A"/>
-</g>
-<text x="640" y="272" text-anchor="middle" class="lbl" fill="#FF6B00">builder</text>
-<text x="640" y="287" text-anchor="middle" class="sub">squircle · ships</text>
 
-<!-- ══════════════════════════════════════════════════
-     BOT 4 — MEMORY — TEARDROP — violet — cx=890,cy=195
-══════════════════════════════════════════════════ -->
-<g class="b4">
-  <g transform="translate(840,145)">
-    <path d="M50 3 Q45 3 42 8 L20 41 Q4 65 10 81 Q18 96 50 96 Q82 96 90 81 Q96 65 80 41 L58 8 Q55 3 50 3 Z" fill="#7C3AED" filter="url(#gv)"/>
-    <ellipse cx="26" cy="24" rx="13" ry="8" fill="rgba(255,255,255,0.20)" transform="rotate(-24 26 24)"/>
+<defs>
+  <filter id="gfcoach" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<g opacity="0" style="transform-origin:1000px 160px">
+  <animate attributeName="opacity" dur="32s" repeatCount="indefinite"
+    keyTimes="0;0.1875;0.2000;0.8750;0.9375;1" values="0;0;1;1;0;0" calcMode="spline"
+    keySplines="0 0 1 1;0.4 0 0.2 1;0 0 1 1;0 0 1 1;0 0 1 1"/>
+  <!-- agent body -->
+  <g style="transform-box:fill-box;transform-origin:50% 50%">
+    <animateTransform attributeName="transform" type="translate" additive="sum"
+      values="0,0;0,0;0,0" dur="2.8s" repeatCount="indefinite"/>
+    <g transform="translate(965,125)">
+      <path d="M50 3 Q45 3 42 8 L20 41 Q4 65 10 81 Q18 96 50 96 Q82 96 90 81 Q96 65 80 41 L58 8 Q55 3 50 3 Z" fill="#00FF9F" filter="url(#gfcoach)" transform="scale(0.7) translate(15.049999999999999,15.049999999999999)"/>
+      <!-- highlight -->
+      <ellipse cx="25.2" cy="23.8" rx="12.6" ry="8.4"
+        fill="rgba(255,255,255,0.22)" transform="rotate(-24 25.2 23.8)"/>
+      <!-- eyes -->
+      <g style="transform-box:fill-box;transform-origin:50% 50%">
+        <rect x="20.650000000000002" y="28" width="6.3" height="14" rx="3.15" fill="#0A0E1A" transform="scaleX(0.9) scaleY(0.82)" style="transform-box:fill-box;transform-origin:50% 50%">
+          <animate attributeName="scaleY" values="1;0.07;1" dur="3.4s" repeatCount="indefinite" calcMode="discrete"/>
+        </rect>
+        <rect x="37.449999999999996" y="28" width="6.3" height="14" rx="3.15" fill="#0A0E1A" transform="scaleX(0.9) scaleY(0.82)" style="transform-box:fill-box;transform-origin:50% 50%">
+          <animate attributeName="scaleY" values="1;0.07;1" dur="3.4s" begin="0.1s" repeatCount="indefinite" calcMode="discrete"/>
+        </rect>
+      </g>
+    </g>
   </g>
+  <!-- presence dot -->
+  <circle cx="1036.4" cy="196.4" r="6" fill="#00FF9F" stroke="#0A0E1A" stroke-width="2" opacity="0.9"/>
+  <!-- label -->
+  <text x="1000" y="215" text-anchor="middle" font-family="'JetBrains Mono','Fira Code',monospace" font-size="11px" font-weight="700" fill="#00FF9F" letter-spacing="1px">coach</text>
+  <text x="1000" y="229" text-anchor="middle" font-family="'JetBrains Mono','Fira Code',monospace" font-size="9px" fill="#1E3A5F">teardrop · reflects</text>
 </g>
-<g class="b4e" style="transform-origin:890px 195px">
-  <rect x="872" y="187" width="10" height="20" rx="5" fill="#0A0E1A" transform="rotate(-15 877 197)"/>
-  <rect x="897" y="187" width="10" height="20" rx="5" fill="#0A0E1A" transform="rotate(-15 902 197)"/>
-</g>
-<text x="890" y="272" text-anchor="middle" class="lbl" fill="#7C3AED">memory</text>
-<text x="890" y="287" text-anchor="middle" class="sub">teardrop · persists</text>
 
-<!-- ══════════════════════════════════════════════════
-     BOT 5 — GUARDIAN — TRIANGLE — red — cx=1060,cy=88
-══════════════════════════════════════════════════ -->
-<circle cx="1060" cy="88" r="42" fill="none" stroke="#FF4444" stroke-width="1" class="ar"/>
-<g class="b5">
-  <g transform="translate(1010,38)">
-    <path d="M50 7 Q57 7 60 14 L93 77 Q97 86 88 89 Q85 90 81 90 H19 Q10 90 7 83 Q5 78 8 73 L40 14 Q43 7 50 7 Z" fill="#FF4444" filter="url(#gr)"/>
-    <ellipse cx="28" cy="36" rx="11" ry="7" fill="rgba(255,255,255,0.18)" transform="rotate(-24 28 36)"/>
+<defs>
+  <filter id="gfwiki" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<g opacity="0" style="transform-origin:775px 310px">
+  <animate attributeName="opacity" dur="32s" repeatCount="indefinite"
+    keyTimes="0;0.2156;0.2281;0.8750;0.9375;1" values="0;0;1;1;0;0" calcMode="spline"
+    keySplines="0 0 1 1;0.4 0 0.2 1;0 0 1 1;0 0 1 1;0 0 1 1"/>
+  <!-- agent body -->
+  <g style="transform-box:fill-box;transform-origin:50% 50%">
+    <animateTransform attributeName="transform" type="translate" additive="sum"
+      values="0,0;0,0;0,0" dur="2.2s" repeatCount="indefinite"/>
+    <g transform="translate(740,275)">
+      <path d="M28 4H72A24 24 0 0 1 96 28V72A24 24 0 0 1 72 96H28A24 24 0 0 1 4 72V28A24 24 0 0 1 28 4Z" fill="#BD93F9" filter="url(#gfwiki)" transform="scale(0.7) translate(15.049999999999999,15.049999999999999)"/>
+      <!-- highlight -->
+      <ellipse cx="25.2" cy="23.8" rx="12.6" ry="8.4"
+        fill="rgba(255,255,255,0.22)" transform="rotate(-24 25.2 23.8)"/>
+      <!-- eyes -->
+      <g style="transform-box:fill-box;transform-origin:50% 50%">
+        <rect x="20.650000000000002" y="28" width="6.3" height="14" rx="3.15" fill="#0A0E1A" >
+          <animate attributeName="scaleY" values="1;0.07;1" dur="3.4s" repeatCount="indefinite" calcMode="discrete"/>
+        </rect>
+        <rect x="37.449999999999996" y="28" width="6.3" height="14" rx="3.15" fill="#0A0E1A" >
+          <animate attributeName="scaleY" values="1;0.07;1" dur="3.4s" begin="0.1s" repeatCount="indefinite" calcMode="discrete"/>
+        </rect>
+      </g>
+    </g>
   </g>
+  <!-- presence dot -->
+  <circle cx="811.4" cy="346.4" r="6" fill="#BD93F9" stroke="#0A0E1A" stroke-width="2" opacity="0.9"/>
+  <!-- label -->
+  <text x="775" y="365" text-anchor="middle" font-family="'JetBrains Mono','Fira Code',monospace" font-size="11px" font-weight="700" fill="#BD93F9" letter-spacing="1px">wiki</text>
+  <text x="775" y="379" text-anchor="middle" font-family="'JetBrains Mono','Fira Code',monospace" font-size="9px" fill="#1E3A5F">squircle · stores</text>
 </g>
-<g class="b5e" style="transform-origin:1060px 88px">
-  <rect x="1043" y="82" width="9" height="13" rx="3" fill="#0A0E1A" transform="rotate(16 1048 88)"/>
-  <rect x="1064" y="82" width="9" height="13" rx="3" fill="#0A0E1A" transform="rotate(16 1069 88)"/>
-</g>
-<text x="1060" y="158" text-anchor="middle" class="lbl" fill="#FF4444">guardian</text>
-<text x="1060" y="173" text-anchor="middle" class="sub">triangle · alerts</text>
 
-<!-- ── bottom ── -->
-<line x1="40" y1="312" x2="1140" y2="312" stroke="#1E3A5F" stroke-width="0.5" opacity="0.4"/>
-<text x="590" y="332" text-anchor="middle" font-family="Courier New,monospace" font-size="10px" fill="#1E3A5F" letter-spacing="2px">5 agents  ·  DEPLOYED  ·  zero cloud deps</text>
+<defs>
+  <filter id="gfenforcer" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<g opacity="0" style="transform-origin:925px 310px">
+  <animate attributeName="opacity" dur="32s" repeatCount="indefinite"
+    keyTimes="0;0.2437;0.2562;0.8750;0.9375;1" values="0;0;1;1;0;0" calcMode="spline"
+    keySplines="0 0 1 1;0.4 0 0.2 1;0 0 1 1;0 0 1 1;0 0 1 1"/>
+  <!-- agent body -->
+  <g style="transform-box:fill-box;transform-origin:50% 50%">
+    <animateTransform attributeName="transform" type="translate" additive="sum"
+      values="0,0;0,0;0,0;0,0" dur="2.8s" repeatCount="indefinite"/>
+    <g transform="translate(890,275)">
+      <path d="M50 7 Q57 7 60 14 L93 77 Q97 86 88 89 Q85 90 81 90 H19 Q10 90 7 83 Q5 78 8 73 L40 14 Q43 7 50 7 Z" fill="#FF4444" filter="url(#gfenforcer)" transform="scale(0.7) translate(15.049999999999999,15.049999999999999)"/>
+      <!-- highlight -->
+      <ellipse cx="25.2" cy="23.8" rx="12.6" ry="8.4"
+        fill="rgba(255,255,255,0.22)" transform="rotate(-24 25.2 23.8)"/>
+      <!-- eyes -->
+      <g style="transform-box:fill-box;transform-origin:50% 50%">
+        <rect x="20.650000000000002" y="28" width="6.3" height="14" rx="3.15" fill="#0A0E1A" transform="rotate(16deg)" style="transform-box:fill-box;transform-origin:50% 50%">
+          <animate attributeName="scaleY" values="1;0.07;1" dur="1.2s" repeatCount="indefinite" calcMode="discrete"/>
+        </rect>
+        <rect x="37.449999999999996" y="28" width="6.3" height="14" rx="3.15" fill="#0A0E1A" transform="rotate(16deg)" style="transform-box:fill-box;transform-origin:50% 50%">
+          <animate attributeName="scaleY" values="1;0.07;1" dur="1.2s" begin="0.1s" repeatCount="indefinite" calcMode="discrete"/>
+        </rect>
+      </g>
+    </g>
+  </g>
+  <!-- presence dot -->
+  <circle cx="961.4" cy="346.4" r="6" fill="#FF4444" stroke="#0A0E1A" stroke-width="2" opacity="0.9"/>
+  <!-- label -->
+  <text x="925" y="365" text-anchor="middle" font-family="'JetBrains Mono','Fira Code',monospace" font-size="11px" font-weight="700" fill="#FF4444" letter-spacing="1px">enforcer</text>
+  <text x="925" y="379" text-anchor="middle" font-family="'JetBrains Mono','Fira Code',monospace" font-size="9px" fill="#1E3A5F">triangle · guards</text>
+</g>
+
+<!-- bottom bar -->
+<line x1="40" y1="396" x2="1140" y2="396" stroke="#1E3A5F" stroke-width="0.4" opacity="0.3"/>
+<text x="590" y="412" text-anchor="middle" font-family="'JetBrains Mono','Fira Code',monospace" font-size="9px" fill="#1E3A5F" letter-spacing="2px">abheos · 5 agents · DEPLOYED · zero cloud deps</text>
 </svg>
