@@ -6,7 +6,6 @@
 </a>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/abheos-v2.3-FF6B00?style=flat-square&labelColor=0A0E1A&logoColor=white"/>
   <img src="https://img.shields.io/badge/STATUS-DEPLOYED-00FF9F?style=flat-square&labelColor=0A0E1A"/>
   <img src="https://img.shields.io/badge/BASE-BERLIN%20%F0%9F%87%A9%F0%9F%87%AA-00D4FF?style=flat-square&labelColor=0A0E1A"/>
   <img src="https://img.shields.io/badge/AGENTS-ACTIVE-00FF9F?style=flat-square&labelColor=0A0E1A"/>
@@ -17,10 +16,6 @@
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
   </a>
   <img src="https://komarev.com/ghpvc/?username=eabhijith&color=00D4FF&style=for-the-badge&label=PROFILE+VIEWS"/>
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/eabhijith/eabhijith/main/agents-card.svg" width="100%" alt="Agent Roster"/>
 </p>
 
 ---

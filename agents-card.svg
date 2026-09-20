@@ -205,7 +205,7 @@
 
 <rect width="1180" height="360" rx="16" fill="url(#bg)"/>
 <rect width="1180" height="360" rx="16" fill="none" stroke="url(#borderG)" stroke-width="1.5" opacity="0.4"/>
-<text x="590" y="26" text-anchor="middle" class="ptitle">AGENT.ROSTER  ·  abheos runtime  ·  20s dispatch cycle</text>
+<text x="590" y="26" text-anchor="middle" class="ptitle">AGENT.ROSTER  ·  20s dispatch cycle</text>
 <line x1="40" y1="34" x2="1140" y2="34" stroke="#00D4FF" stroke-width="0.5" opacity="0.1"/>
 
 <!-- ── CONNECTION LANES ── -->
@@ -356,5 +356,5 @@
 
 <!-- ── bottom ── -->
 <line x1="40" y1="312" x2="1140" y2="312" stroke="#1E3A5F" stroke-width="0.5" opacity="0.4"/>
-<text x="590" y="332" text-anchor="middle" font-family="Courier New,monospace" font-size="10px" fill="#1E3A5F" letter-spacing="2px">abheos  ·  5 agents  ·  DEPLOYED  ·  zero cloud deps</text>
+<text x="590" y="332" text-anchor="middle" font-family="Courier New,monospace" font-size="10px" fill="#1E3A5F" letter-spacing="2px">5 agents  ·  DEPLOYED  ·  zero cloud deps</text>
 </svg>

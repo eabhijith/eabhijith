@@ -15,14 +15,14 @@
 
 I build orchestrators, not scripts. Every problem I approach gets broken into: what is the entrypoint, what are the tools, where does the memory live, what does failure look like. If I can't answer all four, I don't start writing.
 
-abheos — my personal AI OS — is the clearest expression of this. It's file-based, git-backed, portable across machines and employers. No ChromaDB, no cloud, no vendor lock-in. Git is the graph.
+I build systems that are file-based, git-backed, portable across machines and employers. No cloud dependencies, no vendor lock-in. Git is the graph.
 
 ## What I'm available for
 
 - Multi-agent architecture — design, review, debugging
 - LLM orchestration with Pydantic-AI or LangGraph
 - Code review on production AI systems
-- Questions about abheos or archify
+- Questions about archify
 
 ## How to get my attention
 
