@@ -141,6 +141,47 @@
   insight stored ✓
 </text>
 
+<!-- B: Attention arcs (softmax QKt/sqrt(dk)) -->
+<g opacity="0">
+  <animate attributeName="opacity" from="0" to="0.138" dur="0.3s" begin="9.0s" fill="freeze"/>
+  <path d="M140,255 Q265,248.8527534706349 390,255" fill="none" stroke="#00D4FF" stroke-width="0.92" opacity="0.6" stroke-dasharray="4 4"/>
+  
+  </g>
+<g opacity="0">
+  <animate attributeName="opacity" from="0" to="0.195" dur="0.3s" begin="9.3s" fill="freeze"/>
+  <path d="M390,255 Q510,246.3397669413783 630,255" fill="none" stroke="#FF6B00" stroke-width="1.30" opacity="0.6" stroke-dasharray="4 4"/>
+  
+  </g>
+<g opacity="0">
+  <animate attributeName="opacity" from="0" to="0.179" dur="0.3s" begin="9.6s" fill="freeze"/>
+  <path d="M630,255 Q750,247.04163321942835 870,255" fill="none" stroke="#00FF9F" stroke-width="1.19" opacity="0.6" stroke-dasharray="4 4"/>
+  
+  </g>
+<g opacity="0">
+  <animate attributeName="opacity" from="0" to="0.150" dur="0.3s" begin="9.3s" fill="freeze"/>
+  <path d="M390,255 Q265,248.32251356672126 140,255" fill="none" stroke="#FF6B00" stroke-width="1.00" opacity="0.6" stroke-dasharray="4 4"/>
+  
+  </g>
+<g opacity="0">
+  <animate attributeName="opacity" from="0" to="0.206" dur="0.3s" begin="9.6s" fill="freeze"/>
+  <path d="M630,255 Q510,245.84569921061268 390,255" fill="none" stroke="#00FF9F" stroke-width="1.37" opacity="0.6" stroke-dasharray="4 4"/>
+  
+  </g>
+<g opacity="0">
+  <animate attributeName="opacity" from="0" to="0.154" dur="0.3s" begin="9.9s" fill="freeze"/>
+  <path d="M870,255 Q750,248.15411197660845 630,255" fill="none" stroke="#7C3AED" stroke-width="1.03" opacity="0.6" stroke-dasharray="4 4"/>
+  
+  </g>
+<g opacity="0">
+  <animate attributeName="opacity" from="0" to="0.122" dur="0.3s" begin="9.7s" fill="freeze"/>
+  <path d="M1062,170 Q726,164.58092717793437 390,207" fill="none" stroke="#FF4444" stroke-width="0.81" opacity="0.6" stroke-dasharray="4 4"/>
+  
+  </g>
+<g opacity="0">
+  <animate attributeName="opacity" from="0" to="0.114" dur="0.3s" begin="9.9s" fill="freeze"/>
+  <path d="M1062,170 Q846,164.92196317676954 630,207" fill="none" stroke="#FF4444" stroke-width="0.76" opacity="0.6" stroke-dasharray="4 4"/>
+  
+  </g>
 <!-- ══════════════════════════════════════════════════
      BOT 1 — HARVESTER — BLOB — cyan — cx=140
 ══════════════════════════════════════════════════ -->

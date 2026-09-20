@@ -156,6 +156,26 @@
   <text x="256" y="472" text-anchor="middle"
     font-family="'Courier New', Consolas, monospace" font-size="9px"
     fill="#00D4FF" opacity="0.4" letter-spacing="1px">Senior AI &amp; Automation Specialist · Berlin</text>
+<g clip-path="url(#scanClip)">
+<path d="M64.0,240.0 L73.6,243.6 L83.2,247.1 L92.8,250.5 L102.4,253.5 L112.0,256.3 L121.6,258.6 L131.2,260.5 L140.8,261.9 L150.4,262.8 L160.0,263.0 L169.6,262.8 L179.2,261.9 L188.8,260.5 L198.4,258.6 L208.0,256.3 L217.6,253.5 L227.2,250.5 L236.8,247.1 L246.4,243.6 L256.0,240.0 L265.6,236.4 L275.2,232.9 L284.8,229.5 L294.4,226.5 L304.0,223.7 L313.6,221.4 L323.2,219.5 L332.8,218.1 L342.4,217.2 L352.0,217.0 L361.6,217.2 L371.2,218.1 L380.8,219.5 L390.4,221.4 L400.0,223.7 L409.6,226.5 L419.2,229.5 L428.8,232.9 L438.4,236.4 L448.0,240.0" fill="none" stroke="#FF6B00"
+    stroke-width="1.2" opacity="0.1">
+    <animateTransform attributeName="transform" type="translate"
+      from="0,-384" to="0,384" dur="8s"
+      repeatCount="indefinite" calcMode="linear"/>
+  </path>
+<path d="M64.0,240.0 L73.6,247.0 L83.2,252.4 L92.8,255.2 L102.4,254.6 L112.0,250.9 L121.6,244.7 L131.2,237.6 L140.8,231.0 L150.4,226.3 L160.0,224.6 L169.6,226.3 L179.2,231.0 L188.8,237.6 L198.4,244.7 L208.0,250.9 L217.6,254.6 L227.2,255.2 L236.8,252.4 L246.4,247.0 L256.0,240.0 L265.6,233.0 L275.2,227.6 L284.8,224.8 L294.4,225.4 L304.0,229.1 L313.6,235.3 L323.2,242.4 L332.8,249.0 L342.4,253.7 L352.0,255.4 L361.6,253.7 L371.2,249.0 L380.8,242.4 L390.4,235.3 L400.0,229.1 L409.6,225.4 L419.2,224.8 L428.8,227.6 L438.4,233.0 L448.0,240.0" fill="none" stroke="#00FF9F"
+    stroke-width="1.2" opacity="0.07">
+    <animateTransform attributeName="transform" type="translate"
+      from="0,-384" to="0,384" dur="5s"
+      repeatCount="indefinite" calcMode="linear"/>
+  </path>
+<path d="M64.0,240.0 L73.6,248.6 L83.2,247.8 L92.8,238.5 L102.4,230.9 L112.0,233.2 L121.6,243.0 L131.2,249.5 L140.8,245.6 L150.4,235.6 L160.0,230.4 L169.6,235.6 L179.2,245.6 L188.8,249.5 L198.4,243.0 L208.0,233.2 L217.6,230.9 L227.2,238.5 L236.8,247.8 L246.4,248.6 L256.0,240.0 L265.6,231.4 L275.2,232.2 L284.8,241.5 L294.4,249.1 L304.0,246.8 L313.6,237.0 L323.2,230.5 L332.8,234.4 L342.4,244.4 L352.0,249.6 L361.6,244.4 L371.2,234.4 L380.8,230.5 L390.4,237.0 L400.0,246.8 L409.6,249.1 L419.2,241.5 L428.8,232.2 L438.4,231.4 L448.0,240.0" fill="none" stroke="#00D4FF"
+    stroke-width="1.2" opacity="0.05">
+    <animateTransform attributeName="transform" type="translate"
+      from="0,-384" to="0,384" dur="3s"
+      repeatCount="indefinite" calcMode="linear"/>
+  </path>
+</g>
 
   <rect x="504" y="8" width="660" height="540" rx="8"
   fill="#11141F" fill-opacity="0.85"

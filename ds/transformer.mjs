@@ -39,7 +39,7 @@ export function buildPEWaves({
     const phase = i * (Math.PI / d);
 
     // Build sine wave as SVG path
-    const steps = 120;
+    const steps = 40;  // reduced for SVG size
     const pts = [];
     for (let s = 0; s <= steps; s++) {
       const x = (s / steps) * W;
@@ -125,17 +125,15 @@ export function attentionArc({ x1, y1, x2, y2, weight, color: col, agentId, targ
 // Each band has different color (low freq = warm, high freq = cool)
 export function buildFreqScan({ cx, cy, r, scanClipId, theme = "dark" }) {
   const freqs = [
-    { f: 1,  col: color.amber,  amp: 0.15, dur: "8s",   opacity: 0.12 },
-    { f: 2,  col: color.green,  amp: 0.10, dur: "5.3s",  opacity: 0.09 },
-    { f: 4,  col: color.cyan,   amp: 0.07, dur: "3.7s",  opacity: 0.07 },
-    { f: 8,  col: color.violet, amp: 0.04, dur: "2.4s",  opacity: 0.05 },
-    { f: 16, col: color.cyan,   amp: 0.02, dur: "1.6s",  opacity: 0.04 },
+    { f: 1, col: color.amber,  amp: 0.12, dur: "8s",  opacity: 0.10 },
+    { f: 3, col: color.green,  amp: 0.08, dur: "5s",  opacity: 0.07 },
+    { f: 7, col: color.cyan,   amp: 0.05, dur: "3s",  opacity: 0.05 },
   ];
 
   const W = r * 2;
   const waves = freqs.map(({ f, col, amp, dur, opacity }) => {
     const A = r * amp;  // amplitude in px
-    const steps = 80;
+    const steps = 40;  // reduced for SVG size
     const pts = [];
     for (let s = 0; s <= steps; s++) {
       const x = cx - r + (s / steps) * W;
