@@ -25,6 +25,14 @@
 
 ---
 
+### GitHub Pipeline
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/eabhijith/eabhijith/main/dist/github-agents.svg" width="100%" alt="GitHub Agents Pipeline"/>
+</p>
+
+---
+
 ### GitHub Stats
 
 <p align="center">

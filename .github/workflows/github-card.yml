@@ -1,0 +1,37 @@
+name: Generate GitHub Agents Card
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch: {}
+  push:
+    paths:
+      - "generate-github-card.mjs"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Generate GitHub agents card
+        env:
+          GH_USERNAME: eabhijith
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OUTPUT_PATH: dist/github-agents.svg
+        run: node generate-github-card.mjs
+
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update github agents card"
+          file_pattern: dist/github-agents.svg
