@@ -1,12 +1,12 @@
 <a href="https://github.com/eabhijith/eabhijith">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/eabhijith/eabhijith/main/dark.svg">
-    <img alt="Abhijith Eanuga — GitHub Profile" src="https://raw.githubusercontent.com/eabhijith/eabhijith/main/light.svg" width="100%"/>
+    <img alt="Abhijith Eanuga — Agent Deployment Card" src="https://raw.githubusercontent.com/eabhijith/eabhijith/main/light.svg" width="100%"/>
   </picture>
 </a>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=3000&pause=800&color=A78BFA&center=true&vCenter=true&width=600&lines=Senior+AI+%26+Automation+Specialist;Building+Multi-Agent+Systems;Pydantic-AI+%C2%B7+LangGraph+%C2%B7+Bedrock;Apex+%C2%B7+JavaScript+%C2%B7+Python+%C2%B7+React;Functional+Programming+Advocate" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=3000&pause=800&color=A78BFA&center=true&vCenter=true&width=700&lines=orchestrator%40abheos%3A~%24+agent+deploy+eabhijith;Senior+AI+%26+Automation+Specialist;Building+Multi-Agent+Systems;Pydantic-AI+%C2%B7+LangGraph+%C2%B7+Bedrock;Functional+%C2%B7+Minimal+%C2%B7+Ship+it" alt="Typing SVG"/>
 </p>
 
 <p align="center">
@@ -18,31 +18,35 @@
 
 ---
 
-```javascript
-const abhijith = {
-  name:     "Abhijith Eanuga",
-  location: "Berlin, Germany",
-  role:     "Senior AI & Automation Specialist",
+```python
+from agent import BaseAgent, tool, memory
 
-  currentlyBuilding: [
-    "Multi-agent enterprise system — Pydantic-AI + LangGraph",
-    "Bedrock-powered AI assistant (production — KB, summariser, BI genie)",
-    "abheos — personal AI workspace, file-based, zero cloud deps",
-    "archify — diagram-as-code renderer (architecture, dataflow, sequence)",
-  ],
+@agent(
+    id          = "eabhijith",
+    designation = "Senior AI & Automation Specialist",
+    base        = "Berlin, Germany",
+    status      = "DEPLOYED · ACTIVE",
+)
+class Abhijith(BaseAgent):
 
-  stack: {
-    languages:  ["Python", "JavaScript", "TypeScript", "Apex"],
-    agents:     ["Pydantic-AI", "LangGraph", "AWS Bedrock", "Google ADK"],
-    backend:    ["FastAPI", "Node.js", "Salesforce"],
-    frontend:   ["React"],
-    cloud:      ["AWS", "Databricks"],
-    tools:      ["Git", "Docker", "Claude Code"],
-  },
+    mission = "Multi-agent systems · LLM orchestration · Production AI tooling"
 
-  philosophy: "Functional · Minimal · Ship it",
-  funFact:    "World is all about mind and matter — if we don't mind, it doesn't matter",
-};
+    capabilities = [
+        "Pydantic-AI", "LangGraph", "AWS Bedrock", "Google ADK",
+        "Python", "JavaScript", "Apex", "React", "FastAPI",
+        "AWS", "Databricks", "Salesforce",
+    ]
+
+    active_missions = {
+        "TARS"    : "Enterprise agentic loop — fire, enrich, propose, approve, write",
+        "bedrock" : "AWS Bedrock AI assistant in production (KB, summariser, BI genie)",
+        "abheos"  : "Personal AI OS — file-based, git-backed, 26 slash commands, zero cloud deps",
+        "archify" : "Diagram-as-code renderer — architecture, dataflow, sequence from JSON",
+    }
+
+    memory_model = "4-layer · git-backed · portable · swap employer.md to change jobs"
+    philosophy   = "Functional · Minimal · Ship it"
+    fun_fact     = "World is all about mind and matter — if we don't mind, it doesn't matter"
 ```
 
 ---
