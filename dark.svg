@@ -189,6 +189,13 @@
   <g clip-path="url(#ascii-panel-clip)">
     <rect x="14" y="26" width="488" height="560" fill="url(#sl)" opacity="0.9" pointer-events="none"/>
   </g>
+
+  <!-- sweep line clipped to ASCII portrait panel only -->
+  <g clip-path="url(#ascii-panel-clip)">
+    <rect x="14" y="-44" width="488" height="55" fill="url(#scanGrad)" opacity="0.65" style="mix-blend-mode:screen" pointer-events="none">
+      <animateTransform attributeName="transform" type="translate" from="0 -44" to="0 530" dur="4.2s" repeatCount="indefinite"/>
+    </rect>
+  </g>
   <!-- HUD corner brackets on ASCII panel -->
   <g opacity="0.6">
     <path class="brk" pathLength="1" d="M14,52 L14,26 L40,26"/>
