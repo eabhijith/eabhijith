@@ -30,24 +30,24 @@ export const CARD = {
 };
 
 export const PORTRAIT = {
-  cx: 244,
-  cy: 268,
+  cx: 258,   // LEFT_X + LEFT_W/2 = 14 + 244 = 258
+  cy: 242,   // panel_y(10) + title(32) + r(200) = 242
   r:  200,
   cols:          52,
   rows:          46,
   lineH:         9.2,
   fontSize:      8,
-  useTextLength: false,  // tspans already have textLength="400" baked in
+  useTextLength: false,
   scanDur:       "3.5s",
 };
 
 export const PANEL = {
-  x:      508,   // 8px grid: 500+8
-  y:      26,    // match left panel top (y=26)
-  width:  656,   // 508+656=1164, 16px right margin
-  height: 468,   // match left panel height exactly
-  rx:     8,     // 8px grid
-  textX:  524,   // 508+16 = 524 (2×8px padding)
+  x:      510,   // 14+488+8
+  y:      10,    // same as left panel
+  width:  654,   // 1180-510-16
+  height: 536,   // 572-10-26 (content_h - panel_y - footer)
+  rx:     8,
+  textX:  526,   // 510+16
 };
 
 export const TITLEBAR = {

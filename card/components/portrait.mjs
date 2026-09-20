@@ -1,20 +1,19 @@
 /**
  * card/components/portrait.mjs
- * Left panel: circular ASCII portrait + coordinated scan sweep.
+ * Left panel — computed from first principles, all values verified:
  *
- * Scan timing contract (exported for info-panel.mjs):
- *   CYCLE     = 8s total loop
- *   SCAN_DUR  = 5s  (scan travels face top→bottom)
- *   HOLD_DUR  = 2s  (all lines visible)
- *   FADE_DUR  = 0.5s (fade out)
- *   FACE_TOP  = 68  (local y where scan starts)
- *   FACE_H    = 400 (pixels scan travels)
- *
- * Each info line reveals when scan_t = (face_y - FACE_TOP) / FACE_H * SCAN_DUR
+ *  Card 1180×610, titlebar 38px → content 572px
+ *  Left panel:  x=14,  y=10, w=488, h=536 → bottom=546
+ *  Circle:      cx=258, cy=242, r=200
+ *    top  = cy-r = 42  (panel_y+title_h = 10+32)
+ *    bottom = cy+r = 442
+ *    label1 = cy+r+18 = 460
+ *    label2 = cy+r+34 = 476
+ *    panel bottom = 546  → labels inside ✓
  */
 
 import { PORTRAIT, THEMES } from "../config.mjs";
-import fs from "node:fs";
+import fs   from "node:fs";
 import path from "node:path";
 
 export const SCAN = {
@@ -23,43 +22,37 @@ export const SCAN = {
   HOLD_DUR: 2.0,
   FADE_DUR: 0.5,
   FACE_TOP: 68,
-  FACE_H:   400,
+  FACE_H:   374,  // cy+r - FACE_TOP = 442-68
 };
 
 export function buildPortrait(theme, tspanFile) {
-  const t = THEMES[theme];
+  const t  = THEMES[theme];
   const { cx, cy, r } = PORTRAIT;
 
   let tspans = "";
-  const tspanPath = path.resolve(import.meta.dirname, "..", tspanFile);
-  if (fs.existsSync(tspanPath)) {
-    tspans = fs.readFileSync(tspanPath, "utf8").trim();
-  }
+  const tp = path.resolve(import.meta.dirname, "..", tspanFile);
+  if (fs.existsSync(tp)) tspans = fs.readFileSync(tp, "utf8").trim();
 
-  const scanTop = SCAN.FACE_TOP;
-  const scanH   = SCAN.FACE_H;
-  const dur     = `${SCAN.CYCLE}s`;
+  const { SCAN_DUR, CYCLE, FACE_TOP, FACE_H } = SCAN;
+  const scanFrac = (SCAN_DUR / CYCLE).toFixed(3);
 
-  // Scan rect: starts at face top, travels scanH px over SCAN_DUR seconds
-  // Uses animateTransform — SMIL only, no CSS
-  const scanFraction  = SCAN.SCAN_DUR  / SCAN.CYCLE;          // 0.625
-  const holdEnd       = (SCAN.SCAN_DUR + SCAN.HOLD_DUR)       / SCAN.CYCLE;  // 0.875
-  const fadeEnd       = (SCAN.SCAN_DUR + SCAN.HOLD_DUR + SCAN.FADE_DUR) / SCAN.CYCLE; // 0.9375
+  // Panel dimensions (match config exactly)
+  const PX = 14, PY = 10, PW = 488, PH = 536;
 
   return `
-  <!-- ── LEFT PANEL y=10, height=532 to match right panel ── -->
-  <rect x="14" y="10" width="488" height="532" rx="8"
+  <!-- ═══ LEFT PANEL x=${PX} y=${PY} w=${PW} h=${PH} bottom=${PY+PH} ═══ -->
+  <rect x="${PX}" y="${PY}" width="${PW}" height="${PH}" rx="8"
     fill="${t.bg[1]}" fill-opacity="0.4"
     stroke="url(#borderGrad)" stroke-width="1" opacity="0.5"/>
 
-  <!-- panel title inside box -->
-  <text x="30" y="26"
+  <!-- title inside panel, 16px from top -->
+  <text x="${PX+16}" y="${PY+20}"
     font-family="'Courier New',monospace" font-size="11px"
     fill="${t.panelTitle}" letter-spacing="2px" opacity="0.6">VISUAL.ID</text>
-  <line x1="14" y1="32" x2="502" y2="32"
+  <line x1="${PX}" y1="${PY+28}" x2="${PX+PW}" y2="${PY+28}"
     stroke="${t.panelTitle}" stroke-width="0.5" opacity="0.2"/>
 
-  <!-- ASCII portrait clipped to circle -->
+  <!-- ASCII portrait: tspans use x=44 textLength=400 from working commit -->
   <g clip-path="url(#portraitClip)">
     <text x="0" y="0"
       font-family="'Courier New',Consolas,monospace"
@@ -69,55 +62,51 @@ export function buildPortrait(theme, tspanFile) {
     </text>
   </g>
 
-  <!-- scan sweep: glow layer -->
+  <!-- scan sweep clipped to portrait circle -->
   <g clip-path="url(#scanClip)">
-    <rect x="${cx - r}" y="${scanTop}" width="${r * 2}" height="18"
+    <rect x="${cx-r}" y="${FACE_TOP}" width="${r*2}" height="18"
       fill="${t.scanLine}" opacity="0.10">
       <animateTransform attributeName="transform" type="translate"
-        from="0,0" to="0,${scanH}"
-        dur="${dur}" repeatCount="indefinite" calcMode="linear"
-        keyTimes="0;${scanFraction.toFixed(3)};1"
-        values="0 0;0 ${scanH};0 ${scanH}"/>
+        from="0,0" to="0,${FACE_H}" dur="${CYCLE}s" repeatCount="indefinite"
+        calcMode="linear" keyTimes="0;${scanFrac};1" values="0 0;0 ${FACE_H};0 ${FACE_H}"/>
     </rect>
-    <rect x="${cx - r}" y="${scanTop + 7}" width="${r * 2}" height="2"
+    <rect x="${cx-r}" y="${FACE_TOP+7}" width="${r*2}" height="2"
       fill="${t.scanLine}" opacity="0.85">
       <animateTransform attributeName="transform" type="translate"
-        from="0,0" to="0,${scanH}"
-        dur="${dur}" repeatCount="indefinite" calcMode="linear"
-        keyTimes="0;${scanFraction.toFixed(3)};1"
-        values="0 0;0 ${scanH};0 ${scanH}"/>
+        from="0,0" to="0,${FACE_H}" dur="${CYCLE}s" repeatCount="indefinite"
+        calcMode="linear" keyTimes="0;${scanFrac};1" values="0 0;0 ${FACE_H};0 ${FACE_H}"/>
     </rect>
   </g>
 
   <!-- pulsing ring -->
-  <circle cx="${cx}" cy="${cy}" r="${r + 16}" fill="none"
+  <circle cx="${cx}" cy="${cy}" r="${r+16}" fill="none"
     stroke="${t.ring1}" stroke-width="1" opacity="0.4">
-    <animate attributeName="r" values="${r+16};${r+26};${r+16}" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="${r+16};${r+24};${r+16}" dur="3s" repeatCount="indefinite"/>
     <animate attributeName="opacity" values="0.4;0.1;0.4" dur="3s" repeatCount="indefinite"/>
   </circle>
 
   <!-- rotating dashed outer ring -->
-  <circle cx="${cx}" cy="${cy}" r="${r + 32}" fill="none"
-    stroke="${t.ring2}" stroke-width="0.8" stroke-dasharray="6 4" opacity="0.3">
+  <circle cx="${cx}" cy="${cy}" r="${r+30}" fill="none"
+    stroke="${t.ring2}" stroke-width="0.8" stroke-dasharray="6 4" opacity="0.25">
     <animateTransform attributeName="transform" type="rotate"
       from="0 ${cx} ${cy}" to="360 ${cx} ${cy}" dur="12s" repeatCount="indefinite"/>
   </circle>
 
-  <!-- crisp border ring -->
+  <!-- crisp portrait border -->
   <circle cx="${cx}" cy="${cy}" r="${r}" fill="none"
-    stroke="${t.ring1}" stroke-width="2.5" opacity="0.9"/>
+    stroke="${t.ring1}" stroke-width="2" opacity="0.9"/>
 
-  <!-- presence dot -->
-  <circle cx="${cx + Math.round(r * 0.73)}" cy="${cy + Math.round(r * 0.73)}"
+  <!-- presence dot: cx+r*0.7 ≈ 398, cy+r*0.7 ≈ 382 — inside panel (502) ✓ -->
+  <circle cx="${Math.round(cx+r*0.7)}" cy="${Math.round(cy+r*0.7)}"
     r="8" fill="${t.presenceDot}" stroke="${t.bg[1]}" stroke-width="3">
     <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
   </circle>
 
-  <!-- identity labels — inside panel, cy+r+20 = 268+200+20 = 488, cy+r+504 = 504, panel bottom = 542 ✓ -->
-  <text x="${cx}" y="${cy + r + 22}" text-anchor="middle"
+  <!-- identity labels: cy+r+18=460, cy+r+34=476 — inside panel bottom 546 ✓ -->
+  <text x="${cx}" y="${cy+r+18}" text-anchor="middle"
     font-family="'JetBrains Mono','Fira Code',monospace"
-    font-size="15px" fill="${t.ring1}" font-weight="700" letter-spacing="3px">eabhijith</text>
-  <text x="${cx}" y="${cy + r + 38}" text-anchor="middle"
+    font-size="14px" fill="${t.ring1}" font-weight="700" letter-spacing="3px">eabhijith</text>
+  <text x="${cx}" y="${cy+r+34}" text-anchor="middle"
     font-family="'Courier New',monospace"
-    font-size="10px" fill="${t.ring1}" opacity="0.45" letter-spacing="2px">agent · deployed · active</text>`;
+    font-size="9px" fill="${t.ring1}" opacity="0.4" letter-spacing="2px">agent · deployed · active</text>`;
 }

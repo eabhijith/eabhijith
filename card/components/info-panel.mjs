@@ -93,15 +93,15 @@ export function buildInfoPanel(theme) {
   );
 
   return `
-  <!-- ── RIGHT PANEL (matches left panel: y=26, height=468) ── -->
+  <!-- ═══ RIGHT PANEL x=510 y=10 w=654 h=536 bottom=546 ═══ -->
   <rect x="${PANEL.x}" y="${PANEL.y}" width="${PANEL.width}" height="${PANEL.height}" rx="${PANEL.rx}"
     fill="${t.panelFill}" fill-opacity="0.85"
     stroke="${t.panelStroke}" stroke-width="1" opacity="0.7"/>
   <text x="${PANEL.textX}" y="20"
     font-family="'Courier New',monospace" font-size="11px"
     fill="${t.panelTitle}" letter-spacing="2px" opacity="0.6">PROFILE.MANIFEST</text>
-  <line x1="${PANEL.x}" y1="28" x2="${PANEL.x + PANEL.width}" y2="28"
-    stroke="${t.panelStroke}" stroke-width="0.5" opacity="0.3"/>
+  <line x1="${PANEL.x}" y1="${PANEL.y+28}" x2="${PANEL.x+PANEL.width}" y2="${PANEL.y+28}"
+    stroke="${t.panelStroke}" stroke-width="0.5" opacity="0.2"/>
   <!-- section dividers on 8px grid -->
   <line x1="${PANEL.textX}" y1="112" x2="1155" y2="112" stroke="${t.colComment}" stroke-width="0.4" opacity="0.3"/>
   <line x1="${PANEL.textX}" y1="208" x2="1155" y2="208" stroke="${t.colComment}" stroke-width="0.4" opacity="0.3"/>
