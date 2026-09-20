@@ -41,6 +41,8 @@
 <clipPath id="lc19"><rect x="500" y="444" width="0" height="24"><animate attributeName="width" from="0" to="690" dur="0.38s" begin="2.84s" fill="freeze"/></rect></clipPath>
 <clipPath id="lc20"><rect x="500" y="466" width="0" height="24"><animate attributeName="width" from="0" to="690" dur="0.38s" begin="2.95s" fill="freeze"/></rect></clipPath>
 <clipPath id="lc21"><rect x="500" y="488" width="0" height="24"><animate attributeName="width" from="0" to="690" dur="0.38s" begin="3.06s" fill="freeze"/></rect></clipPath>
+<clipPath id="asciiCircleClip"><circle cx="258" cy="262" r="148"/></clipPath>
+<clipPath id="scanCircleClip"><circle cx="258" cy="262" r="148"/></clipPath>
 </defs>
 <rect width="1180" height="610" rx="18" fill="url(#bgGlow)"/>
 <g id="titlebar">
@@ -87,53 +89,63 @@
 </g>
 <g clip-path="url(#asciiCircleClip)">
 <text x="0" y="0" font-family="'Courier New',Consolas,monospace" font-size="8px" letter-spacing="-0.2px" fill="url(#asciiGrad)">
-<tspan x="22" y="70">                 .:::..:.::::...:--=                </tspan>
-<tspan x="22" y="79">               ...::::..::::::..::-=-:              </tspan>
-<tspan x="22" y="88">             :.......::.-:.:.:::::-+-:::            </tspan>
-<tspan x="22" y="97">           .::::::......::::::::::-+-:::.:          </tspan>
-<tspan x="22" y="106">          ..::...:.......:::::::::-+-:::...         </tspan>
-<tspan x="22" y="116">         .....:..::::::..:::::-:::-+-:::....        </tspan>
-<tspan x="22" y="125">        .....::::::::::::::::::::::+-:.......       </tspan>
-<tspan x="22" y="134">       ......::::...::..::::::....:+-::.....::      </tspan>
-<tspan x="22" y="143">      .:::..::-..==:::...::::::.:::+-:::..:::::     </tspan>
-<tspan x="22" y="152">      ...:::::==*%###*=:.:::::-::::+-::----:::.     </tspan>
-<tspan x="22" y="162">     .....::.-*%%%%%%##**:.:::----:+-:::::----:-    </tspan>
-<tspan x="22" y="171">     .:..:.:=#%%%%%%%%%#%+::::::::-+----------:-    </tspan>
-<tspan x="22" y="180">    :::.::.+%%%%%%%%%%%%%#-:-------+=-----:::::::   </tspan>
-<tspan x="22" y="189">    -.:.:.=%%%%%%%%##%%%%#+------::+=::::::::::::   </tspan>
-<tspan x="22" y="198">   --:::::*%%%%##*****##%%*::::::::+=:::::::::.:::  </tspan>
-<tspan x="22" y="208">   =-:::::=%###**++++***#%#::::::::+=:::-:-:::.:::  </tspan>
-<tspan x="22" y="217">  :--..::.:##***++++++++*%#::::::::+=::::.:.:..::.. </tspan>
-<tspan x="22" y="226">  .--.:::.:##***+++++**++##-::::..:+-::...::::.::-: </tspan>
-<tspan x="22" y="235">  :--.:-...*#####*+###**+*#::::::::+=::::.::.:::::- </tspan>
-<tspan x="22" y="244">  :--.::..:*#######*##****+::.-=:-:+=::::.-:::::::: </tspan>
-<tspan x="22" y="254">  .--.:...:+*#####***##***+:::---::+=::::::------== </tspan>
-<tspan x="22" y="263">  .--.:....-+*#***=+++++++**::::---+=---========-== </tspan>
-<tspan x="22" y="272">  .--::....-**++*+==++==++*+=======+=-------------: </tspan>
-<tspan x="22" y="281"> ::=--------**+*#*+++*+++++=-------+---::-:------:.:</tspan>
-<tspan x="22" y="290">  -=--------+#**#%##*+****+---::::-+=---::::------- </tspan>
-<tspan x="22" y="300">  :=-:::::::=#*#####******+-----:--++---=:-:-:::-:: </tspan>
-<tspan x="22" y="309">  :=---:::-:+###%#*++**++*%*--::.::+=:-::.::::::::- </tspan>
-<tspan x="22" y="318">  :=--:...:=%%####**++***#%%#+:-:-:+=::-=:-=-:::::= </tspan>
-<tspan x="22" y="327">  :-:-:::::#%%%%####*****#@%##*=:=-++:::=--=-:::::= </tspan>
-<tspan x="22" y="336">  :=--:::.=%%%%%%##***##**%%%###*+:++::-::::::.:::: </tspan>
-<tspan x="22" y="346">  +=:-::.:#%%%%%%%%#####*-=%%%##%#-++:::::::::..::: </tspan>
-<tspan x="22" y="355">   =::::-*%#%%%%%%%%%%#**=.+#%%###**+:::::.:::...:  </tspan>
-<tspan x="22" y="364">   =:-:=*###%%%*%%%%%#***=.-*%%###**+-::::::::...:  </tspan>
-<tspan x="22" y="373">    -+##*###%%%==####****-.:=%%###***++-::::::...   </tspan>
-<tspan x="22" y="382">    +*#**#####%=.-+*##**+...=%%%#####**-=-:--:...   </tspan>
-<tspan x="22" y="392">     #**#######+...:=++=. ..-%%%%%%%###+--:--:::    </tspan>
-<tspan x="22" y="401">     **#########-...........-%%%#%##%##**+-+=:::    </tspan>
-<tspan x="22" y="410">      ##########*:.........::#%%%%##%####+:=--:     </tspan>
-<tspan x="22" y="419">      %#####%%###+..........:+%%%##%%#%##+:::::     </tspan>
-<tspan x="22" y="428">       %@@%####*#%=.. .. .:++*%@%##%####%*----      </tspan>
-<tspan x="22" y="438">        %%%@%@@@##%:.....-++=+#@@%%%#%#%#*+==       </tspan>
-<tspan x="22" y="447">         %%%%@@@%*#*....:---+#%@@%%%#%%%#**+        </tspan>
-<tspan x="22" y="456">          %%%@@@%###:..:-=.-##*%@%%%%%%####         </tspan>
-<tspan x="22" y="465">           %%%@%@#*%+::-++=+*#*#@###%%%###          </tspan>
-<tspan x="22" y="474">             %%%%%*%+:.:++++*#*#%###%@##            </tspan>
-<tspan x="22" y="484">               %%%##*:. -===+++%%##%%%              </tspan>
+<tspan x="60" y="60">               .:.:::..:.::::...:--=:-              </tspan>
+<tspan x="60" y="69">              ....::::..::::::..::-=-:-             </tspan>
+<tspan x="60" y="78">            ::.......::.-:.:.:::::-+-::::           </tspan>
+<tspan x="60" y="87">           .::::::......::::::::::-+-:::.:          </tspan>
+<tspan x="60" y="96">         :..::...:.......:::::::::-+-:::....        </tspan>
+<tspan x="60" y="106">        ......:..::::::..:::::-:::-+-:::.....       </tspan>
+<tspan x="60" y="115">       ......::::::::::::::::::::::+-:........      </tspan>
+<tspan x="60" y="124">       ......::::...::..::::::....:+-::.....::      </tspan>
+<tspan x="60" y="133">      .:::..::-..==:::...::::::.:::+-:::..:::::     </tspan>
+<tspan x="60" y="142">     :...:::::==*%###*=:.:::::-::::+-::----:::.:    </tspan>
+<tspan x="60" y="152">     .....::.-*%%%%%%##**:.:::----:+-:::::----:-    </tspan>
+<tspan x="60" y="161">    :.:..:.:=#%%%%%%%%%#%+::::::::-+----------:--   </tspan>
+<tspan x="60" y="170">   ::::.::.+%%%%%%%%%%%%%#-:-------+=-----::::::::  </tspan>
+<tspan x="60" y="179">   --.:.:.=%%%%%%%%##%%%%#+------::+=:::::::::::::  </tspan>
+<tspan x="60" y="188">   --:::::*%%%%##*****##%%*::::::::+=:::::::::.:::  </tspan>
+<tspan x="60" y="198">  :=-:::::=%###**++++***#%#::::::::+=:::-:-:::.:::: </tspan>
+<tspan x="60" y="207">  :--..::.:##***++++++++*%#::::::::+=::::.:.:..::.. </tspan>
+<tspan x="60" y="216">  .--.:::.:##***+++++**++##-::::..:+-::...::::.::-: </tspan>
+<tspan x="60" y="225"> ::--.:-...*#####*+###**+*#::::::::+=::::.::.:::::-:</tspan>
+<tspan x="60" y="234"> -:--.::..:*#######*##****+::.-=:-:+=::::.-:::::::::</tspan>
+<tspan x="60" y="244"> ..--.:...:+*#####***##***+:::---::+=::::::------===</tspan>
+<tspan x="60" y="253"> ..--.:....-+*#***=+++++++**::::---+=---========-==-</tspan>
+<tspan x="60" y="262"> ..--::....-**++*+==++==++*+=======+=-------------:-</tspan>
+<tspan x="60" y="271"> ::=--------**+*#*+++*+++++=-------+---::-:------:.:</tspan>
+<tspan x="60" y="280"> --=--------+#**#%##*+****+---::::-+=---::::--------</tspan>
+<tspan x="60" y="290"> ::=-:::::::=#*#####******+-----:--++---=:-:-:::-:::</tspan>
+<tspan x="60" y="299"> ::=---:::-:+###%#*++**++*%*--::.::+=:-::.::::::::--</tspan>
+<tspan x="60" y="308"> ::=--:...:=%%####**++***#%%#+:-:-:+=::-=:-=-:::::==</tspan>
+<tspan x="60" y="317"> ::-:-:::::#%%%%####*****#@%##*=:=-++:::=--=-:::::=-</tspan>
+<tspan x="60" y="326">  :=--:::.=%%%%%%##***##**%%%###*+:++::-::::::.:::: </tspan>
+<tspan x="60" y="336">  +=:-::.:#%%%%%%%%#####*-=%%%##%#-++:::::::::..::: </tspan>
+<tspan x="60" y="345">  -=::::-*%#%%%%%%%%%%#**=.+#%%###**+:::::.:::...:: </tspan>
+<tspan x="60" y="354">   =:-:=*###%%%*%%%%%#***=.-*%%###**+-::::::::...:  </tspan>
+<tspan x="60" y="363">   =-+##*###%%%==####****-.:=%%###***++-::::::...:  </tspan>
+<tspan x="60" y="372">   =+*#**#####%=.-+*##**+...=%%%#####**-=-:--:...:  </tspan>
+<tspan x="60" y="382">    *#**#######+...:=++=. ..-%%%%%%%###+--:--::::   </tspan>
+<tspan x="60" y="391">     **#########-...........-%%%#%##%##**+-+=:::    </tspan>
+<tspan x="60" y="400">     ###########*:.........::#%%%%##%####+:=--::    </tspan>
+<tspan x="60" y="409">      %#####%%###+..........:+%%%##%%#%##+:::::     </tspan>
+<tspan x="60" y="418">       %@@%####*#%=.. .. .:++*%@%##%####%*----      </tspan>
+<tspan x="60" y="428">       %%%%@%@@@##%:.....-++=+#@@%%%#%#%#*+===      </tspan>
+<tspan x="60" y="437">        %%%%%@@@%*#*....:---+#%@@%%%#%%%#**+-       </tspan>
+<tspan x="60" y="446">         %%%%@@@%###:..:-=.-##*%@%%%%%%#####        </tspan>
+<tspan x="60" y="455">           %%%@%@#*%+::-++=+*#*#@###%%%###          </tspan>
+<tspan x="60" y="464">            %%%%%%*%+:.:++++*#*#%###%@###           </tspan>
+<tspan x="60" y="474">              %%%%##*:. -===+++%%##%%%#             </tspan>
 </text>
+</g>
+
+<g clip-path="url(#scanCircleClip)">
+<rect x="110" y="114" width="296" height="50" fill="#00D4FF" opacity="0.06"/>
+<rect x="110" y="158" width="296" height="2" fill="#00D4FF" opacity="0.7">
+<animateTransform attributeName="transform" type="translate" from="0,0" to="0,252" dur="3.5s" repeatCount="indefinite" calcMode="linear"/>
+</rect>
+<rect x="110" y="150" width="296" height="12" fill="#00D4FF" opacity="0.12">
+<animateTransform attributeName="transform" type="translate" from="0,0" to="0,252" dur="3.5s" repeatCount="indefinite" calcMode="linear"/>
+</rect>
 </g>
 <circle cx="258" cy="262" r="148" fill="none"
       stroke="#00D4FF" stroke-width="2.5" opacity="0.9"/>
@@ -168,42 +180,42 @@
 <clipPath id="tc19"><rect x="500" y="442" width="0" height="28"><animate attributeName="width" from="0" to="690" dur="0.55s" begin="15.83s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/></rect></clipPath>
 <clipPath id="tc20"><rect x="500" y="464" width="0" height="28"><animate attributeName="width" from="0" to="690" dur="0.55s" begin="16.67s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/></rect></clipPath>
 <clipPath id="tc21"><rect x="500" y="486" width="0" height="28"><animate attributeName="width" from="0" to="690" dur="0.55s" begin="17.50s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/></rect></clipPath>
-<text x="524" y="46" font-family="'Courier New',monospace" font-size="13px" opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="0.00s" fill="freeze"/><tspan fill="#6272A4">guest@</tspan><tspan fill="#50FA7B" font-weight="bold">abhijith</tspan><tspan fill="#6272A4">:~$ </tspan><tspan fill="#F8F8F2">cat profile.md</tspan></text>
-<text x="524" y="68" font-family="'Courier New',monospace" font-size="13px" opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="0.95s" fill="freeze"/><tspan fill="#6272A4">
+<text x="524" y="46" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#6272A4">guest@</tspan><tspan fill="#50FA7B" font-weight="bold">abhijith</tspan><tspan fill="#6272A4">:~$ </tspan><tspan fill="#F8F8F2">cat profile.md</tspan></text>
+<text x="524" y="68" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#6272A4">
 </tspan><tspan fill="#BD93F9" font-weight="bold">agent_id</tspan><tspan fill="#6272A4"> .. </tspan><tspan fill="#F8F8F2">eabhijith</tspan></text>
-<text x="524" y="90" font-family="'Courier New',monospace" font-size="13px" opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="1.90s" fill="freeze"/><tspan fill="#6272A4">
+<text x="524" y="90" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#6272A4">
 </tspan><tspan fill="#BD93F9" font-weight="bold">designation</tspan><tspan fill="#6272A4"> .. </tspan><tspan fill="#F8F8F2">Senior AI &amp; Automation Specialist</tspan></text>
-<text x="524" y="112" font-family="'Courier New',monospace" font-size="13px" opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="2.86s" fill="freeze"/><tspan fill="#6272A4">
+<text x="524" y="112" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#6272A4">
 </tspan><tspan fill="#BD93F9" font-weight="bold">base</tspan><tspan fill="#6272A4"> .. </tspan><tspan fill="#F8F8F2">Berlin, Germany</tspan></text>
-<text x="524" y="134" font-family="'Courier New',monospace" font-size="13px" opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="3.81s" fill="freeze"/><tspan fill="#6272A4">
+<text x="524" y="134" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#6272A4">
 </tspan><tspan fill="#BD93F9" font-weight="bold">mission</tspan><tspan fill="#6272A4"> .. </tspan><tspan fill="#F8F8F2">Multi-Agent · LLM Orchestration</tspan></text>
-<text x="524" y="156" font-family="'Courier New',monospace" font-size="13px" opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="4.76s" fill="freeze"/><tspan fill="#6272A4">
+<text x="524" y="156" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#6272A4">
 </tspan><tspan fill="#BD93F9" font-weight="bold">status</tspan><tspan fill="#6272A4"> .. </tspan><tspan fill="#50FA7B" font-weight="bold">DEPLOYED · ACTIVE</tspan></text>
-<text x="524" y="200" font-family="'Courier New',monospace" font-size="13px" opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="5.71s" fill="freeze"/><tspan fill="#6272A4">
+<text x="524" y="200" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#6272A4">
 </tspan><tspan fill="#BD93F9" font-weight="bold">capabilities</tspan><tspan fill="#50FA7B"> ────────────────────</tspan></text>
-<text x="524" y="222" font-family="'Courier New',monospace" font-size="13px" opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="6.67s" fill="freeze"/><tspan fill="#6272A4">
+<text x="524" y="222" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#6272A4">
 </tspan><tspan fill="#F8F8F2">▸ Pydantic-AI · LangGraph · Bedrock</tspan></text>
-<text x="524" y="244" font-family="'Courier New',monospace" font-size="13px" opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="7.62s" fill="freeze"/><tspan fill="#6272A4">
+<text x="524" y="244" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#6272A4">
 </tspan><tspan fill="#F8F8F2">▸ Python · JavaScript · Apex · React</tspan></text>
-<text x="524" y="266" font-family="'Courier New',monospace" font-size="13px" opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="8.57s" fill="freeze"/><tspan fill="#6272A4">
+<text x="524" y="266" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#6272A4">
 </tspan><tspan fill="#F8F8F2">▸ AWS · Databricks · Salesforce</tspan></text>
-<text x="524" y="310" font-family="'Courier New',monospace" font-size="13px" opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="9.52s" fill="freeze"/><tspan fill="#6272A4">
+<text x="524" y="310" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#6272A4">
 </tspan><tspan fill="#BD93F9" font-weight="bold">side_projects</tspan><tspan fill="#50FA7B"> ────────────────────</tspan></text>
-<text x="524" y="332" font-family="'Courier New',monospace" font-size="13px" opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="10.48s" fill="freeze"/><tspan fill="#6272A4">
+<text x="524" y="332" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#6272A4">
 </tspan><tspan fill="#F8F8F2">▸ personal AI OS</tspan></text>
-<text x="524" y="354" font-family="'Courier New',monospace" font-size="13px" opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="11.43s" fill="freeze"/><tspan fill="#6272A4">
+<text x="524" y="354" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#6272A4">
 </tspan><tspan fill="#F8F8F2">▸ archify — diagram renderer</tspan></text>
-<text x="524" y="398" font-family="'Courier New',monospace" font-size="13px" opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="12.38s" fill="freeze"/><tspan fill="#6272A4">
+<text x="524" y="398" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#6272A4">
 </tspan><tspan fill="#BD93F9" font-weight="bold">philosophy</tspan><tspan fill="#6272A4"> .. </tspan><tspan fill="#F8F8F2">Functional · Minimal · Ship it</tspan></text>
-<text x="524" y="420" font-family="'Courier New',monospace" font-size="13px" opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="13.33s" fill="freeze"/><tspan fill="#6272A4">
+<text x="524" y="420" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#6272A4">
 </tspan><tspan fill="#BD93F9" font-weight="bold">uptime</tspan><tspan fill="#6272A4"> .. </tspan><tspan fill="#F8F8F2">since 2017 · Berlin</tspan></text>
-<text x="524" y="464" font-family="'Courier New',monospace" font-size="13px" opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="14.29s" fill="freeze"/><tspan fill="#6272A4">
+<text x="524" y="464" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#6272A4">
 </tspan><tspan fill="#BD93F9" font-weight="bold">linkedin</tspan><tspan fill="#6272A4"> .. </tspan><tspan fill="#F8F8F2">linkedin.com/in/eabhijith</tspan></text>
-<text x="524" y="486" font-family="'Courier New',monospace" font-size="13px" opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="15.24s" fill="freeze"/><tspan fill="#6272A4">
+<text x="524" y="486" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#6272A4">
 </tspan><tspan fill="#BD93F9" font-weight="bold">github</tspan><tspan fill="#6272A4"> .. </tspan><tspan fill="#F8F8F2">github.com/eabhijith</tspan></text>
-<text x="524" y="508" font-family="'Courier New',monospace" font-size="13px" opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="16.19s" fill="freeze"/><tspan fill="#6272A4">
+<text x="524" y="508" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#6272A4">
 </tspan><tspan fill="#BD93F9" font-weight="bold">website</tspan><tspan fill="#6272A4"> .. </tspan><tspan fill="#8BE9FD">eabhijith.vercel.app</tspan></text>
-<text x="524" y="530" font-family="'Courier New',monospace" font-size="13px" opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="17.14s" fill="freeze"/><tspan fill="#BD93F9" font-weight="bold">$ _</tspan></text>
+<text x="524" y="530" font-family="'Courier New',monospace" font-size="13px"><tspan fill="#BD93F9" font-weight="bold">$ _</tspan></text>
 </g>
 <text x="590" y="593" text-anchor="middle" font-family="'Courier New',monospace" font-size="13px" fill="#1E3A5F" letter-spacing="2px">Agents are the interface. The rest is scaffolding.</text>
 <rect x="3" y="3" width="1174" height="604" rx="16" fill="none" stroke="url(#borderGrad)" stroke-width="1.5" opacity="0.7">
