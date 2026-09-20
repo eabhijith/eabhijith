@@ -203,8 +203,6 @@
     <path class="brk" pathLength="1" d="M14,464 L14,494 L40,494"/>
     <path class="brk" pathLength="1" d="M476,494 L502,494 L502,464"/>
   </g>
-  <!-- scanning border trace on info panel -->
-  <rect class="bscan" x="508" y="48" width="655" height="500" rx="14" pathLength="1"/>
   <g clip-path="url(#lc0)"><text x="520" y="0"><tspan x="520" y="42"  class="head">eabhijith</tspan><tspan class="cc">@production  </tspan><tspan class="dim">──────────────────────────────────────</tspan></text></g>
   <g clip-path="url(#lc1)"><text x="520" y="0"><tspan x="520" y="64"  class="cc">  </tspan><tspan class="key">agent_id     </tspan><tspan class="cc">......... </tspan><tspan class="value">eabhijith</tspan></text></g>
   <g clip-path="url(#lc2)"><text x="520" y="0"><tspan x="520" y="86"  class="cc">  </tspan><tspan class="key">designation  </tspan><tspan class="cc">......... </tspan><tspan class="value">Senior AI &amp; Automation Specialist</tspan></text></g>
