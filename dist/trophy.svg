@@ -1,5 +1,5 @@
-Payment required
-
-DEPLOYMENT_DISABLED
-
-sfo1::zkzct-1789932258867-320df01c007f
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 120" width="500" height="120">
+  <rect width="500" height="120" rx="8" fill="#0A0E1A"/>
+  <text x="250" y="65" text-anchor="middle" font-family="'Courier New',monospace" font-size="14px" fill="#1E3A5F" letter-spacing="2px">TROPHIES  ·  LOADING</text>
+  <circle cx="250" cy="75" r="4" fill="#00D4FF"><animate attributeName="opacity" values="1;0;1" dur="1.2s" repeatCount="indefinite"/></circle>
+</svg>

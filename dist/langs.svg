@@ -1,5 +1,10 @@
-The deployment is currently unavailable
-
-DEPLOYMENT_PAUSED
-
-sfo1::rf794-1789932258580-8a09a06303ce
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 195" width="300" height="195">
+  <rect width="300" height="195" rx="6" fill="#0A0E1A" stroke="#1E3A5F" stroke-width="1"/>
+  <text x="25" y="35" font-family="'Segoe UI',monospace" font-size="14px" font-weight="700" fill="#00D4FF">Most Used Languages</text>
+  <line x1="25" y1="45" x2="275" y2="45" stroke="#1E3A5F" stroke-width="0.8"/>
+  <text x="25" y="75"  font-family="monospace" font-size="12px" fill="#CBD5E1">● Python</text><rect x="130" y="63" width="80" height="8" rx="4" fill="#3776AB"/>
+  <text x="25" y="100" font-family="monospace" font-size="12px" fill="#CBD5E1">● JavaScript</text><rect x="130" y="88" width="65" height="8" rx="4" fill="#F7DF1E"/>
+  <text x="25" y="125" font-family="monospace" font-size="12px" fill="#CBD5E1">● TypeScript</text><rect x="130" y="113" width="50" height="8" rx="4" fill="#3178C6"/>
+  <text x="25" y="150" font-family="monospace" font-size="12px" fill="#CBD5E1">● Apex</text><rect x="130" y="138" width="40" height="8" rx="4" fill="#00A1E0"/>
+  <text x="25" y="175" font-family="monospace" font-size="12px" fill="#CBD5E1">● Shell</text><rect x="130" y="163" width="30" height="8" rx="4" fill="#89E051"/>
+</svg>
