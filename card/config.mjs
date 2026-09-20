@@ -45,12 +45,12 @@ export const PORTRAIT = {
   cx: 244,
   cy: 268,   // local coords (inside translate(0,38))
   r:  200,
-  // ASCII grid
-  cols:      52,
-  rows:      46,
-  charW:     7.6,
-  lineH:     9.2,
-  fontSize:  8,
+  // ASCII grid — each row forced to textLength = r*2 so chars always fill circle exactly
+  cols:       52,
+  rows:       46,
+  lineH:      9.2,
+  fontSize:   8,
+  useTextLength: true,   // forces textLength=diameter per tspan — fixes browser char-width drift
   scanDur:   "3.5s",
 };
 
