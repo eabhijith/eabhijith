@@ -47,13 +47,17 @@ export function buildPortrait(theme, tspanFile) {
   const fadeEnd       = (SCAN.SCAN_DUR + SCAN.HOLD_DUR + SCAN.FADE_DUR) / SCAN.CYCLE; // 0.9375
 
   return `
-  <!-- ── LEFT PANEL ────────────────────────────────── -->
-  <rect x="14" y="26" width="488" height="468" rx="14"
+  <!-- ── LEFT PANEL y=10, height=532 to match right panel ── -->
+  <rect x="14" y="10" width="488" height="532" rx="8"
     fill="${t.bg[1]}" fill-opacity="0.4"
     stroke="url(#borderGrad)" stroke-width="1" opacity="0.5"/>
-  <text x="30" y="24"
+
+  <!-- panel title inside box -->
+  <text x="30" y="26"
     font-family="'Courier New',monospace" font-size="11px"
-    fill="${t.panelTitle}" letter-spacing="2px" opacity="0.6">AGENT.VISUAL</text>
+    fill="${t.panelTitle}" letter-spacing="2px" opacity="0.6">VISUAL.ID</text>
+  <line x1="14" y1="32" x2="502" y2="32"
+    stroke="${t.panelTitle}" stroke-width="0.5" opacity="0.2"/>
 
   <!-- ASCII portrait clipped to circle -->
   <g clip-path="url(#portraitClip)">
@@ -75,7 +79,6 @@ export function buildPortrait(theme, tspanFile) {
         keyTimes="0;${scanFraction.toFixed(3)};1"
         values="0 0;0 ${scanH};0 ${scanH}"/>
     </rect>
-    <!-- bright scan line -->
     <rect x="${cx - r}" y="${scanTop + 7}" width="${r * 2}" height="2"
       fill="${t.scanLine}" opacity="0.85">
       <animateTransform attributeName="transform" type="translate"
@@ -89,19 +92,15 @@ export function buildPortrait(theme, tspanFile) {
   <!-- pulsing ring -->
   <circle cx="${cx}" cy="${cy}" r="${r + 16}" fill="none"
     stroke="${t.ring1}" stroke-width="1" opacity="0.4">
-    <animate attributeName="r"
-      values="${r+16};${r+26};${r+16}" dur="3s" repeatCount="indefinite"/>
-    <animate attributeName="opacity"
-      values="0.4;0.1;0.4" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="${r+16};${r+26};${r+16}" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0.1;0.4" dur="3s" repeatCount="indefinite"/>
   </circle>
 
   <!-- rotating dashed outer ring -->
   <circle cx="${cx}" cy="${cy}" r="${r + 32}" fill="none"
-    stroke="${t.ring2}" stroke-width="0.8"
-    stroke-dasharray="6 4" opacity="0.3">
+    stroke="${t.ring2}" stroke-width="0.8" stroke-dasharray="6 4" opacity="0.3">
     <animateTransform attributeName="transform" type="rotate"
-      from="0 ${cx} ${cy}" to="360 ${cx} ${cy}"
-      dur="12s" repeatCount="indefinite"/>
+      from="0 ${cx} ${cy}" to="360 ${cx} ${cy}" dur="12s" repeatCount="indefinite"/>
   </circle>
 
   <!-- crisp border ring -->
@@ -110,15 +109,15 @@ export function buildPortrait(theme, tspanFile) {
 
   <!-- presence dot -->
   <circle cx="${cx + Math.round(r * 0.73)}" cy="${cy + Math.round(r * 0.73)}"
-    r="10" fill="${t.presenceDot}" stroke="${t.bg[1]}" stroke-width="3">
+    r="8" fill="${t.presenceDot}" stroke="${t.bg[1]}" stroke-width="3">
     <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
   </circle>
 
-  <!-- identity label -->
-  <text x="${cx}" y="${cy + r + 26}" text-anchor="middle"
+  <!-- identity labels — inside panel, cy+r+20 = 268+200+20 = 488, cy+r+504 = 504, panel bottom = 542 ✓ -->
+  <text x="${cx}" y="${cy + r + 22}" text-anchor="middle"
     font-family="'JetBrains Mono','Fira Code',monospace"
     font-size="15px" fill="${t.ring1}" font-weight="700" letter-spacing="3px">eabhijith</text>
-  <text x="${cx}" y="${cy + r + 44}" text-anchor="middle"
+  <text x="${cx}" y="${cy + r + 38}" text-anchor="middle"
     font-family="'Courier New',monospace"
     font-size="10px" fill="${t.ring1}" opacity="0.45" letter-spacing="2px">agent · deployed · active</text>`;
 }

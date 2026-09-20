@@ -52,7 +52,7 @@ export const PANEL = {
 
 export const TITLEBAR = {
   prompt:      `guest@${USERNAME}:~$ cat profile.md`,
-  statusLabel: "DEPLOYED",
+  statusLabel: "ONLINE",
 };
 
 /**
