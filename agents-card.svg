@@ -1,266 +1,360 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 340" width="1180" height="340">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 360" width="1180" height="360">
 <defs>
   <radialGradient id="bg" cx="50%" cy="50%" r="70%">
-    <stop offset="0%" stop-color="#0F1E3A"/>
-    <stop offset="100%" stop-color="#0A0E1A"/>
+    <stop offset="0%" stop-color="#0F1E3A"/><stop offset="100%" stop-color="#0A0E1A"/>
   </radialGradient>
   <linearGradient id="borderG" x1="0%" y1="0%" x2="100%" y2="0%">
-    <stop offset="0%" stop-color="#00D4FF"/>
-    <stop offset="50%" stop-color="#00FF9F"/>
+    <stop offset="0%" stop-color="#00D4FF"/><stop offset="50%" stop-color="#00FF9F"/>
     <stop offset="100%" stop-color="#FF6B00"/>
   </linearGradient>
-
-  <!-- flow line gradient: cyan → green -->
-  <linearGradient id="flowCG" x1="0%" y1="0%" x2="100%" y2="0%">
-    <stop offset="0%" stop-color="#00D4FF"/>
-    <stop offset="100%" stop-color="#00FF9F"/>
-  </linearGradient>
-  <!-- flow line gradient: green → amber -->
-  <linearGradient id="flowGA" x1="0%" y1="0%" x2="100%" y2="0%">
-    <stop offset="0%" stop-color="#00FF9F"/>
-    <stop offset="100%" stop-color="#FF6B00"/>
-  </linearGradient>
-  <!-- flow line gradient: amber → violet -->
-  <linearGradient id="flowAV" x1="0%" y1="0%" x2="100%" y2="0%">
-    <stop offset="0%" stop-color="#FF6B00"/>
-    <stop offset="100%" stop-color="#7C3AED"/>
-  </linearGradient>
-  <!-- guardian vertical lines -->
-  <linearGradient id="flowVR" x1="0%" y1="0%" x2="0%" y2="100%">
-    <stop offset="0%" stop-color="#FF4444"/>
-    <stop offset="100%" stop-color="#7C3AED"/>
-  </linearGradient>
-
-  <!-- glow filters -->
-  <filter id="gc" x="-50%" y="-50%" width="200%" height="200%">
-    <feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-  </filter>
-  <filter id="gg" x="-50%" y="-50%" width="200%" height="200%">
-    <feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-  </filter>
-  <filter id="ga" x="-50%" y="-50%" width="200%" height="200%">
-    <feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-  </filter>
-  <filter id="gv" x="-50%" y="-50%" width="200%" height="200%">
-    <feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-  </filter>
-  <filter id="gr" x="-50%" y="-50%" width="200%" height="200%">
-    <feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-  </filter>
-  <filter id="lineglow">
-    <feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-  </filter>
+  <filter id="gc"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="gg"><feGaussianBlur stdDeviation="9"  result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="ga"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="gv"><feGaussianBlur stdDeviation="9"  result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="gr"><feGaussianBlur stdDeviation="7"  result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="pk"><feGaussianBlur stdDeviation="4"  result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
 
   <style>
-    .lbl { font-family:'JetBrains Mono','Fira Code',monospace; font-size:12px; letter-spacing:1px; font-weight:700; }
-    .sub { font-family:'JetBrains Mono','Fira Code',monospace; font-size:9.5px; letter-spacing:0.5px; fill:#475569; }
-    .ptitle { font-family:'Courier New',monospace; font-size:11px; fill:#00D4FF; letter-spacing:2px; opacity:0.6; }
+    .lbl{font-family:"JetBrains Mono","Fira Code",monospace;font-size:12px;letter-spacing:1px;font-weight:700}
+    .sub{font-family:"JetBrains Mono","Fira Code",monospace;font-size:9px;letter-spacing:0.5px;fill:#334155}
+    .ptitle{font-family:"Courier New",monospace;font-size:11px;fill:#00D4FF;letter-spacing:2px;opacity:0.6}
+    .pktlbl{font-family:"Courier New",monospace;font-size:8px;fill:#1E3A5F;letter-spacing:1px}
+    /* transform-box so 50% 50% always means shape centre */
+    .b1,.b1e,.b2,.b2h,.b2e,.b3,.b3e,.b4,.b4e,.b5,.b5e,
+    .sl,.sr{transform-box:fill-box;transform-origin:50% 50%}
 
-    /* ── BOT BOBS ── */
-    @keyframes bob  { 0%,100%{transform:translateY(0)}   50%{transform:translateY(-7px)} }
-    @keyframes bobs { 0%,100%{transform:translateY(0) rotate(2.5deg)} 50%{transform:translateY(-4px) rotate(-2.5deg)} }
-    @keyframes bobw { 0%,100%{transform:translateY(0) rotate(-4deg)} 50%{transform:translateY(-3px) rotate(-4deg)} }
-    @keyframes shud { 0%,100%{transform:translateX(0)} 25%{transform:translateX(2.5px)} 75%{transform:translateX(-2.5px)} }
-    @keyframes blink{ 0%,90%,100%{transform:scaleY(1)} 93%,97%{transform:scaleY(0.07)} }
-    @keyframes scan { 0%,100%{transform:translateX(-5px)} 50%{transform:translateX(5px)} }
-    @keyframes orbl { 0%{transform:translate(-34px,0)}  50%{transform:translate(-27px,-16px)} 100%{transform:translate(-34px,0)} }
-    @keyframes orbr { 0%{transform:translate(34px,0)}   50%{transform:translate(27px,16px)}  100%{transform:translate(34px,0)} }
-    @keyframes pulse{ 0%,100%{opacity:0.18} 50%{opacity:0.55} }
-    @keyframes morph1{ 0%,100%{rx:52;ry:56} 33%{rx:58;ry:50} 66%{rx:48;ry:58} }
-    @keyframes morph2{ 0%,100%{rx:40;ry:44} 33%{rx:46;ry:38} 66%{rx:36;ry:46} }
-    @keyframes morph3{ 0%,100%{rx:54;ry:52} 33%{rx:60;ry:46} 66%{rx:50;ry:58} }
-    @keyframes morph4{ 0%,100%{rx:50;ry:54} 33%{rx:56;ry:48} 66%{rx:46;ry:56} }
+    /* ── ORCHESTRATOR (blob/cyan) 20s: idle→working→waiting→done→idle ── */
+    @keyframes oc{
+      0%,19%{transform:translateY(0)}
+      3%{transform:translateY(-7px)} 6%{transform:translateY(0)}
+      11%{transform:translateY(-5px)} 18%{transform:translateY(0)}
+      20%{transform:rotate(2.5deg) scaleX(1.1) scaleY(0.9)}
+      21.5%{transform:rotate(-2.5deg) scaleX(0.9) scaleY(1.1)}
+      23%{transform:rotate(2.5deg) scaleX(1.13) scaleY(0.87)}
+      24.5%{transform:rotate(-2.5deg) scaleX(0.87) scaleY(1.13)}
+      26%{transform:rotate(2.5deg) scaleX(1.1) scaleY(0.9)}
+      27.5%{transform:rotate(-2.5deg) scaleX(0.9) scaleY(1.1)}
+      34%{transform:rotate(0)}
+      35%,74%{transform:translateY(-3px) rotate(-4deg)}
+      75%{transform:scaleX(1.22) scaleY(0.78)}
+      76%{transform:scaleX(0.94) scaleY(1.06)}
+      77.5%{transform:scaleX(1.04) scaleY(0.96)}
+      79%,88%{transform:scaleX(1) scaleY(1)}
+      91%{transform:translateY(-6px)} 95%{transform:translateY(0)}
+      100%{transform:translateY(0)}
+    }
+    @keyframes oce{
+      0%,19%{transform:scaleX(1) scaleY(1) rotate(0) translateY(0)}
+      3%{transform:scaleX(1) scaleY(0.07)}
+      5%{transform:scaleX(1) scaleY(1)}
+      20%,34%{transform:scaleX(1.24) scaleY(0.62)}
+      35%,74%{transform:scaleX(1.1) scaleY(0.22) rotate(-13deg) translateX(4px)}
+      75%,88%{transform:scaleX(1.06) scaleY(0.72) rotate(-15deg)}
+      90%{transform:scaleX(1) scaleY(0.07) rotate(0)}
+      92%,100%{transform:scaleX(1) scaleY(1) rotate(0)}
+    }
 
-    /* bots */
-    .b1 { animation: bob  2.8s ease-in-out infinite; }
-    .b2 { animation: bob  1.1s ease-in-out infinite; }
-    .b3 { animation: bobs 0.42s ease-in-out infinite; }
-    .b4 { animation: bob  2.2s ease-in-out infinite; }
-    .b5 { animation: shud 0.4s  ease-in-out infinite; animation-delay:1.5s; }
+    /* ── RESEARCHER (hexagon/green) 20s: idle→thinking→working→done→idle ── */
+    @keyframes rs{
+      0%,29%{transform:translateY(0)}
+      5%{transform:translateY(-6px)} 10%{transform:translateY(0)}
+      17%{transform:translateY(-5px)} 22%{transform:translateY(0)}
+      30%,49%{transform:translateY(-2px)}
+      50%{transform:rotate(2.5deg) scaleX(1.12) scaleY(0.88)}
+      51.5%{transform:rotate(-2.5deg) scaleX(0.88) scaleY(1.12)}
+      53%{transform:rotate(2.5deg) scaleX(1.1) scaleY(0.9)}
+      54.5%{transform:rotate(-2.5deg) scaleX(0.9) scaleY(1.1)}
+      56%{transform:rotate(2.5deg) scaleX(1.08) scaleY(0.92)}
+      58%{transform:rotate(0deg) scaleX(1) scaleY(1)}
+      64%{transform:rotate(0)}
+      65%{transform:scaleX(1.2) scaleY(0.8)}
+      66%{transform:scaleX(0.94) scaleY(1.06)}
+      68%{transform:scaleX(1.03) scaleY(0.97)}
+      70%,79%{transform:scaleX(1) scaleY(1)}
+      84%{transform:translateY(-6px)} 88%{transform:translateY(0)}
+      93%{transform:translateY(-5px)} 97%{transform:translateY(0)}
+    }
+    @keyframes rsh{
+      0%,29%,50%,100%{transform:scale(1)}
+      30%,49%{transform:scale(0.68)}
+    }
+    @keyframes rse{
+      0%,29%{transform:scaleX(1) scaleY(1) translateX(0)}
+      8%{transform:scaleX(1) scaleY(0.07)}
+      10%{transform:scaleX(1) scaleY(1)}
+      30%,49%{transform:scaleX(0.9) scaleY(0.82)}
+      35%{transform:scaleX(0.9) scaleY(0.82) translateX(5px)}
+      40%{transform:scaleX(0.9) scaleY(0.82) translateX(-5px)}
+      45%{transform:scaleX(0.9) scaleY(0.82) translateX(5px)}
+      50%,64%{transform:scaleX(1.24) scaleY(0.62) translateX(0)}
+      65%,79%{transform:scaleX(1.06) scaleY(0.72) rotate(-15deg)}
+      80%{transform:scaleX(1) scaleY(0.07) rotate(0)}
+      82%,100%{transform:scaleX(1) scaleY(1)}
+    }
+    @keyframes rsl{
+      0%,29%,50%,100%{transform:translate(0,0);opacity:0}
+      30%{opacity:0.8} 34%{transform:translate(-34px,0);opacity:0.8}
+      37%{transform:translate(-26px,-16px)} 40%{transform:translate(-34px,0)}
+      43%{transform:translate(-26px,-16px)} 46%{transform:translate(-34px,0)}
+      49%{opacity:0.8} 50%{opacity:0;transform:translate(0,0)}
+    }
+    @keyframes rsr{
+      0%,29%,50%,100%{transform:translate(0,0);opacity:0}
+      30%{opacity:0.55} 34%{transform:translate(34px,0);opacity:0.55}
+      37%{transform:translate(26px,16px)} 40%{transform:translate(34px,0)}
+      43%{transform:translate(26px,16px)} 46%{transform:translate(34px,0)}
+      49%{opacity:0.55} 50%{opacity:0;transform:translate(0,0)}
+    }
 
-    .bk { animation: blink 3.6s ease-in-out infinite; }
-    .bk2{ animation: blink 2.0s ease-in-out infinite; }
-    .bk3{ animation: blink 1.8s ease-in-out infinite; }
-    .bk4{ animation: blink 3.2s ease-in-out infinite; }
-    .bk5{ animation: blink 1.2s ease-in-out infinite; }
-    .sc { animation: scan  1.0s ease-in-out infinite; }
-    .ol { animation: orbl  2.6s ease-in-out infinite; }
-    .or { animation: orbr  2.6s ease-in-out infinite; }
+    /* ── BUILDER (squircle/amber) 20s: idle→working→done→idle ── */
+    @keyframes bl{
+      0%,49%{transform:translateY(0)}
+      6%{transform:translateY(-7px)} 11%{transform:translateY(0)}
+      18%{transform:translateY(-6px)} 23%{transform:translateY(0)}
+      31%{transform:translateY(-7px)} 36%{transform:translateY(0)}
+      43%{transform:translateY(-5px)} 48%{transform:translateY(0)}
+      50%{transform:rotate(2.5deg) scaleX(1.13) scaleY(0.87)}
+      51%{transform:rotate(-2.5deg) scaleX(0.87) scaleY(1.13)}
+      52%{transform:rotate(2.5deg) scaleX(1.15) scaleY(0.85)}
+      53%{transform:rotate(-2.5deg) scaleX(0.85) scaleY(1.15)}
+      54%{transform:rotate(2.5deg) scaleX(1.13) scaleY(0.87)}
+      55%{transform:rotate(-2.5deg) scaleX(0.87) scaleY(1.13)}
+      56%{transform:rotate(2.5deg) scaleX(1.1) scaleY(0.9)}
+      57%{transform:rotate(-2.5deg) scaleX(0.9) scaleY(1.1)}
+      58%{transform:rotate(2.5deg) scaleX(1.08) scaleY(0.92)}
+      59%{transform:rotate(-2.5deg) scaleX(0.92) scaleY(1.08)}
+      60%{transform:rotate(1.5deg) scaleX(1.06) scaleY(0.94)}
+      63%{transform:rotate(0deg) scaleX(1) scaleY(1)}
+      64%,69%{transform:translateY(-2px)}
+      70%{transform:scaleX(1.22) scaleY(0.78)}
+      71%{transform:scaleX(0.93) scaleY(1.07)}
+      72.5%{transform:scaleX(1.04) scaleY(0.96)}
+      74%,84%{transform:scaleX(1) scaleY(1)}
+      89%{transform:translateY(-6px)} 93%{transform:translateY(0)}
+      97%{transform:translateY(-5px)} 100%{transform:translateY(0)}
+    }
+    @keyframes ble{
+      0%,49%{transform:scaleX(1) scaleY(1) rotate(0)}
+      12%{transform:scaleX(1) scaleY(0.07)} 14%{transform:scaleX(1) scaleY(1)}
+      35%{transform:scaleX(1) scaleY(0.07)} 37%{transform:scaleX(1) scaleY(1)}
+      50%,69%{transform:scaleX(1.24) scaleY(0.62)}
+      70%,84%{transform:scaleX(1.06) scaleY(0.72) rotate(-15deg)}
+      85%{transform:scaleX(1) scaleY(0.07) rotate(0)}
+      87%,100%{transform:scaleX(1) scaleY(1)}
+    }
 
-    /* ── DATA PULSE along flow lines ── */
-    /* Each circle travels the path by animating cx from start to end */
-    @keyframes px12a{ 0%{cx:220;opacity:0} 5%{opacity:1} 90%{opacity:1} 100%{cx:390;opacity:0} }
-    @keyframes px12b{ 0%{cx:220;opacity:0} 5%{opacity:1} 90%{opacity:1} 100%{cx:390;opacity:0} }
-    @keyframes px23a{ 0%{cx:490;opacity:0} 5%{opacity:1} 90%{opacity:1} 100%{cx:660;opacity:0} }
-    @keyframes px23b{ 0%{cx:490;opacity:0} 5%{opacity:1} 90%{opacity:1} 100%{cx:660;opacity:0} }
-    @keyframes px34a{ 0%{cx:760;opacity:0} 5%{opacity:1} 90%{opacity:1} 100%{cx:930;opacity:0} }
-    @keyframes px34b{ 0%{cx:760;opacity:0} 5%{opacity:1} 90%{opacity:1} 100%{cx:930;opacity:0} }
+    /* ── MEMORY (teardrop/violet) 20s: idle→working→done→idle ── */
+    @keyframes mm{
+      0%,64%{transform:translateY(0)}
+      4%{transform:translateY(-6px)} 8%{transform:translateY(0)}
+      16%{transform:translateY(-5px)} 21%{transform:translateY(0)}
+      28%{transform:translateY(-6px)} 33%{transform:translateY(0)}
+      41%{transform:translateY(-5px)} 46%{transform:translateY(0)}
+      53%{transform:translateY(-6px)} 58%{transform:translateY(0)}
+      65%{transform:rotate(2deg) scaleX(1.1) scaleY(0.9)}
+      66.5%{transform:rotate(-2deg) scaleX(0.9) scaleY(1.1)}
+      68%{transform:rotate(2deg) scaleX(1.08) scaleY(0.92)}
+      69.5%{transform:rotate(-2deg) scaleX(0.92) scaleY(1.08)}
+      71%{transform:rotate(1deg) scaleX(1.05) scaleY(0.95)}
+      73%,79%{transform:rotate(0) scaleX(1) scaleY(1) translateY(-2px)}
+      80%{transform:scaleX(1.25) scaleY(0.75)}
+      81%{transform:scaleX(0.92) scaleY(1.08)}
+      82.5%{transform:scaleX(1.05) scaleY(0.95)}
+      84%,94%{transform:scaleX(1) scaleY(1) translateY(-3px)}
+      98%{transform:translateY(-5px)} 100%{transform:translateY(0)}
+    }
+    @keyframes mme{
+      0%,64%{transform:scaleX(1) scaleY(1) rotate(0)}
+      10%{transform:scaleX(1) scaleY(0.07)} 12%{transform:scaleX(1) scaleY(1)}
+      38%{transform:scaleX(1) scaleY(0.07)} 40%{transform:scaleX(1) scaleY(1)}
+      65%,79%{transform:scaleX(1.24) scaleY(0.62)}
+      80%,94%{transform:scaleX(1.06) scaleY(0.72) rotate(-15deg)}
+      95%{transform:scaleX(1) scaleY(0.07) rotate(0)}
+      97%,100%{transform:scaleX(1) scaleY(1)}
+    }
 
-    /* guardian arcs down to builder + memory */
-    @keyframes pgb{ 0%{opacity:0;r:3} 20%{opacity:1;r:4} 80%{opacity:1;r:4} 100%{opacity:0;r:3} }
+    /* ── GUARDIAN (triangle/red) continuous alert ── */
+    @keyframes gd{
+      0%,100%{transform:translateX(0)}
+      20%{transform:translateX(2.5px)} 40%{transform:translateX(-2.5px)}
+      60%{transform:translateX(2px)} 80%{transform:translateX(-2px)}
+    }
+    @keyframes gde{
+      0%,100%{transform:scaleX(0.86) scaleY(0.5) rotate(16deg)}
+      38%{transform:scaleX(0.86) scaleY(0.07) rotate(16deg)}
+      42%{transform:scaleX(0.86) scaleY(0.5) rotate(16deg)}
+    }
+    @keyframes alert{0%,100%{r:42;opacity:0.18}50%{r:52;opacity:0.04}}
 
-    .p12a{ animation: px12a 1.8s ease-in-out infinite; }
-    .p12b{ animation: px12b 1.8s ease-in-out infinite; animation-delay:0.9s; }
-    .p23a{ animation: px23a 1.8s ease-in-out infinite; animation-delay:0.3s; }
-    .p23b{ animation: px23b 1.8s ease-in-out infinite; animation-delay:1.2s; }
-    .p34a{ animation: px34a 1.8s ease-in-out infinite; animation-delay:0.6s; }
-    .p34b{ animation: px34b 1.8s ease-in-out infinite; animation-delay:1.5s; }
-    .pgb { animation: pgb   2.4s ease-in-out infinite; }
-
-    /* label badge pulse */
-    @keyframes badgep{ 0%,100%{opacity:0.7} 50%{opacity:1} }
-    .badge{ animation: badgep 2s ease-in-out infinite; }
+    .b1{animation:oc  20s ease-in-out infinite}
+    .b1e{animation:oce 20s ease-in-out infinite}
+    .b2{animation:rs  20s ease-in-out infinite}
+    .b2h{animation:rsh 20s ease-in-out infinite}
+    .b2e{animation:rse 20s ease-in-out infinite}
+    .sl{animation:rsl 20s ease-in-out infinite}
+    .sr{animation:rsr 20s ease-in-out infinite}
+    .b3{animation:bl  20s ease-in-out infinite}
+    .b3e{animation:ble 20s ease-in-out infinite}
+    .b4{animation:mm  20s ease-in-out infinite}
+    .b4e{animation:mme 20s ease-in-out infinite}
+    .b5{animation:gd  0.45s ease-in-out infinite;animation-delay:1.5s}
+    .b5e{animation:gde 1.2s ease-in-out infinite}
+    .ar{animation:alert 1.5s ease-in-out infinite}
   </style>
 </defs>
 
-<!-- ── background ── -->
-<rect width="1180" height="340" rx="16" fill="url(#bg)"/>
-<rect width="1180" height="340" rx="16" fill="none" stroke="url(#borderG)" stroke-width="1.5" opacity="0.45"/>
+<rect width="1180" height="360" rx="16" fill="url(#bg)"/>
+<rect width="1180" height="360" rx="16" fill="none" stroke="url(#borderG)" stroke-width="1.5" opacity="0.4"/>
+<text x="590" y="26" text-anchor="middle" class="ptitle">AGENT.ROSTER  ·  abheos runtime  ·  20s dispatch cycle</text>
+<line x1="40" y1="34" x2="1140" y2="34" stroke="#00D4FF" stroke-width="0.5" opacity="0.1"/>
 
-<!-- panel title -->
-<text x="590" y="30" text-anchor="middle" class="ptitle">AGENT.ROSTER  ·  abheos runtime</text>
-<line x1="40" y1="40" x2="1140" y2="40" stroke="#00D4FF" stroke-width="0.5" opacity="0.15"/>
+<!-- ── CONNECTION LANES ── -->
+<!-- forward: y=188 -->
+<line x1="208" y1="188" x2="335" y2="188" stroke="#00D4FF" stroke-width="1.2" opacity="0.3"/>
+<line x1="458" y1="188" x2="585" y2="188" stroke="#00FF9F" stroke-width="1.2" opacity="0.3"/>
+<line x1="708" y1="188" x2="835" y2="188" stroke="#FF6B00" stroke-width="1.2" opacity="0.3"/>
+<!-- arrowheads forward -->
+<polygon points="333,184 342,188 333,192" fill="#00D4FF" opacity="0.5"/>
+<polygon points="583,184 592,188 583,192" fill="#00FF9F" opacity="0.5"/>
+<polygon points="833,184 842,188 833,192" fill="#FF6B00" opacity="0.5"/>
+<!-- return: y=202 -->
+<line x1="335" y1="202" x2="208" y2="202" stroke="#7C3AED" stroke-width="0.8" opacity="0.2"/>
+<line x1="585" y1="202" x2="458" y2="202" stroke="#7C3AED" stroke-width="0.8" opacity="0.2"/>
+<line x1="835" y1="202" x2="708" y2="202" stroke="#7C3AED" stroke-width="0.8" opacity="0.2"/>
+<!-- arrowheads return -->
+<polygon points="210,198 200,202 210,206" fill="#7C3AED" opacity="0.35"/>
+<polygon points="460,198 450,202 460,206" fill="#7C3AED" opacity="0.35"/>
+<polygon points="710,198 700,202 710,206" fill="#7C3AED" opacity="0.35"/>
+<!-- lane labels -->
+<text x="271" y="181" text-anchor="middle" class="pktlbl">task →</text>
+<text x="521" y="181" text-anchor="middle" class="pktlbl">context →</text>
+<text x="771" y="181" text-anchor="middle" class="pktlbl">result →</text>
+<text x="271" y="218" text-anchor="middle" class="pktlbl">← done</text>
+<text x="521" y="218" text-anchor="middle" class="pktlbl">← done</text>
+<text x="771" y="218" text-anchor="middle" class="pktlbl">← done</text>
+<!-- guardian dashed arcs -->
+<path d="M 1040,120 Q 860,148 642,178" fill="none" stroke="#FF4444" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.22"/>
+<path d="M 1055,120 Q 970,145 895,178" fill="none" stroke="#FF4444" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.22"/>
 
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!--  FLOW LINES + DATA PULSES (drawn UNDER the bots)          -->
-<!-- ═══════════════════════════════════════════════════════════ -->
-
-<!-- line 1→2: orchestrator → researcher -->
-<line x1="218" y1="155" x2="392" y2="155" stroke="url(#flowCG)" stroke-width="1.5" opacity="0.35" filter="url(#lineglow)"/>
-<line x1="218" y1="155" x2="392" y2="155" stroke="url(#flowCG)" stroke-width="0.8" opacity="0.7"/>
-<!-- arrow -->
-<polygon points="390,150 400,155 390,160" fill="#00FF9F" opacity="0.8"/>
-<!-- pulses -->
-<circle class="p12a" cy="155" r="4" fill="#00D4FF" filter="url(#lineglow)"/>
-<circle class="p12b" cy="155" r="3" fill="#00FF9F" opacity="0.8"/>
-<!-- label -->
-<text x="305" y="146" text-anchor="middle" class="sub" fill="#00D4FF" font-size="8px" letter-spacing="1px">task</text>
-
-<!-- line 2→3: researcher → builder -->
-<line x1="488" y1="155" x2="662" y2="155" stroke="url(#flowGA)" stroke-width="1.5" opacity="0.35" filter="url(#lineglow)"/>
-<line x1="488" y1="155" x2="662" y2="155" stroke="url(#flowGA)" stroke-width="0.8" opacity="0.7"/>
-<polygon points="660,150 670,155 660,160" fill="#FF6B00" opacity="0.8"/>
-<circle class="p23a" cy="155" r="4" fill="#00FF9F" filter="url(#lineglow)"/>
-<circle class="p23b" cy="155" r="3" fill="#FF6B00" opacity="0.8"/>
-<text x="575" y="146" text-anchor="middle" class="sub" fill="#00FF9F" font-size="8px" letter-spacing="1px">context</text>
-
-<!-- line 3→4: builder → memory -->
-<line x1="758" y1="155" x2="932" y2="155" stroke="url(#flowAV)" stroke-width="1.5" opacity="0.35" filter="url(#lineglow)"/>
-<line x1="758" y1="155" x2="932" y2="155" stroke="url(#flowAV)" stroke-width="0.8" opacity="0.7"/>
-<polygon points="930,150 940,155 930,160" fill="#7C3AED" opacity="0.8"/>
-<circle class="p34a" cy="155" r="4" fill="#FF6B00" filter="url(#lineglow)"/>
-<circle class="p34b" cy="155" r="3" fill="#7C3AED" opacity="0.8"/>
-<text x="845" y="146" text-anchor="middle" class="sub" fill="#FF6B00" font-size="8px" letter-spacing="1px">result</text>
-
-<!-- guardian arcs: curved lines DOWN from top to builder + memory -->
-<!-- guardian sits at top center (x=1062) — arc down-left to builder (590) and memory (826) -->
-<path d="M 1040,80 Q 870,40 710,100" fill="none" stroke="#FF4444" stroke-width="1" stroke-dasharray="4 4" opacity="0.35" filter="url(#lineglow)"/>
-<path d="M 1055,80 Q 970,40 870,100" fill="none" stroke="#FF4444" stroke-width="1" stroke-dasharray="4 4" opacity="0.35" filter="url(#lineglow)"/>
-<!-- pulse along guardian arcs -->
-<circle class="pgb" cy="60" cx="870" r="4" fill="#FF4444" filter="url(#gr)"/>
-<text x="1050" y="58" text-anchor="middle" class="sub" fill="#FF4444" font-size="8px" letter-spacing="1px">watching</text>
-
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!--  BOT 1 — ORCHESTRATOR — x=118 — cyan — idle               -->
-<!-- ═══════════════════════════════════════════════════════════ -->
-<g class="b1" style="transform-origin:118px 155px">
-  <ellipse cx="118" cy="155" rx="52" ry="56" fill="#00D4FF" filter="url(#gc)" opacity="0.95">
-    <animate attributeName="rx" values="52;56;50;54;52" dur="2.8s" repeatCount="indefinite"/>
-    <animate attributeName="ry" values="56;52;58;54;56" dur="2.8s" repeatCount="indefinite"/>
-  </ellipse>
-  <ellipse cx="102" cy="136" rx="16" ry="10" fill="rgba(255,255,255,0.22)" transform="rotate(-24 102 136)"/>
-</g>
-<g class="bk" style="transform-origin:118px 155px">
-  <rect x="103" y="146" width="10" height="20" rx="5" fill="#0A0E1A"/>
-  <rect x="125" y="146" width="10" height="20" rx="5" fill="#0A0E1A"/>
-</g>
-<!-- presence dot -->
-<circle cx="162" cy="195" r="6" fill="#00FF9F" stroke="#0A0E1A" stroke-width="2"/>
-<text x="118" y="232" text-anchor="middle" class="lbl" fill="#00D4FF">orchestrator</text>
-<text x="118" y="248" text-anchor="middle" class="sub">directs · delegates</text>
-
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!--  BOT 2 — RESEARCHER — x=440 — green — thinking            -->
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!-- satellites -->
-<g class="ol" style="transform-origin:440px 155px">
-  <ellipse cx="440" cy="155" rx="10" ry="10" fill="#00FF9F" opacity="0.7"/>
-</g>
-<g class="or" style="transform-origin:440px 155px">
-  <ellipse cx="440" cy="155" rx="8" ry="8" fill="#00FF9F" opacity="0.5"/>
-</g>
-<g class="b2" style="transform-origin:440px 155px">
-  <g style="transform:scale(0.88);transform-origin:440px 155px">
-    <ellipse cx="440" cy="155" rx="44" ry="46" fill="#00FF9F" filter="url(#gg)">
-      <animate attributeName="rx" values="44;48;42;46;44" dur="1.1s" repeatCount="indefinite"/>
-      <animate attributeName="ry" values="46;42;48;44;46" dur="1.1s" repeatCount="indefinite"/>
-    </ellipse>
-    <ellipse cx="425" cy="137" rx="13" ry="9" fill="rgba(255,255,255,0.18)" transform="rotate(-24 425 137)"/>
-  </g>
-</g>
-<g class="bk2" style="transform-origin:440px 155px">
-  <g class="sc">
-    <rect x="426" y="148" width="9" height="16" rx="4" fill="#0A0E1A"/>
-    <rect x="445" y="150" width="9" height="16" rx="4" fill="#0A0E1A"/>
-  </g>
-</g>
-<text x="440" y="232" text-anchor="middle" class="lbl" fill="#00FF9F">researcher</text>
-<text x="440" y="248" text-anchor="middle" class="sub">queries · enriches</text>
-
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!--  BOT 3 — BUILDER — x=710 — amber — working                -->
-<!-- ═══════════════════════════════════════════════════════════ -->
-<g class="b3" style="transform-origin:710px 155px">
-  <ellipse cx="710" cy="155" rx="56" ry="52" fill="#FF6B00" filter="url(#ga)">
-    <animate attributeName="rx" values="56;52;60;54;56" dur="0.42s" repeatCount="indefinite"/>
-    <animate attributeName="ry" values="52;56;48;54;52" dur="0.42s" repeatCount="indefinite"/>
-  </ellipse>
-  <ellipse cx="693" cy="136" rx="18" ry="11" fill="rgba(255,255,255,0.22)" transform="rotate(-24 693 136)"/>
-</g>
-<g class="bk3" style="transform-origin:710px 155px">
-  <rect x="694" y="148" width="13" height="13" rx="4" fill="#0A0E1A"/>
-  <rect x="718" y="146" width="13" height="17" rx="4" fill="#0A0E1A"/>
-</g>
-<text x="710" y="232" text-anchor="middle" class="lbl" fill="#FF6B00">builder</text>
-<text x="710" y="248" text-anchor="middle" class="sub">executes · ships</text>
-
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!--  BOT 4 — MEMORY — x=980 — violet — done                   -->
-<!-- ═══════════════════════════════════════════════════════════ -->
-<g class="b4" style="transform-origin:980px 155px">
-  <ellipse cx="980" cy="155" rx="50" ry="54" fill="#7C3AED" filter="url(#gv)">
-    <animate attributeName="rx" values="50;54;48;52;50" dur="2.2s" repeatCount="indefinite"/>
-    <animate attributeName="ry" values="54;50;56;52;54" dur="2.2s" repeatCount="indefinite"/>
-  </ellipse>
-  <ellipse cx="963" cy="136" rx="15" ry="10" fill="rgba(255,255,255,0.20)" transform="rotate(-24 963 136)"/>
-</g>
-<g class="bk4" style="transform-origin:980px 155px">
-  <rect x="963" y="145" width="10" height="19" rx="5" fill="#0A0E1A" transform="rotate(-15 968 155)"/>
-  <rect x="985" y="145" width="10" height="19" rx="5" fill="#0A0E1A" transform="rotate(-15 990 155)"/>
-</g>
-<text x="980" y="232" text-anchor="middle" class="lbl" fill="#7C3AED">memory</text>
-<text x="980" y="248" text-anchor="middle" class="sub">persists · recalls</text>
-
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!--  BOT 5 — GUARDIAN — TOP CENTER (1062,70) — red — blocked  -->
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!-- alert ring -->
-<circle cx="1100" cy="80" r="44" fill="none" stroke="#FF4444" stroke-width="1" opacity="0.2">
-  <animate attributeName="r" values="44;52;44" dur="1.5s" repeatCount="indefinite"/>
-  <animate attributeName="opacity" values="0.2;0.05;0.2" dur="1.5s" repeatCount="indefinite"/>
+<!-- ── SMIL DATA PACKETS ── -->
+<!-- fwd 1→2: 20-35% of 20s -->
+<circle cy="188" r="5" fill="#00D4FF" filter="url(#pk)">
+  <animate attributeName="opacity" dur="20s" repeatCount="indefinite"
+    keyTimes="0;0.195;0.20;0.35;0.355;1" values="0;0;1;1;0;0"/>
+  <animate attributeName="cx"    dur="20s" repeatCount="indefinite"
+    keyTimes="0;0.20;0.35;1"       values="210;210;334;334"/>
 </circle>
-<g class="b5" style="transform-origin:1100px 80px">
-  <rect x="1064" y="44" width="72" height="72" rx="18" fill="#FF4444" filter="url(#gr)"/>
-  <ellipse cx="1082" cy="60" rx="12" ry="8" fill="rgba(255,255,255,0.18)" transform="rotate(-24 1082 60)"/>
-</g>
-<g class="bk5" style="transform-origin:1100px 80px">
-  <rect x="1085" y="68" width="9" height="14" rx="3" fill="#0A0E1A" transform="rotate(16 1090 75)"/>
-  <rect x="1105" y="68" width="9" height="14" rx="3" fill="#0A0E1A" transform="rotate(16 1110 75)"/>
-</g>
-<text x="1100" y="142" text-anchor="middle" class="lbl" fill="#FF4444">guardian</text>
-<text x="1100" y="156" text-anchor="middle" class="sub">monitors · alerts</text>
+<!-- fwd 2→3: 50-65% of 20s -->
+<circle cy="188" r="5" fill="#00FF9F" filter="url(#pk)">
+  <animate attributeName="opacity" dur="20s" repeatCount="indefinite"
+    keyTimes="0;0.495;0.50;0.65;0.655;1" values="0;0;1;1;0;0"/>
+  <animate attributeName="cx"    dur="20s" repeatCount="indefinite"
+    keyTimes="0;0.50;0.65;1"       values="460;460;584;584"/>
+</circle>
+<!-- fwd 3→4: 55-70% of 20s -->
+<circle cy="188" r="5" fill="#FF6B00" filter="url(#pk)">
+  <animate attributeName="opacity" dur="20s" repeatCount="indefinite"
+    keyTimes="0;0.545;0.55;0.70;0.705;1" values="0;0;1;1;0;0"/>
+  <animate attributeName="cx"    dur="20s" repeatCount="indefinite"
+    keyTimes="0;0.55;0.70;1"       values="710;710;834;834"/>
+</circle>
+<!-- return: 75-93% of 20s, violet, travels right→left -->
+<circle cy="202" r="5" fill="#7C3AED" filter="url(#pk)">
+  <animate attributeName="opacity" dur="20s" repeatCount="indefinite"
+    keyTimes="0;0.745;0.75;0.93;0.935;1" values="0;0;1;1;0;0"/>
+  <animate attributeName="cx"    dur="20s" repeatCount="indefinite"
+    keyTimes="0;0.75;0.93;1"       values="834;834;210;210"/>
+</circle>
 
-<!-- ── bottom bar ── -->
-<line x1="40" y1="272" x2="1140" y2="272" stroke="#1E3A5F" stroke-width="0.5" opacity="0.6"/>
-<text x="590" y="292" text-anchor="middle" font-family="Courier New,monospace" font-size="10px" fill="#1E3A5F" letter-spacing="2px">abheos  ·  5 agents  ·  DEPLOYED  ·  git-backed  ·  zero cloud deps</text>
+<!-- ══════════════════════════════════════════════════
+     BOT 1 — ORCHESTRATOR — BLOB — cyan — cx=140,cy=195
+══════════════════════════════════════════════════ -->
+<g class="b1">
+  <ellipse cx="140" cy="195" rx="52" ry="56" fill="#00D4FF" filter="url(#gc)">
+    <animate attributeName="rx" values="52;56;50;54;52;48;56;52" dur="2.8s" repeatCount="indefinite"/>
+    <animate attributeName="ry" values="56;52;58;54;56;60;52;56" dur="2.8s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="123" cy="175" rx="17" ry="11" fill="rgba(255,255,255,0.22)" transform="rotate(-24 123 175)"/>
+</g>
+<g class="b1e" style="transform-origin:140px 195px">
+  <rect x="123" y="185" width="11" height="22" rx="5" fill="#0A0E1A"/>
+  <rect x="146" y="185" width="11" height="22" rx="5" fill="#0A0E1A"/>
+</g>
+<circle cx="183" cy="235" r="6" fill="#00FF9F" stroke="#0A0E1A" stroke-width="2"/>
+<text x="140" y="272" text-anchor="middle" class="lbl" fill="#00D4FF">orchestrator</text>
+<text x="140" y="287" text-anchor="middle" class="sub">blob · directs</text>
+
+<!-- ══════════════════════════════════════════════════
+     BOT 2 — RESEARCHER — HEXAGON — green — cx=390,cy=195
+══════════════════════════════════════════════════ -->
+<!-- satellites (thinking state) -->
+<circle class="sl" cx="390" cy="195" r="10" fill="#00FF9F"/>
+<circle class="sr" cx="390" cy="195" r="8"  fill="#00FF9F"/>
+<g class="b2">
+  <g class="b2h">
+    <g transform="translate(340,145)">
+      <path d="M50 3 L89 25 Q93 27 93 32 V68 Q93 73 89 75 L50 97 Q50 98 46 96 L11 75 Q7 73 7 68 V32 Q7 27 11 25 L46 4 Q48 3 50 3 Z" fill="#00FF9F" filter="url(#gg)"/>
+      <ellipse cx="25" cy="25" rx="14" ry="9" fill="rgba(255,255,255,0.20)" transform="rotate(-24 25 25)"/>
+    </g>
+  </g>
+</g>
+<g class="b2e" style="transform-origin:390px 195px">
+  <rect x="372" y="188" width="10" height="18" rx="5" fill="#0A0E1A"/>
+  <rect x="397" y="190" width="10" height="18" rx="5" fill="#0A0E1A"/>
+</g>
+<text x="390" y="272" text-anchor="middle" class="lbl" fill="#00FF9F">researcher</text>
+<text x="390" y="287" text-anchor="middle" class="sub">hexagon · queries</text>
+
+<!-- ══════════════════════════════════════════════════
+     BOT 3 — BUILDER — SQUIRCLE — amber — cx=640,cy=195
+══════════════════════════════════════════════════ -->
+<g class="b3">
+  <g transform="translate(590,145)">
+    <path d="M28 4H72A24 24 0 0 1 96 28V72A24 24 0 0 1 72 96H28A24 24 0 0 1 4 72V28A24 24 0 0 1 28 4Z" fill="#FF6B00" filter="url(#ga)"/>
+    <ellipse cx="25" cy="24" rx="16" ry="10" fill="rgba(255,255,255,0.22)" transform="rotate(-24 25 24)"/>
+  </g>
+</g>
+<g class="b3e" style="transform-origin:640px 195px">
+  <rect x="622" y="188" width="12" height="16" rx="4" fill="#0A0E1A"/>
+  <rect x="648" y="185" width="12" height="21" rx="4" fill="#0A0E1A"/>
+</g>
+<text x="640" y="272" text-anchor="middle" class="lbl" fill="#FF6B00">builder</text>
+<text x="640" y="287" text-anchor="middle" class="sub">squircle · ships</text>
+
+<!-- ══════════════════════════════════════════════════
+     BOT 4 — MEMORY — TEARDROP — violet — cx=890,cy=195
+══════════════════════════════════════════════════ -->
+<g class="b4">
+  <g transform="translate(840,145)">
+    <path d="M50 3 Q45 3 42 8 L20 41 Q4 65 10 81 Q18 96 50 96 Q82 96 90 81 Q96 65 80 41 L58 8 Q55 3 50 3 Z" fill="#7C3AED" filter="url(#gv)"/>
+    <ellipse cx="26" cy="24" rx="13" ry="8" fill="rgba(255,255,255,0.20)" transform="rotate(-24 26 24)"/>
+  </g>
+</g>
+<g class="b4e" style="transform-origin:890px 195px">
+  <rect x="872" y="187" width="10" height="20" rx="5" fill="#0A0E1A" transform="rotate(-15 877 197)"/>
+  <rect x="897" y="187" width="10" height="20" rx="5" fill="#0A0E1A" transform="rotate(-15 902 197)"/>
+</g>
+<text x="890" y="272" text-anchor="middle" class="lbl" fill="#7C3AED">memory</text>
+<text x="890" y="287" text-anchor="middle" class="sub">teardrop · persists</text>
+
+<!-- ══════════════════════════════════════════════════
+     BOT 5 — GUARDIAN — TRIANGLE — red — cx=1060,cy=88
+══════════════════════════════════════════════════ -->
+<circle cx="1060" cy="88" r="42" fill="none" stroke="#FF4444" stroke-width="1" class="ar"/>
+<g class="b5">
+  <g transform="translate(1010,38)">
+    <path d="M50 7 Q57 7 60 14 L93 77 Q97 86 88 89 Q85 90 81 90 H19 Q10 90 7 83 Q5 78 8 73 L40 14 Q43 7 50 7 Z" fill="#FF4444" filter="url(#gr)"/>
+    <ellipse cx="28" cy="36" rx="11" ry="7" fill="rgba(255,255,255,0.18)" transform="rotate(-24 28 36)"/>
+  </g>
+</g>
+<g class="b5e" style="transform-origin:1060px 88px">
+  <rect x="1043" y="82" width="9" height="13" rx="3" fill="#0A0E1A" transform="rotate(16 1048 88)"/>
+  <rect x="1064" y="82" width="9" height="13" rx="3" fill="#0A0E1A" transform="rotate(16 1069 88)"/>
+</g>
+<text x="1060" y="158" text-anchor="middle" class="lbl" fill="#FF4444">guardian</text>
+<text x="1060" y="173" text-anchor="middle" class="sub">triangle · alerts</text>
+
+<!-- ── bottom ── -->
+<line x1="40" y1="312" x2="1140" y2="312" stroke="#1E3A5F" stroke-width="0.5" opacity="0.4"/>
+<text x="590" y="332" text-anchor="middle" font-family="Courier New,monospace" font-size="10px" fill="#1E3A5F" letter-spacing="2px">abheos  ·  5 agents  ·  DEPLOYED  ·  zero cloud deps</text>
 </svg>

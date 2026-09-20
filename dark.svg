@@ -100,7 +100,7 @@
 </defs>
 
 <rect width="1180" height="610" rx="18" fill="url(#bgGlow)"/>
-<rect width="1180" height="610" rx="18" fill="url(#scanlines)"/>
+<!-- scanlines removed from full card -->
 
 <!-- subtle grid lines for ops feel -->
 <line x1="0" y1="305" x2="1180" y2="305" stroke="#00D4FF" stroke-width="0.3" opacity="0.06"/>
@@ -227,9 +227,7 @@
 </g>
 
 <!-- scan sweep -->
-<rect x="0" y="-70" width="1180" height="70" fill="url(#scanGrad)" opacity="0.6" style="mix-blend-mode:screen">
-  <animateTransform attributeName="transform" type="translate" from="0 -70" to="0 680" dur="4.2s" repeatCount="indefinite"/>
-</rect>
+<!-- full-card scan sweep removed -->
 
 <!-- manifesto line -->
 <text x="590" y="593" text-anchor="middle" class="manifesto">Agents are the interface. The rest is scaffolding.</text>

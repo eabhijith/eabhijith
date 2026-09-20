@@ -199,9 +199,7 @@
   </rect>
 </g>
 
-<rect x="0" y="-70" width="1180" height="70" fill="url(#scanGrad)" opacity="0.4">
-  <animateTransform attributeName="transform" type="translate" from="0 -70" to="0 680" dur="4.2s" repeatCount="indefinite"/>
-</rect>
+<!-- full-card scan sweep removed -->
 
 <text x="590" y="593" text-anchor="middle" class="manifesto">Agents are the interface. The rest is scaffolding.</text>
 
