@@ -31,12 +31,12 @@
 ### GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=eabhijith&show_icons=true&bg_color=0A0E1A&title_color=00D4FF&text_color=CBD5E1&icon_color=00FF9F&border_color=1E3A5F&hide_border=false&count_private=true&include_all_commits=true" width="48%"/>
+  <img src="https://github-readme-stats-phi-henna-57.vercel.app/api?username=eabhijith&show_icons=true&bg_color=0A0E1A&title_color=00D4FF&text_color=CBD5E1&icon_color=00FF9F&border_color=1E3A5F&count_private=true&include_all_commits=true" width="48%"/>
   <img src="https://streak-stats.demolab.com/?user=eabhijith&background=0A0E1A&ring=00D4FF&fire=FF6B00&currStreakLabel=00D4FF&sideLabels=00FF9F&dates=CBD5E1&border=1E3A5F" width="48%"/>
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=eabhijith&layout=compact&bg_color=0A0E1A&title_color=00D4FF&text_color=CBD5E1&border_color=1E3A5F&langs_count=8" width="48%"/>
+  <img src="https://github-readme-stats-phi-henna-57.vercel.app/api/top-langs/?username=eabhijith&layout=compact&bg_color=0A0E1A&title_color=00D4FF&text_color=CBD5E1&border_color=1E3A5F&langs_count=8" width="48%"/>
   <img src="https://github-profile-trophy.vercel.app/?username=eabhijith&theme=onestar&no-bg=true&no-frame=true&column=4&margin-w=4" width="48%"/>
 </p>
 
