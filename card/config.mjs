@@ -54,3 +54,20 @@ export const TITLEBAR = {
   prompt:      `guest@${USERNAME}:~$ cat profile.md`,
   statusLabel: "DEPLOYED",
 };
+
+/**
+ * PORTRAIT REGENERATION
+ * If portrait-tspans.txt ever needs rebuilding:
+ *
+ *   python3 card/regen-portrait.py
+ *
+ * This uses card/avatar.jpg (committed) — never regenerate from
+ * a different source or the circle alignment will break.
+ *
+ * Working parameters (DO NOT CHANGE):
+ *   x="44" textLength="400" lengthAdjust="spacingAndGlyphs"
+ *   cx=244, cy=268, r=200
+ *   52 cols × 46 rows, lineH=9.2, font-size=8px
+ *   Avatar crop: y=35..200 (skip building background)
+ *   Char map: "@#%*+=- . " dark→dense, light→sparse
+ */
