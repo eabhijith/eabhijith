@@ -74,39 +74,41 @@ export function buildInfoPanel(theme) {
 
   // clipPath defs need to go into <defs> — we build them inline here
   // by embedding clipPath elements directly before each text element
+  // Locate boot sequence — appears before scan hits face (t=0 to t=0.9s)
+  // Four lines type in fast, creating the sci-fi "finding agent" feel
+  const locateLine = (y, face_y, inner) => revealLine(x, y, face_y, inner, theme);
+
+  const bootLines = [
+    locateLine(46,  20, `<tspan fill="${t.colComment}">$ </tspan><tspan fill="${t.colAccent}">locate --agent eabhijith --scan deep</tspan>`),
+    locateLine(64,  30, `<tspan fill="${t.colComment}">  </tspan><tspan fill="${t.colComment}">scanning network</tspan><tspan fill="${t.colAccent}">...............</tspan>`),
+    locateLine(82,  42, `<tspan fill="${t.colComment}">  </tspan><tspan fill="${t.colComment}">signal acquired </tspan><tspan fill="${t.colStatus}" font-weight="bold">[52°31'N 13°24'E · BERLIN]</tspan>`),
+    locateLine(100, 56, `<tspan fill="${t.colComment}">  </tspan><tspan fill="${t.colComment}">identity </tspan><tspan fill="${t.colStatus}" font-weight="bold">CONFIRMED</tspan><tspan fill="${t.colAccent}"> ✓</tspan>`),
+    locateLine(118, 68, `<tspan fill="${t.colComment}">$ </tspan><tspan fill="${t.colValue}">cat profile.md</tspan>`),
+  ].join("\n");
+
   const rows = [
-    [46,  68,  prompt()],
-    [68,  100, kv("agent_id",    IDENTITY.id)],
-    [90,  130, kv("designation", IDENTITY.designation)],
-    [112, 160, kv("base",        IDENTITY.base)],
-    [134, 190, kv("mission",     IDENTITY.mission)],
-    [156, 220, status_l("status", IDENTITY.status)],
-    [178, 260, section("capabilities")],
-    ...CAPABILITIES.map((c, i) => [200 + i*22, 290 + i*30, item(c)]),
-    [266, 370, section("side_projects")],
-    ...PROJECTS.map((p, i) => [288 + i*22, 390 + i*20, item(`▸ ${p}`)]),
-    [332, 430, kv("philosophy",  IDENTITY.philosophy)],
-    [354, 445, kv("uptime",      IDENTITY.uptime)],
-    [376, 455, kv("linkedin",    IDENTITY.linkedin)],
-    [398, 462, kv("github",      IDENTITY.github)],
-    [420, 468, web("website",    IDENTITY.website)],
+    [136, 100, kv("agent_id",    IDENTITY.id)],
+    [158, 130, kv("designation", IDENTITY.designation)],
+    [180, 160, kv("base",        IDENTITY.base)],
+    [202, 190, kv("mission",     IDENTITY.mission)],
+    [224, 220, status_l("status", IDENTITY.status)],
+    [246, 260, section("capabilities")],
+    ...CAPABILITIES.map((c, i) => [268 + i*22, 290 + i*30, item(c)]),
+    [334, 370, section("side_projects")],
+    ...PROJECTS.map((p, i) => [356 + i*22, 390 + i*20, item(`▸ ${p}`)]),
+    [400, 430, kv("philosophy",  IDENTITY.philosophy)],
+    [422, 445, kv("uptime",      IDENTITY.uptime)],
+    [444, 455, kv("linkedin",    IDENTITY.linkedin)],
+    [466, 462, kv("github",      IDENTITY.github)],
+    [488, 468, web("website",    IDENTITY.website)],
   ].map(([y, face_y, inner]) => revealLine(x, y, face_y, inner, theme)).join("\n");
 
-  // Blinking cursor — appears when scan finishes, fades with rest
-  const { CYCLE, SCAN_DUR, HOLD_DUR, FADE_DUR } = SCAN;
-  const cursorStart = (SCAN_DUR / CYCLE).toFixed(3);
-  const holdEnd     = ((SCAN_DUR + HOLD_DUR) / CYCLE).toFixed(3);
-  const fadeEnd     = ((SCAN_DUR + HOLD_DUR + FADE_DUR) / CYCLE).toFixed(3);
-
-  const cursor = [
-    `<rect x="${x}" y="428" width="8" height="14" fill="${t.colCursor}" opacity="0">`,
-    `  <animate attributeName="opacity" dur="${CYCLE}s" repeatCount="indefinite"`,
-    `    keyTimes="0;${cursorStart};${holdEnd};${fadeEnd};1"`,
-    `    values="0;1;1;0;0"/>`,
-    `  <animate attributeName="opacity" values="1;0;1" dur="0.55s" repeatCount="indefinite"`,
-    `    begin="${SCAN_DUR}s"/>`,
-    `</rect>`,
-  ].join("\n  ");
+  // MANIFEST LOADED line — appears when scan finishes, fades with rest
+  const manifestLoaded = revealLine(
+    x, 510, 468,
+    `<tspan fill="${t.colAccent}">[ MANIFEST LOADED · AGENT ACTIVE ]</tspan>`,
+    theme
+  );
 
   return `
   <!-- ── RIGHT PANEL ───────────────────────────────── -->
@@ -118,9 +120,11 @@ export function buildInfoPanel(theme) {
     fill="${t.panelTitle}" letter-spacing="2px" opacity="0.6">AGENT.MANIFEST</text>
   <line x1="${PANEL.x}" y1="30" x2="${PANEL.x + PANEL.width}" y2="30"
     stroke="${t.panelStroke}" stroke-width="0.5" opacity="0.3"/>
-  <line x1="${PANEL.textX}" y1="172" x2="1155" y2="172" stroke="${t.colComment}" stroke-width="0.4" opacity="0.3"/>
-  <line x1="${PANEL.textX}" y1="278" x2="1155" y2="278" stroke="${t.colComment}" stroke-width="0.4" opacity="0.3"/>
-  <line x1="${PANEL.textX}" y1="346" x2="1155" y2="346" stroke="${t.colComment}" stroke-width="0.4" opacity="0.3"/>
+  <line x1="${PANEL.textX}" y1="130" x2="1155" y2="130" stroke="${t.colComment}" stroke-width="0.4" opacity="0.3"/>
+  <line x1="${PANEL.textX}" y1="242" x2="1155" y2="242" stroke="${t.colComment}" stroke-width="0.4" opacity="0.3"/>
+  <line x1="${PANEL.textX}" y1="350" x2="1155" y2="350" stroke="${t.colComment}" stroke-width="0.4" opacity="0.3"/>
+  <line x1="${PANEL.textX}" y1="416" x2="1155" y2="416" stroke="${t.colComment}" stroke-width="0.4" opacity="0.3"/>
+${bootLines}
 ${rows}
-  ${cursor}`;
+${manifestLoaded}`;
 }

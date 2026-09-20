@@ -161,106 +161,125 @@
     fill="#0369A1" letter-spacing="2px" opacity="0.6">AGENT.MANIFEST</text>
   <line x1="508" y1="30" x2="1163" y2="30"
     stroke="#0369A1" stroke-width="0.5" opacity="0.3"/>
-  <line x1="524" y1="172" x2="1155" y2="172" stroke="#94A3B8" stroke-width="0.4" opacity="0.3"/>
-  <line x1="524" y1="278" x2="1155" y2="278" stroke="#94A3B8" stroke-width="0.4" opacity="0.3"/>
-  <line x1="524" y1="346" x2="1155" y2="346" stroke="#94A3B8" stroke-width="0.4" opacity="0.3"/>
+  <line x1="524" y1="130" x2="1155" y2="130" stroke="#94A3B8" stroke-width="0.4" opacity="0.3"/>
+  <line x1="524" y1="242" x2="1155" y2="242" stroke="#94A3B8" stroke-width="0.4" opacity="0.3"/>
+  <line x1="524" y1="350" x2="1155" y2="350" stroke="#94A3B8" stroke-width="0.4" opacity="0.3"/>
+  <line x1="524" y1="416" x2="1155" y2="416" stroke="#94A3B8" stroke-width="0.4" opacity="0.3"/>
 <clipPath id="cp0"><rect x="524" y="30" width="0" height="22">
   <animate attributeName="width" dur="8s" repeatCount="indefinite" keyTimes="0;0.006;0.056;0.875;0.938;1" values="0;0;640;640;0;0" calcMode="spline" keySplines="0 0 0.2 1;0.4 0 0.2 1;0 0 1 1;0.4 0 0.2 1;0 0 1 1"/>
 </rect></clipPath>
 <text x="524" y="46" clip-path="url(#cp0)"
-  font-family="'Courier New',monospace" font-size="13px"><tspan fill="#94A3B8">guest@</tspan><tspan fill="#047857" font-weight="bold">eabhijith</tspan><tspan fill="#94A3B8">:~$ </tspan><tspan fill="#1E293B">cat profile.md</tspan></text>
-<clipPath id="cp1"><rect x="524" y="52" width="0" height="22">
+  font-family="'Courier New',monospace" font-size="13px"><tspan fill="#94A3B8">$ </tspan><tspan fill="#047857">locate --agent eabhijith --scan deep</tspan></text>
+<clipPath id="cp1"><rect x="524" y="48" width="0" height="22">
+  <animate attributeName="width" dur="8s" repeatCount="indefinite" keyTimes="0;0.006;0.056;0.875;0.938;1" values="0;0;640;640;0;0" calcMode="spline" keySplines="0 0 0.2 1;0.4 0 0.2 1;0 0 1 1;0.4 0 0.2 1;0 0 1 1"/>
+</rect></clipPath>
+<text x="524" y="64" clip-path="url(#cp1)"
+  font-family="'Courier New',monospace" font-size="13px"><tspan fill="#94A3B8">  </tspan><tspan fill="#94A3B8">scanning network</tspan><tspan fill="#047857">...............</tspan></text>
+<clipPath id="cp2"><rect x="524" y="66" width="0" height="22">
+  <animate attributeName="width" dur="8s" repeatCount="indefinite" keyTimes="0;0.006;0.056;0.875;0.938;1" values="0;0;640;640;0;0" calcMode="spline" keySplines="0 0 0.2 1;0.4 0 0.2 1;0 0 1 1;0.4 0 0.2 1;0 0 1 1"/>
+</rect></clipPath>
+<text x="524" y="82" clip-path="url(#cp2)"
+  font-family="'Courier New',monospace" font-size="13px"><tspan fill="#94A3B8">  </tspan><tspan fill="#94A3B8">signal acquired </tspan><tspan fill="#047857" font-weight="bold">[52°31'N 13°24'E · BERLIN]</tspan></text>
+<clipPath id="cp3"><rect x="524" y="84" width="0" height="22">
+  <animate attributeName="width" dur="8s" repeatCount="indefinite" keyTimes="0;0.006;0.056;0.875;0.938;1" values="0;0;640;640;0;0" calcMode="spline" keySplines="0 0 0.2 1;0.4 0 0.2 1;0 0 1 1;0.4 0 0.2 1;0 0 1 1"/>
+</rect></clipPath>
+<text x="524" y="100" clip-path="url(#cp3)"
+  font-family="'Courier New',monospace" font-size="13px"><tspan fill="#94A3B8">  </tspan><tspan fill="#94A3B8">identity </tspan><tspan fill="#047857" font-weight="bold">CONFIRMED</tspan><tspan fill="#047857"> ✓</tspan></text>
+<clipPath id="cp4"><rect x="524" y="102" width="0" height="22">
+  <animate attributeName="width" dur="8s" repeatCount="indefinite" keyTimes="0;0.006;0.056;0.875;0.938;1" values="0;0;640;640;0;0" calcMode="spline" keySplines="0 0 0.2 1;0.4 0 0.2 1;0 0 1 1;0.4 0 0.2 1;0 0 1 1"/>
+</rect></clipPath>
+<text x="524" y="118" clip-path="url(#cp4)"
+  font-family="'Courier New',monospace" font-size="13px"><tspan fill="#94A3B8">$ </tspan><tspan fill="#1E293B">cat profile.md</tspan></text>
+<clipPath id="cp5"><rect x="524" y="120" width="0" height="22">
   <animate attributeName="width" dur="8s" repeatCount="indefinite" keyTimes="0;0.050;0.100;0.875;0.938;1" values="0;0;640;640;0;0" calcMode="spline" keySplines="0 0 0.2 1;0.4 0 0.2 1;0 0 1 1;0.4 0 0.2 1;0 0 1 1"/>
 </rect></clipPath>
-<text x="524" y="68" clip-path="url(#cp1)"
+<text x="524" y="136" clip-path="url(#cp5)"
   font-family="'Courier New',monospace" font-size="13px"><tspan fill="#94A3B8">  </tspan><tspan fill="#0369A1" font-weight="bold">agent_id</tspan><tspan fill="#94A3B8"> .. </tspan><tspan fill="#1E293B">eabhijith</tspan></text>
-<clipPath id="cp2"><rect x="524" y="74" width="0" height="22">
+<clipPath id="cp6"><rect x="524" y="142" width="0" height="22">
   <animate attributeName="width" dur="8s" repeatCount="indefinite" keyTimes="0;0.097;0.147;0.875;0.938;1" values="0;0;640;640;0;0" calcMode="spline" keySplines="0 0 0.2 1;0.4 0 0.2 1;0 0 1 1;0.4 0 0.2 1;0 0 1 1"/>
 </rect></clipPath>
-<text x="524" y="90" clip-path="url(#cp2)"
+<text x="524" y="158" clip-path="url(#cp6)"
   font-family="'Courier New',monospace" font-size="13px"><tspan fill="#94A3B8">  </tspan><tspan fill="#0369A1" font-weight="bold">designation</tspan><tspan fill="#94A3B8"> .. </tspan><tspan fill="#1E293B">Senior AI &amp; Automation Specialist</tspan></text>
-<clipPath id="cp3"><rect x="524" y="96" width="0" height="22">
+<clipPath id="cp7"><rect x="524" y="164" width="0" height="22">
   <animate attributeName="width" dur="8s" repeatCount="indefinite" keyTimes="0;0.144;0.194;0.875;0.938;1" values="0;0;640;640;0;0" calcMode="spline" keySplines="0 0 0.2 1;0.4 0 0.2 1;0 0 1 1;0.4 0 0.2 1;0 0 1 1"/>
 </rect></clipPath>
-<text x="524" y="112" clip-path="url(#cp3)"
+<text x="524" y="180" clip-path="url(#cp7)"
   font-family="'Courier New',monospace" font-size="13px"><tspan fill="#94A3B8">  </tspan><tspan fill="#0369A1" font-weight="bold">base</tspan><tspan fill="#94A3B8"> .. </tspan><tspan fill="#1E293B">Berlin, Germany</tspan></text>
-<clipPath id="cp4"><rect x="524" y="118" width="0" height="22">
+<clipPath id="cp8"><rect x="524" y="186" width="0" height="22">
   <animate attributeName="width" dur="8s" repeatCount="indefinite" keyTimes="0;0.191;0.241;0.875;0.938;1" values="0;0;640;640;0;0" calcMode="spline" keySplines="0 0 0.2 1;0.4 0 0.2 1;0 0 1 1;0.4 0 0.2 1;0 0 1 1"/>
 </rect></clipPath>
-<text x="524" y="134" clip-path="url(#cp4)"
+<text x="524" y="202" clip-path="url(#cp8)"
   font-family="'Courier New',monospace" font-size="13px"><tspan fill="#94A3B8">  </tspan><tspan fill="#0369A1" font-weight="bold">mission</tspan><tspan fill="#94A3B8"> .. </tspan><tspan fill="#1E293B">Multi-Agent · LLM Orchestration</tspan></text>
-<clipPath id="cp5"><rect x="524" y="140" width="0" height="22">
+<clipPath id="cp9"><rect x="524" y="208" width="0" height="22">
   <animate attributeName="width" dur="8s" repeatCount="indefinite" keyTimes="0;0.237;0.287;0.875;0.938;1" values="0;0;640;640;0;0" calcMode="spline" keySplines="0 0 0.2 1;0.4 0 0.2 1;0 0 1 1;0.4 0 0.2 1;0 0 1 1"/>
 </rect></clipPath>
-<text x="524" y="156" clip-path="url(#cp5)"
+<text x="524" y="224" clip-path="url(#cp9)"
   font-family="'Courier New',monospace" font-size="13px"><tspan fill="#94A3B8">  </tspan><tspan fill="#0369A1" font-weight="bold">status</tspan><tspan fill="#94A3B8"> .. </tspan><tspan fill="#047857" font-weight="bold">DEPLOYED · ACTIVE</tspan></text>
-<clipPath id="cp6"><rect x="524" y="162" width="0" height="22">
+<clipPath id="cp10"><rect x="524" y="230" width="0" height="22">
   <animate attributeName="width" dur="8s" repeatCount="indefinite" keyTimes="0;0.300;0.350;0.875;0.938;1" values="0;0;640;640;0;0" calcMode="spline" keySplines="0 0 0.2 1;0.4 0 0.2 1;0 0 1 1;0.4 0 0.2 1;0 0 1 1"/>
 </rect></clipPath>
-<text x="524" y="178" clip-path="url(#cp6)"
+<text x="524" y="246" clip-path="url(#cp10)"
   font-family="'Courier New',monospace" font-size="13px"><tspan fill="#94A3B8">  </tspan><tspan fill="#0369A1" font-weight="bold">capabilities</tspan><tspan fill="#047857"> ────────────────</tspan></text>
-<clipPath id="cp7"><rect x="524" y="184" width="0" height="22">
+<clipPath id="cp11"><rect x="524" y="252" width="0" height="22">
   <animate attributeName="width" dur="8s" repeatCount="indefinite" keyTimes="0;0.347;0.397;0.875;0.938;1" values="0;0;640;640;0;0" calcMode="spline" keySplines="0 0 0.2 1;0.4 0 0.2 1;0 0 1 1;0.4 0 0.2 1;0 0 1 1"/>
 </rect></clipPath>
-<text x="524" y="200" clip-path="url(#cp7)"
+<text x="524" y="268" clip-path="url(#cp11)"
   font-family="'Courier New',monospace" font-size="13px"><tspan fill="#94A3B8">    </tspan><tspan fill="#1E293B">▸ Pydantic-AI · LangGraph · Bedrock</tspan></text>
-<clipPath id="cp8"><rect x="524" y="206" width="0" height="22">
+<clipPath id="cp12"><rect x="524" y="274" width="0" height="22">
   <animate attributeName="width" dur="8s" repeatCount="indefinite" keyTimes="0;0.394;0.444;0.875;0.938;1" values="0;0;640;640;0;0" calcMode="spline" keySplines="0 0 0.2 1;0.4 0 0.2 1;0 0 1 1;0.4 0 0.2 1;0 0 1 1"/>
 </rect></clipPath>
-<text x="524" y="222" clip-path="url(#cp8)"
+<text x="524" y="290" clip-path="url(#cp12)"
   font-family="'Courier New',monospace" font-size="13px"><tspan fill="#94A3B8">    </tspan><tspan fill="#1E293B">▸ Python · JavaScript · Apex · React</tspan></text>
-<clipPath id="cp9"><rect x="524" y="228" width="0" height="22">
+<clipPath id="cp13"><rect x="524" y="296" width="0" height="22">
   <animate attributeName="width" dur="8s" repeatCount="indefinite" keyTimes="0;0.441;0.491;0.875;0.938;1" values="0;0;640;640;0;0" calcMode="spline" keySplines="0 0 0.2 1;0.4 0 0.2 1;0 0 1 1;0.4 0 0.2 1;0 0 1 1"/>
 </rect></clipPath>
-<text x="524" y="244" clip-path="url(#cp9)"
+<text x="524" y="312" clip-path="url(#cp13)"
   font-family="'Courier New',monospace" font-size="13px"><tspan fill="#94A3B8">    </tspan><tspan fill="#1E293B">▸ AWS · Databricks · Salesforce</tspan></text>
-<clipPath id="cp10"><rect x="524" y="250" width="0" height="22">
+<clipPath id="cp14"><rect x="524" y="318" width="0" height="22">
   <animate attributeName="width" dur="8s" repeatCount="indefinite" keyTimes="0;0.472;0.522;0.875;0.938;1" values="0;0;640;640;0;0" calcMode="spline" keySplines="0 0 0.2 1;0.4 0 0.2 1;0 0 1 1;0.4 0 0.2 1;0 0 1 1"/>
 </rect></clipPath>
-<text x="524" y="266" clip-path="url(#cp10)"
+<text x="524" y="334" clip-path="url(#cp14)"
   font-family="'Courier New',monospace" font-size="13px"><tspan fill="#94A3B8">  </tspan><tspan fill="#0369A1" font-weight="bold">side_projects</tspan><tspan fill="#047857"> ────────────────</tspan></text>
-<clipPath id="cp11"><rect x="524" y="272" width="0" height="22">
+<clipPath id="cp15"><rect x="524" y="340" width="0" height="22">
   <animate attributeName="width" dur="8s" repeatCount="indefinite" keyTimes="0;0.503;0.553;0.875;0.938;1" values="0;0;640;640;0;0" calcMode="spline" keySplines="0 0 0.2 1;0.4 0 0.2 1;0 0 1 1;0.4 0 0.2 1;0 0 1 1"/>
 </rect></clipPath>
-<text x="524" y="288" clip-path="url(#cp11)"
+<text x="524" y="356" clip-path="url(#cp15)"
   font-family="'Courier New',monospace" font-size="13px"><tspan fill="#94A3B8">    </tspan><tspan fill="#1E293B">▸ personal AI OS</tspan></text>
-<clipPath id="cp12"><rect x="524" y="294" width="0" height="22">
+<clipPath id="cp16"><rect x="524" y="362" width="0" height="22">
   <animate attributeName="width" dur="8s" repeatCount="indefinite" keyTimes="0;0.534;0.584;0.875;0.938;1" values="0;0;640;640;0;0" calcMode="spline" keySplines="0 0 0.2 1;0.4 0 0.2 1;0 0 1 1;0.4 0 0.2 1;0 0 1 1"/>
 </rect></clipPath>
-<text x="524" y="310" clip-path="url(#cp12)"
+<text x="524" y="378" clip-path="url(#cp16)"
   font-family="'Courier New',monospace" font-size="13px"><tspan fill="#94A3B8">    </tspan><tspan fill="#1E293B">▸ archify — diagram renderer</tspan></text>
-<clipPath id="cp13"><rect x="524" y="316" width="0" height="22">
+<clipPath id="cp17"><rect x="524" y="384" width="0" height="22">
   <animate attributeName="width" dur="8s" repeatCount="indefinite" keyTimes="0;0.566;0.616;0.875;0.938;1" values="0;0;640;640;0;0" calcMode="spline" keySplines="0 0 0.2 1;0.4 0 0.2 1;0 0 1 1;0.4 0 0.2 1;0 0 1 1"/>
 </rect></clipPath>
-<text x="524" y="332" clip-path="url(#cp13)"
+<text x="524" y="400" clip-path="url(#cp17)"
   font-family="'Courier New',monospace" font-size="13px"><tspan fill="#94A3B8">  </tspan><tspan fill="#0369A1" font-weight="bold">philosophy</tspan><tspan fill="#94A3B8"> .. </tspan><tspan fill="#1E293B">Functional · Minimal · Ship it</tspan></text>
-<clipPath id="cp14"><rect x="524" y="338" width="0" height="22">
+<clipPath id="cp18"><rect x="524" y="406" width="0" height="22">
   <animate attributeName="width" dur="8s" repeatCount="indefinite" keyTimes="0;0.589;0.639;0.875;0.938;1" values="0;0;640;640;0;0" calcMode="spline" keySplines="0 0 0.2 1;0.4 0 0.2 1;0 0 1 1;0.4 0 0.2 1;0 0 1 1"/>
 </rect></clipPath>
-<text x="524" y="354" clip-path="url(#cp14)"
+<text x="524" y="422" clip-path="url(#cp18)"
   font-family="'Courier New',monospace" font-size="13px"><tspan fill="#94A3B8">  </tspan><tspan fill="#0369A1" font-weight="bold">uptime</tspan><tspan fill="#94A3B8"> .. </tspan><tspan fill="#1E293B">since 2017 · Berlin</tspan></text>
-<clipPath id="cp15"><rect x="524" y="360" width="0" height="22">
+<clipPath id="cp19"><rect x="524" y="428" width="0" height="22">
   <animate attributeName="width" dur="8s" repeatCount="indefinite" keyTimes="0;0.605;0.655;0.875;0.938;1" values="0;0;640;640;0;0" calcMode="spline" keySplines="0 0 0.2 1;0.4 0 0.2 1;0 0 1 1;0.4 0 0.2 1;0 0 1 1"/>
 </rect></clipPath>
-<text x="524" y="376" clip-path="url(#cp15)"
+<text x="524" y="444" clip-path="url(#cp19)"
   font-family="'Courier New',monospace" font-size="13px"><tspan fill="#94A3B8">  </tspan><tspan fill="#0369A1" font-weight="bold">linkedin</tspan><tspan fill="#94A3B8"> .. </tspan><tspan fill="#1E293B">linkedin.com/in/eabhijith</tspan></text>
-<clipPath id="cp16"><rect x="524" y="382" width="0" height="22">
+<clipPath id="cp20"><rect x="524" y="450" width="0" height="22">
   <animate attributeName="width" dur="8s" repeatCount="indefinite" keyTimes="0;0.616;0.666;0.875;0.938;1" values="0;0;640;640;0;0" calcMode="spline" keySplines="0 0 0.2 1;0.4 0 0.2 1;0 0 1 1;0.4 0 0.2 1;0 0 1 1"/>
 </rect></clipPath>
-<text x="524" y="398" clip-path="url(#cp16)"
+<text x="524" y="466" clip-path="url(#cp20)"
   font-family="'Courier New',monospace" font-size="13px"><tspan fill="#94A3B8">  </tspan><tspan fill="#0369A1" font-weight="bold">github</tspan><tspan fill="#94A3B8"> .. </tspan><tspan fill="#1E293B">github.com/eabhijith</tspan></text>
-<clipPath id="cp17"><rect x="524" y="404" width="0" height="22">
+<clipPath id="cp21"><rect x="524" y="472" width="0" height="22">
   <animate attributeName="width" dur="8s" repeatCount="indefinite" keyTimes="0;0.625;0.675;0.875;0.938;1" values="0;0;640;640;0;0" calcMode="spline" keySplines="0 0 0.2 1;0.4 0 0.2 1;0 0 1 1;0.4 0 0.2 1;0 0 1 1"/>
 </rect></clipPath>
-<text x="524" y="420" clip-path="url(#cp17)"
+<text x="524" y="488" clip-path="url(#cp21)"
   font-family="'Courier New',monospace" font-size="13px"><tspan fill="#94A3B8">  </tspan><tspan fill="#0369A1" font-weight="bold">website</tspan><tspan fill="#94A3B8"> .. </tspan><tspan fill="#0891B2">eabhijith.vercel.app</tspan></text>
-  <rect x="524" y="428" width="8" height="14" fill="#0369A1" opacity="0">
-    <animate attributeName="opacity" dur="8s" repeatCount="indefinite"
-      keyTimes="0;0.625;0.875;0.938;1"
-      values="0;1;1;0;0"/>
-    <animate attributeName="opacity" values="1;0;1" dur="0.55s" repeatCount="indefinite"
-      begin="5s"/>
-  </rect>
+<clipPath id="cp22"><rect x="524" y="494" width="0" height="22">
+  <animate attributeName="width" dur="8s" repeatCount="indefinite" keyTimes="0;0.625;0.675;0.875;0.938;1" values="0;0;640;640;0;0" calcMode="spline" keySplines="0 0 0.2 1;0.4 0 0.2 1;0 0 1 1;0.4 0 0.2 1;0 0 1 1"/>
+</rect></clipPath>
+<text x="524" y="510" clip-path="url(#cp22)"
+  font-family="'Courier New',monospace" font-size="13px"><tspan fill="#047857">[ MANIFEST LOADED · AGENT ACTIVE ]</tspan></text>
 </g>
 
 <text x="590" y="593" text-anchor="middle"
