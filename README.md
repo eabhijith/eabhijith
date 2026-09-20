@@ -12,6 +12,9 @@
 </p>
 
 <p align="center">
+  <a href="https://eabhijith.vercel.app/">
+    <img src="https://img.shields.io/badge/eabhijith.vercel.app-0A0E1A?style=for-the-badge&logo=vercel&logoColor=00D4FF"/>
+  </a>
   <a href="https://www.linkedin.com/in/eabhijith/">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
   </a>
