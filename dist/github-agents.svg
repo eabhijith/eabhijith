@@ -22,7 +22,7 @@
 <rect width="1180" height="420" rx="16" fill="none" stroke="url(#borderG)" stroke-width="1.5" opacity="0.4"/>
 
 <!-- title -->
-<text x="590" y="26" text-anchor="middle">GITHUB.PIPELINE  ·  eabhijith  ·  live data</text>
+<text x="590" y="26" text-anchor="middle" fill="#64748B">GITHUB.PIPELINE  ·  eabhijith  ·  live data</text>
 <line x1="40" y1="34" x2="1140" y2="34" stroke="#00D4FF" stroke-width="0.5" opacity="0.1"/>
 
 <!-- ── STAT STRIP ─────────────────────────────────────────────────── -->
@@ -72,22 +72,17 @@
 <line x1="208" y1="248" x2="325" y2="248" stroke="#00D4FF" stroke-width="1.2" opacity="0.3"/>
 <line x1="450" y1="248" x2="567" y2="248" stroke="#FF6B00" stroke-width="1.2" opacity="0.3"/>
 <line x1="692" y1="248" x2="809" y2="248" stroke="#00FF9F" stroke-width="1.2" opacity="0.3"/>
-<line x1="934" y1="248" x2="1051" y2="248" stroke="#7C3AED" stroke-width="1.2" opacity="0.3"/>
 <!-- arrows -->
 <polygon points="323,244 332,248 323,252" fill="#00D4FF" opacity="0.5"/>
 <polygon points="565,244 574,248 565,252" fill="#FF6B00" opacity="0.5"/>
 <polygon points="807,244 816,248 807,252" fill="#00FF9F" opacity="0.5"/>
-<polygon points="1049,244 1058,248 1049,252" fill="#7C3AED" opacity="0.5"/>
 <!-- return y=262 -->
 <line x1="325" y1="262" x2="208" y2="262" stroke="#7C3AED" stroke-width="0.7" opacity="0.2"/>
 <line x1="567" y1="262" x2="450" y2="262" stroke="#7C3AED" stroke-width="0.7" opacity="0.2"/>
 <line x1="809" y1="262" x2="692" y2="262" stroke="#7C3AED" stroke-width="0.7" opacity="0.2"/>
-<line x1="1051" y1="262" x2="934" y2="262" stroke="#7C3AED" stroke-width="0.7" opacity="0.2"/>
 <polygon points="210,258 200,262 210,266" fill="#7C3AED" opacity="0.3"/>
 <polygon points="452,258 442,262 452,266" fill="#7C3AED" opacity="0.3"/>
 <polygon points="694,258 684,262 694,266" fill="#7C3AED" opacity="0.3"/>
-<polygon points="936,258 926,262 936,266" fill="#7C3AED" opacity="0.3"/>
-
 <!-- enforcer dashed arcs -->
 <path d="M 1065,162 Q 890,200 700,238" fill="none" stroke="#FF4444" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.22"/>
 <path d="M 1075,162 Q 970,200 870,238" fill="none" stroke="#FF4444" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.22"/>
@@ -161,7 +156,7 @@
 </g>
 <circle cx="183" cy="295" r="6" fill="#00FF9F" stroke="#0A0E1A" stroke-width="2"/>
 <text x="140" y="334" text-anchor="middle" fill="#00D4FF">harvester</text>
-<text x="140" y="349" text-anchor="middle">blob · fetches</text>
+<text x="140" y="349" text-anchor="middle"><tspan fill="#64748B">blob · fetches</tspan></text>
 
 <!-- ══════════════════════════════════════════════════
      BOT 2 — ARCHIFY — HEXAGON — amber — cx=390
@@ -176,7 +171,7 @@
   <rect x="397" y="245" width="10" height="19" rx="4" fill="#0A0E1A"><animate attributeName="height" values="19.0;1.5;19.0" dur="3.2s" repeatCount="indefinite"/><animate attributeName="y" values="245.0;253.7;245.0" dur="3.2s" repeatCount="indefinite"/></rect>
 </g>
 <text x="390" y="334" text-anchor="middle" fill="#FF6B00">archify</text>
-<text x="390" y="349" text-anchor="middle">hexagon · structures</text>
+<text x="390" y="349" text-anchor="middle"><tspan fill="#64748B">hexagon · structures</tspan></text>
 
 <!-- ══════════════════════════════════════════════════
      BOT 3 — COACH — TEARDROP — green — cx=630
@@ -192,7 +187,7 @@
   <rect x="637" y="247" width="10" height="20" rx="5" fill="#0A0E1A" transform="rotate(-15 642 257)"><animate attributeName="height" values="20.0;1.6;20.0" dur="3.2s" repeatCount="indefinite"/><animate attributeName="y" values="247.0;256.2;247.0" dur="3.2s" repeatCount="indefinite"/></rect>
 </g>
 <text x="630" y="334" text-anchor="middle" fill="#00FF9F">coach</text>
-<text x="630" y="349" text-anchor="middle">teardrop · trend ↓ thinking</text>
+<text x="630" y="349" text-anchor="middle"><tspan fill="#64748B">teardrop · trend ↓ thinking</tspan></text>
 
 <!-- ══════════════════════════════════════════════════
      BOT 4 — WIKI — SQUIRCLE — violet — cx=870
@@ -207,7 +202,7 @@
   <rect x="877" y="247" width="10" height="20" rx="5" fill="#0A0E1A" transform="rotate(-15 882 257)"><animate attributeName="height" values="20.0;1.6;20.0" dur="3.2s" repeatCount="indefinite"/><animate attributeName="y" values="247.0;256.2;247.0" dur="3.2s" repeatCount="indefinite"/></rect>
 </g>
 <text x="870" y="334" text-anchor="middle" fill="#7C3AED">wiki</text>
-<text x="870" y="349" text-anchor="middle">squircle · persists</text>
+<text x="870" y="349" text-anchor="middle"><tspan fill="#64748B">squircle · persists</tspan></text>
 
 <!-- ══════════════════════════════════════════════════
      BOT 5 — ENFORCER — TRIANGLE — red — top cx=1062,cy=130
@@ -217,15 +212,14 @@
   <g transform="translate(1012,80)">
     <path d="M50 7 Q57 7 60 14 L93 77 Q97 86 88 89 Q85 90 81 90 H19 Q10 90 7 83 Q5 78 8 73 L40 14 Q43 7 50 7 Z" fill="#FF4444" filter="url(#gr)"/>
     <ellipse cx="28" cy="36" rx="11" ry="7" fill="rgba(255,255,255,0.18)" transform="rotate(-24 28 36)"/>
+    <rect x="30" y="60" width="10" height="16" rx="5" fill="#0A0E1A"><animate attributeName="height" values="16;1.2;16" dur="1.2s" repeatCount="indefinite"/><animate attributeName="y" values="60;67.4;60" dur="1.2s" repeatCount="indefinite"/></rect>
+    <rect x="52" y="60" width="10" height="16" rx="5" fill="#0A0E1A"><animate attributeName="height" values="16;1.2;16" dur="1.2s" begin="0.12s" repeatCount="indefinite"/><animate attributeName="y" values="60;67.4;60" dur="1.2s" begin="0.12s" repeatCount="indefinite"/></rect>
   </g>
-
-  <rect x="1045" y="122" width="9" height="13" rx="3" fill="#0A0E1A" transform="rotate(16 1050 128)"><animate attributeName="height" values="13.0;1.0;13.0" dur="3.2s" repeatCount="indefinite"/><animate attributeName="y" values="122.0;128.0;122.0" dur="3.2s" repeatCount="indefinite"/></rect>
-  <rect x="1067" y="122" width="9" height="13" rx="3" fill="#0A0E1A" transform="rotate(16 1072 128)"><animate attributeName="height" values="13.0;1.0;13.0" dur="3.2s" repeatCount="indefinite"/><animate attributeName="y" values="122.0;128.0;122.0" dur="3.2s" repeatCount="indefinite"/></rect>
 </g>
 <text x="1062" y="200" text-anchor="middle" fill="#FF4444">enforcer</text>
-<text x="1062" y="215" text-anchor="middle">triangle · guards</text>
+<text x="1062" y="215" text-anchor="middle"><tspan fill="#64748B">triangle · guards</tspan></text>
 
 <!-- bottom -->
 <line x1="40" y1="372" x2="1140" y2="372" stroke="#1E3A5F" stroke-width="0.5" opacity="0.4"/>
-<text x="590" y="393" text-anchor="middle" font-family="Courier New,monospace" font-size="10px" fill="#1E3A5F" letter-spacing="2px">abheos · github.pipeline · updated daily · 2026-09-20</text>
+<text x="590" y="393" text-anchor="middle" font-family="Courier New,monospace" font-size="10px" fill="#1E3A5F" letter-spacing="2px">github.pipeline · updated daily · 2026-09-20</text>
 </svg>
