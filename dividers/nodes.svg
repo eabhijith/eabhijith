@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 40" width="1180" height="40">
+<line x1="65" y1="20" x2="196" y2="20" stroke="#BD93F9" stroke-width="1" opacity="0.25"/>
+<line x1="196" y1="20" x2="327" y2="20" stroke="#00D4FF" stroke-width="1" opacity="0.25"/>
+<line x1="327" y1="20" x2="458" y2="20" stroke="#00FF9F" stroke-width="1" opacity="0.25"/>
+<line x1="458" y1="20" x2="589" y2="20" stroke="#FF6B00" stroke-width="1" opacity="0.25"/>
+<line x1="589" y1="20" x2="721" y2="20" stroke="#00D4FF" stroke-width="1" opacity="0.25"/>
+<line x1="721" y1="20" x2="852" y2="20" stroke="#BD93F9" stroke-width="1" opacity="0.25"/>
+<line x1="852" y1="20" x2="983" y2="20" stroke="#00FF9F" stroke-width="1" opacity="0.25"/>
+<line x1="983" y1="20" x2="1114" y2="20" stroke="#FF6B00" stroke-width="1" opacity="0.25"/>
+<circle cx="65" cy="20" r="4" fill="#BD93F9" opacity="0.75">
+    <animate attributeName="r" values="4;7;4" dur="2.2s" begin="0.00s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.75;1;0.75" dur="2.2s" begin="0.00s" repeatCount="indefinite"/>
+  </circle>
+<circle cx="196" cy="20" r="4" fill="#00D4FF" opacity="0.75">
+    <animate attributeName="r" values="4;7;4" dur="2.2s" begin="0.18s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.75;1;0.75" dur="2.2s" begin="0.18s" repeatCount="indefinite"/>
+  </circle>
+<circle cx="327" cy="20" r="4" fill="#00FF9F" opacity="0.75">
+    <animate attributeName="r" values="4;7;4" dur="2.2s" begin="0.36s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.75;1;0.75" dur="2.2s" begin="0.36s" repeatCount="indefinite"/>
+  </circle>
+<circle cx="458" cy="20" r="4" fill="#FF6B00" opacity="0.75">
+    <animate attributeName="r" values="4;7;4" dur="2.2s" begin="0.54s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.75;1;0.75" dur="2.2s" begin="0.54s" repeatCount="indefinite"/>
+  </circle>
+<circle cx="589" cy="20" r="4" fill="#00D4FF" opacity="0.75">
+    <animate attributeName="r" values="4;7;4" dur="2.2s" begin="0.72s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.75;1;0.75" dur="2.2s" begin="0.72s" repeatCount="indefinite"/>
+  </circle>
+<circle cx="721" cy="20" r="4" fill="#BD93F9" opacity="0.75">
+    <animate attributeName="r" values="4;7;4" dur="2.2s" begin="0.90s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.75;1;0.75" dur="2.2s" begin="0.90s" repeatCount="indefinite"/>
+  </circle>
+<circle cx="852" cy="20" r="4" fill="#00FF9F" opacity="0.75">
+    <animate attributeName="r" values="4;7;4" dur="2.2s" begin="1.08s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.75;1;0.75" dur="2.2s" begin="1.08s" repeatCount="indefinite"/>
+  </circle>
+<circle cx="983" cy="20" r="4" fill="#FF6B00" opacity="0.75">
+    <animate attributeName="r" values="4;7;4" dur="2.2s" begin="1.26s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.75;1;0.75" dur="2.2s" begin="1.26s" repeatCount="indefinite"/>
+  </circle>
+<circle cx="1114" cy="20" r="4" fill="#00D4FF" opacity="0.75">
+    <animate attributeName="r" values="4;7;4" dur="2.2s" begin="1.44s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.75;1;0.75" dur="2.2s" begin="1.44s" repeatCount="indefinite"/>
+  </circle>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 40" width="1180" height="40">
+<defs>
+  <linearGradient id="lg" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="#0A0E1A"/>
+    <stop offset="20%"  stop-color="#00D4FF"  stop-opacity="0.8"/>
+    <stop offset="50%"  stop-color="#00FF9F" stop-opacity="0.9"/>
+    <stop offset="80%"  stop-color="#FF6B00" stop-opacity="0.8"/>
+    <stop offset="100%" stop-color="#0A0E1A"/>
+  </linearGradient>
+  <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="#0A0E1A"/>
+    <stop offset="50%"  stop-color="#00FF9F" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#0A0E1A"/>
+  </linearGradient>
+  <filter id="f"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect x="0" y="18" width="1180" height="5" fill="url(#glow)"/>
+<rect x="0" y="19" width="1180" height="2" fill="url(#lg)"/>
+<rect x="0" y="14" width="2" height="12" fill="#00D4FF" opacity="0.6"/>
+<rect x="1178" y="14" width="2" height="12" fill="#FF6B00" opacity="0.6"/>
+<circle cy="20" r="5" fill="#00D4FF" filter="url(#f)">
+  <animate attributeName="cx" from="-8" to="1188" dur="2.8s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.04;0.96;1" dur="2.8s" repeatCount="indefinite"/>
+</circle>
+<circle cy="20" r="4" fill="#00FF9F" filter="url(#f)">
+  <animate attributeName="cx" from="-8" to="1188" dur="2.8s" begin="0.93s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.04;0.96;1" dur="2.8s" begin="0.93s" repeatCount="indefinite"/>
+</circle>
+<circle cy="20" r="4" fill="#FF6B00" filter="url(#f)">
+  <animate attributeName="cx" from="-8" to="1188" dur="2.8s" begin="1.86s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.04;0.96;1" dur="2.8s" begin="1.86s" repeatCount="indefinite"/>
+</circle>
+</svg>

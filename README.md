@@ -5,12 +5,13 @@
   </picture>
 </a>
 
+<p align="center"><img src="https://raw.githubusercontent.com/eabhijith/eabhijith/main/dividers/flow.svg" width="100%"/></p>
+
 <p align="center">
   <img src="https://img.shields.io/badge/STATUS-DEPLOYED-00FF9F?style=flat-square&labelColor=0A0E1A"/>
   <img src="https://img.shields.io/badge/BASE-BERLIN%20%F0%9F%87%A9%F0%9F%87%AA-00D4FF?style=flat-square&labelColor=0A0E1A"/>
   <img src="https://img.shields.io/badge/AGENTS-ACTIVE-00FF9F?style=flat-square&labelColor=0A0E1A"/>
 </p>
-
 <p align="center">
   <a href="https://eabhijith.vercel.app/">
     <img src="https://img.shields.io/badge/eabhijith.vercel.app-0A0E1A?style=for-the-badge&logo=vercel&logoColor=00D4FF"/>
@@ -21,31 +22,22 @@
   <img src="https://komarev.com/ghpvc/?username=eabhijith&color=00D4FF&style=for-the-badge&label=PROFILE+VIEWS"/>
 </p>
 
----
-
-### GitHub Pipeline
-
 <p align="center">
   <img src="https://raw.githubusercontent.com/eabhijith/eabhijith/main/dist/github-agents.svg" width="100%" alt="GitHub Agents Pipeline"/>
 </p>
 
----
-
-### GitHub Stats
+<p align="center"><img src="https://raw.githubusercontent.com/eabhijith/eabhijith/main/dividers/nodes.svg" width="100%"/></p>
 
 <p align="center">
-  <img src="https://github-readme-stats-phi-henna-57.vercel.app/api?username=eabhijith&show_icons=true&bg_color=0A0E1A&title_color=00D4FF&text_color=CBD5E1&icon_color=00FF9F&border_color=1E3A5F&count_private=true&include_all_commits=true" width="48%"/>
-  <img src="https://streak-stats.demolab.com/?user=eabhijith&background=0A0E1A&ring=00D4FF&fire=FF6B00&currStreakLabel=00D4FF&sideLabels=00FF9F&dates=CBD5E1&border=1E3A5F" width="48%"/>
+  <img src="https://raw.githubusercontent.com/eabhijith/eabhijith/main/dist/stats.svg" width="48%" alt="GitHub Stats"/>
+  <img src="https://raw.githubusercontent.com/eabhijith/eabhijith/main/dist/streak.svg" width="48%" alt="Streak Stats"/>
 </p>
-
 <p align="center">
-  <img src="https://github-readme-stats-phi-henna-57.vercel.app/api/top-langs/?username=eabhijith&layout=compact&bg_color=0A0E1A&title_color=00D4FF&text_color=CBD5E1&border_color=1E3A5F&langs_count=8" width="48%"/>
-  <img src="https://github-profile-trophy.vercel.app/?username=eabhijith&theme=onestar&no-bg=true&no-frame=true&column=4&margin-w=4" width="48%"/>
+  <img src="https://raw.githubusercontent.com/eabhijith/eabhijith/main/dist/langs.svg" width="48%" alt="Top Languages"/>
+  <img src="https://raw.githubusercontent.com/eabhijith/eabhijith/main/dist/trophy.svg" width="48%" alt="Trophies"/>
 </p>
 
----
-
-### Contribution Snake
+<p align="center"><img src="https://raw.githubusercontent.com/eabhijith/eabhijith/main/dividers/nodes.svg" width="100%"/></p>
 
 <p align="center">
   <picture>
@@ -55,18 +47,18 @@
   </picture>
 </p>
 
----
-
-### Jet Heatmap
+<p align="center"><img src="https://raw.githubusercontent.com/eabhijith/eabhijith/main/dividers/reverse.svg" width="100%"/></p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/eabhijith/eabhijith/main/dist/github-jet.svg" width="100%"/>
+  <img src="https://raw.githubusercontent.com/eabhijith/eabhijith/main/dist/github-jet.svg" width="100%" alt="Jet Heatmap"/>
 </p>
 
----
+<p align="center"><img src="https://raw.githubusercontent.com/eabhijith/eabhijith/main/dividers/flow.svg" width="100%"/></p>
 
 <p align="center">
   <a href="https://github.com/eabhijith/eabhijith/blob/main/AGENTS.md">→ How to work with me</a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://www.linkedin.com/in/eabhijith/">LinkedIn</a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://eabhijith.vercel.app/">Website</a>
 </p>
