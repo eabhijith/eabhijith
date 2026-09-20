@@ -19,8 +19,6 @@
 ---
 
 ```python
-from agent import BaseAgent, tool, memory
-
 @agent(
     id          = "eabhijith",
     designation = "Senior AI & Automation Specialist",
@@ -37,16 +35,13 @@ class Abhijith(BaseAgent):
         "AWS", "Databricks", "Salesforce",
     ]
 
-    active_missions = {
-        "TARS"    : "Enterprise agentic loop — fire, enrich, propose, approve, write",
-        "bedrock" : "AWS Bedrock AI assistant in production (KB, summariser, BI genie)",
+    side_projects = {
         "abheos"  : "Personal AI OS — file-based, git-backed, 26 slash commands, zero cloud deps",
         "archify" : "Diagram-as-code renderer — architecture, dataflow, sequence from JSON",
     }
 
-    memory_model = "4-layer · git-backed · portable · swap employer.md to change jobs"
-    philosophy   = "Functional · Minimal · Ship it"
-    fun_fact     = "World is all about mind and matter — if we don't mind, it doesn't matter"
+    philosophy = "Functional · Minimal · Ship it"
+    fun_fact   = "World is all about mind and matter — if we don't mind, it doesn't matter"
 ```
 
 ---
