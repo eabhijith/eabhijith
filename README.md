@@ -64,14 +64,6 @@ class Abhijith(BaseAgent):
 
 ---
 
-### Jet Heatmap
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/eabhijith/eabhijith/main/dist/github-jet.svg" alt="GitHub Jet Heatmap" width="100%"/>
-</p>
-
----
-
 ### Contribution Snake
 
 <p align="center">
@@ -80,6 +72,14 @@ class Abhijith(BaseAgent):
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/eabhijith/eabhijith/snake/github-snake.svg"/>
     <img alt="contribution snake" src="https://raw.githubusercontent.com/eabhijith/eabhijith/snake/github-snake-dark.svg"/>
   </picture>
+</p>
+
+---
+
+### Jet Heatmap
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/eabhijith/eabhijith/main/dist/github-jet.svg" alt="GitHub Jet Heatmap" width="100%"/>
 </p>
 
 ---
