@@ -32,6 +32,28 @@
     <feGaussianBlur stdDeviation="3" result="blur"/>
     <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
   </filter>
+  <!-- scanline clipped to ASCII portrait panel only -->
+  <clipPath id="ascii-panel-clip">
+    <rect x="14" y="64" width="488" height="468"/>
+  </clipPath>
+  <pattern id="sl" patternUnits="userSpaceOnUse" x="0" y="0" width="488" height="4">
+    <rect width="488" height="2" y="0" fill="rgba(0,212,255,0.07)"/>
+    <animateTransform attributeName="patternTransform" type="translate" from="0 0" to="0 4" dur="0.18s" repeatCount="indefinite"/>
+  </pattern>
+  <!-- ambient depth behind ASCII -->
+  <radialGradient id="asciiDepth" cx="30%" cy="40%" r="60%">
+    <stop offset="0%" stop-color="#00D4FF" stop-opacity="0.10"/>
+    <stop offset="100%" stop-color="#00D4FF" stop-opacity="0"/>
+  </radialGradient>
+  <!-- neon border trace: scanning segment -->
+  <style>
+    @keyframes borderScan { from{stroke-dashoffset:1} to{stroke-dashoffset:0} }
+    .bscan { stroke-dasharray:0.12 0.88; animation: borderScan 4s linear infinite; fill:none; stroke:#00D4FF; stroke-width:1.5; pathLength:1; }
+    @keyframes bracketDraw { to{stroke-dashoffset:0} }
+    .brk { fill:none; stroke:#00D4FF; stroke-width:1.5; stroke-linecap:square; stroke-dasharray:1; stroke-dashoffset:1; animation:bracketDraw 0.5s ease-out forwards; }
+    .brk:nth-child(1){animation-delay:0.5s} .brk:nth-child(2){animation-delay:0.65s}
+    .brk:nth-child(3){animation-delay:0.8s} .brk:nth-child(4){animation-delay:0.95s}
+  </style>
   <mask id="revealMask" maskUnits="userSpaceOnUse" x="0" y="0" width="1180" height="620">
     <rect x="0" y="0" width="1180" height="0" fill="#fff">
       <animate attributeName="height" from="0" to="560" dur="2.6s" begin="0.2s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
@@ -160,6 +182,22 @@
   </text>
   </g>
 
+
+  <!-- depth glow behind ASCII panel -->
+  <rect x="14" y="64" width="488" height="468" fill="url(#asciiDepth)" pointer-events="none"/>
+  <!-- scanline overlay clipped to ASCII panel only -->
+  <g clip-path="url(#ascii-panel-clip)">
+    <rect x="14" y="64" width="488" height="560" fill="url(#sl)" opacity="0.9" pointer-events="none"/>
+  </g>
+  <!-- HUD corner brackets on ASCII panel -->
+  <g opacity="0.6">
+    <path class="brk" pathLength="1" d="M14,90 L14,64 L40,64"/>
+    <path class="brk" pathLength="1" d="M476,64 L502,64 L502,90"/>
+    <path class="brk" pathLength="1" d="M14,502 L14,532 L40,532"/>
+    <path class="brk" pathLength="1" d="M476,532 L502,532 L502,502"/>
+  </g>
+  <!-- scanning border trace on info panel -->
+  <rect class="bscan" x="508" y="48" width="655" height="500" rx="14" pathLength="1"/>
   <g clip-path="url(#lc0)"><text x="520" y="0"><tspan x="520" y="42"  class="head">eabhijith</tspan><tspan class="cc">@production  </tspan><tspan class="dim">──────────────────────────────────────</tspan></text></g>
   <g clip-path="url(#lc1)"><text x="520" y="0"><tspan x="520" y="64"  class="cc">  </tspan><tspan class="key">agent_id     </tspan><tspan class="cc">......... </tspan><tspan class="value">eabhijith</tspan></text></g>
   <g clip-path="url(#lc2)"><text x="520" y="0"><tspan x="520" y="86"  class="cc">  </tspan><tspan class="key">designation  </tspan><tspan class="cc">......... </tspan><tspan class="value">Senior AI &amp; Automation Specialist</tspan></text></g>
