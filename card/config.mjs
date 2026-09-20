@@ -42,12 +42,12 @@ export const PORTRAIT = {
 };
 
 export const PANEL = {
-  x:      508,
-  y:      10,
-  width:  655,
-  height: 500,
-  rx:     14,
-  textX:  524,
+  x:      508,   // 8px grid: 500+8
+  y:      26,    // match left panel top (y=26)
+  width:  656,   // 508+656=1164, 16px right margin
+  height: 468,   // match left panel height exactly
+  rx:     8,     // 8px grid
+  textX:  524,   // 508+16 = 524 (2×8px padding)
 };
 
 export const TITLEBAR = {
