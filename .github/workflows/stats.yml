@@ -42,4 +42,4 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: update stats cards"
-          file_pattern: "dist/stats.svg dist/langs.svg dist/streak.svg dist/trophy.svg"
+          file_pattern: "dist/stats.svg dist/langs.svg dist/streak.svg dist/trophy.svg dist/activity.svg"

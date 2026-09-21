@@ -61,6 +61,12 @@
 </p>
 
 <p align="center">
+  <img src="https://raw.githubusercontent.com/eabhijith/eabhijith/main/dist/activity.svg" width="100%" alt="Contribution activity over the last 12 months"/>
+</p>
+
+<p align="center"><img src="https://raw.githubusercontent.com/eabhijith/eabhijith/main/dividers/nodes.svg" width="100%" alt=""/></p>
+
+<p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/eabhijith/eabhijith/snake/github-snake-dark.svg"/>
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/eabhijith/eabhijith/snake/github-snake.svg"/>

@@ -21,6 +21,7 @@ const RENDERERS = {
   now:      (await import("./sections/now.mjs"     )).render,
   pipeline: (await import("./sections/pipeline.mjs")).render,
   stats:    (await import("./sections/stats.mjs"   )).render,
+  activity: (await import("./sections/activity.mjs")).render,
   snake:    (await import("./sections/snake.mjs"   )).render,
   heatmap:  (await import("./sections/heatmap.mjs" )).render,
   footer:   (await import("./sections/footer.mjs"  )).render,
@@ -33,7 +34,8 @@ const BETWEEN = {
   intro:    "",            // intro flows straight into "now"
   now:      DIVIDERS.nodes,
   pipeline: "",            // pipeline flows straight into stats
-  stats:    "",            // stats flows straight into snake
+  stats:    "",            // stats flows straight into activity
+  activity: DIVIDERS.nodes,
   snake:    DIVIDERS.reverse,
   heatmap:  DIVIDERS.flow,
   footer:   "",

@@ -4,19 +4,19 @@
   <line x1="25" y1="43" x2="275" y2="43" stroke="#1E3A5F" stroke-width="0.8"/>
   <text x="25" y="70" font-family="monospace" font-size="12px" fill="#CBD5E1">TypeScript</text>
   <rect x="120" y="61" width="150" height="8" rx="4" fill="#1E3A5F" opacity="0.3"/>
-  <rect x="120" y="61" width="64" height="8" rx="4" fill="#3178c6"/>
-  <text x="278" y="70" font-family="monospace" font-size="10px" fill="#1E3A5F">42.9%</text>
-  <text x="25" y="96" font-family="monospace" font-size="12px" fill="#CBD5E1">HTML</text>
+  <rect x="120" y="61" width="63" height="8" rx="4" fill="#3178c6"/>
+  <text x="278" y="70" font-family="monospace" font-size="10px" fill="#1E3A5F">42.3%</text>
+  <text x="25" y="96" font-family="monospace" font-size="12px" fill="#CBD5E1">JavaScript</text>
   <rect x="120" y="87" width="150" height="8" rx="4" fill="#1E3A5F" opacity="0.3"/>
-  <rect x="120" y="87" width="37" height="8" rx="4" fill="#e34c26"/>
-  <text x="278" y="96" font-family="monospace" font-size="10px" fill="#1E3A5F">24.3%</text>
-  <text x="25" y="122" font-family="monospace" font-size="12px" fill="#CBD5E1">JavaScript</text>
+  <rect x="120" y="87" width="38" height="8" rx="4" fill="#f1e05a"/>
+  <text x="278" y="96" font-family="monospace" font-size="10px" fill="#1E3A5F">25.3%</text>
+  <text x="25" y="122" font-family="monospace" font-size="12px" fill="#CBD5E1">HTML</text>
   <rect x="120" y="113" width="150" height="8" rx="4" fill="#1E3A5F" opacity="0.3"/>
-  <rect x="120" y="113" width="36" height="8" rx="4" fill="#f1e05a"/>
-  <text x="278" y="122" font-family="monospace" font-size="10px" fill="#1E3A5F">24.3%</text>
+  <rect x="120" y="113" width="36" height="8" rx="4" fill="#e34c26"/>
+  <text x="278" y="122" font-family="monospace" font-size="10px" fill="#1E3A5F">24.0%</text>
   <text x="25" y="148" font-family="monospace" font-size="12px" fill="#CBD5E1">CSS</text>
   <rect x="120" y="139" width="150" height="8" rx="4" fill="#1E3A5F" opacity="0.3"/>
-  <rect x="120" y="139" width="7" height="8" rx="4" fill="#663399"/>
+  <rect x="120" y="139" width="6" height="8" rx="4" fill="#663399"/>
   <text x="278" y="148" font-family="monospace" font-size="10px" fill="#1E3A5F">4.3%</text>
   <text x="25" y="174" font-family="monospace" font-size="12px" fill="#CBD5E1">Java</text>
   <rect x="120" y="165" width="150" height="8" rx="4" fill="#1E3A5F" opacity="0.3"/>
@@ -25,5 +25,5 @@
   <text x="25" y="200" font-family="monospace" font-size="12px" fill="#CBD5E1">Apex</text>
   <rect x="120" y="191" width="150" height="8" rx="4" fill="#1E3A5F" opacity="0.3"/>
   <rect x="120" y="191" width="4" height="8" rx="4" fill="#1797c0"/>
-  <text x="278" y="200" font-family="monospace" font-size="10px" fill="#1E3A5F">1.1%</text>
+  <text x="278" y="200" font-family="monospace" font-size="10px" fill="#1E3A5F">1.0%</text>
 </svg>

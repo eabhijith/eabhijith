@@ -44,7 +44,10 @@ query($login:String!){
     contributionsCollection{
       totalCommitContributions
       restrictedContributionsCount
-      contributionCalendar{ totalContributions }
+      contributionCalendar{
+        totalContributions
+        weeks{ contributionDays{ date contributionCount } }
+      }
     }
     repositories(ownerAffiliations:[OWNER] first:100 isFork:false){
       totalCount
@@ -97,7 +100,9 @@ function derive(user) {
     .slice(0, 6);
 
   const c = user.contributionsCollection;
+  const days = (c.contributionCalendar.weeks ?? []).flatMap(w => w.contributionDays ?? []);
   return {
+    days,
     commits:   c.totalCommitContributions + c.restrictedContributionsCount,
     contribs:  c.contributionCalendar.totalContributions,
     prs:       user.pullRequests.totalCount,
@@ -158,6 +163,65 @@ function langsCard(s) {
   return frame(340, 232, body);
 }
 
+// Activity graph: daily contributions over the last year, smoothed to weekly totals.
+function activityCard(s) {
+  const W = 840, H = 260, L = 46, R = 20, T = 46, B = 34;
+  const iw = W - L - R, ih = H - T - B;
+
+  // Bucket days into weeks so a year fits without visual noise.
+  const weeks = [];
+  for (let i = 0; i < s.days.length; i += 7) {
+    const chunk = s.days.slice(i, i + 7);
+    if (!chunk.length) continue;
+    weeks.push({ date: chunk[0].date, total: chunk.reduce((a, d) => a + d.contributionCount, 0) });
+  }
+  if (weeks.length < 2) {
+    return frame(W, H, `  <text x="${L}" y="${T}" font-family="monospace" font-size="13px" fill="${TEXT}">Not enough activity data</text>`);
+  }
+
+  const max = Math.max(...weeks.map(w => w.total), 1);
+  const x = i => L + (i / (weeks.length - 1)) * iw;
+  const y = v => T + ih - (v / max) * ih;
+
+  const line = weeks.map((w, i) => `${i ? "L" : "M"}${x(i).toFixed(1)},${y(w.total).toFixed(1)}`).join(" ");
+  const area = `${line} L${x(weeks.length - 1).toFixed(1)},${(T + ih).toFixed(1)} L${L},${(T + ih).toFixed(1)} Z`;
+
+  // Horizontal gridlines at 0, 50%, 100% of max.
+  const grid = [0, 0.5, 1].map(f => {
+    const gy = (T + ih - f * ih).toFixed(1);
+    return `  <line x1="${L}" y1="${gy}" x2="${L + iw}" y2="${gy}" stroke="${muted}" stroke-width="0.6" opacity="0.35"/>\n` +
+           `  <text x="${L - 8}" y="${(+gy + 4).toFixed(1)}" text-anchor="end" font-family="monospace" font-size="10px" fill="${muted}">${Math.round(f * max)}</text>`;
+  }).join("\n");
+
+  // Month ticks, first week of each month only.
+  let lastMonth = null;
+  const ticks = weeks.map((w, i) => {
+    const d = new Date(w.date);
+    const m = d.getUTCMonth();
+    if (m === lastMonth) return null;
+    lastMonth = m;
+    const label = d.toLocaleString("en-US", { month: "short", timeZone: "UTC" });
+    return `  <text x="${x(i).toFixed(1)}" y="${H - 12}" text-anchor="middle" font-family="monospace" font-size="10px" fill="${muted}">${label}</text>`;
+  }).filter(Boolean).join("\n");
+
+  const peak = weeks.reduce((a, w, i) => w.total > weeks[a].total ? i : a, 0);
+
+  const body = `  <defs>
+    <linearGradient id="actFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="${cyan}" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="${cyan}" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <text x="${L - 21}" y="28" font-family="'Segoe UI',monospace" font-size="14px" font-weight="700" fill="${cyan}">Contribution Activity · last 12 months</text>
+  <text x="${W - R}" y="28" text-anchor="end" font-family="monospace" font-size="11px" fill="${green}">${fmt(s.contribs)} total</text>
+${grid}
+  <path d="${area}" fill="url(#actFill)"/>
+  <path d="${line}" fill="none" stroke="${cyan}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="${x(peak).toFixed(1)}" cy="${y(weeks[peak].total).toFixed(1)}" r="3.5" fill="${amber}"/>
+${ticks}`;
+  return frame(W, H, body);
+}
+
 // Tier thresholds: [S, A, B] — anything below B is C.
 const TROPHIES = [
   { label: "Commits",   key: "commits",   tiers: [1000, 500, 100] },
@@ -212,6 +276,7 @@ for (const [file, svg] of [
   ["stats.svg",  statsCard(stats)],
   ["langs.svg",  langsCard(stats)],
   ["trophy.svg", trophyCard(stats)],
+  ["activity.svg", activityCard(stats)],
 ]) {
   const out = path.join(OUT_DIR, file);
   fs.writeFileSync(out, svg, "utf8");

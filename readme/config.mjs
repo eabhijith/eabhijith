@@ -11,6 +11,7 @@ export const SECTIONS = [
   { id: "now",      enabled: true  },
   { id: "pipeline", enabled: true  },
   { id: "stats",    enabled: true  },
+  { id: "activity", enabled: true  },
   { id: "snake",    enabled: true  },
   { id: "heatmap",  enabled: true  },
   { id: "footer",   enabled: true  },
