@@ -26,23 +26,39 @@
 <h2 align="center">Abhijith Eanuga — AI Engineer</h2>
 
 <p align="center">
-  Multi-Agent · LLM Orchestration · based in Berlin, Germany.<br/>
-  I build orchestrators, not scripts — agents with real memory, real tools, real autonomy.
+  <strong>Multi-Agent · LLM Orchestration</strong><br/>
+  I build orchestrators, not scripts — agents with real memory, real tools, real autonomy.<br/>
+  <sub>Based in Berlin, Germany</sub>
 </p>
 
 <p align="center">
-  <strong>Stack:</strong> Pydantic-AI · LangGraph · Bedrock · Python · JavaScript · Apex · React · AWS · Databricks · Salesforce
+  <img src="https://img.shields.io/badge/Pydantic--AI-00D4FF?style=flat-square&labelColor=0A0E1A&logo=pydantic&logoColor=00D4FF" alt="Pydantic-AI"/>
+  <img src="https://img.shields.io/badge/LangGraph-00D4FF?style=flat-square&labelColor=0A0E1A&logo=langchain&logoColor=00D4FF" alt="LangGraph"/>
+  <img src="https://img.shields.io/badge/Bedrock-00D4FF?style=flat-square&labelColor=0A0E1A" alt="Bedrock"/>
+</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-00FF9F?style=flat-square&labelColor=0A0E1A&logo=python&logoColor=00FF9F" alt="Python"/>
+  <img src="https://img.shields.io/badge/JavaScript-00FF9F?style=flat-square&labelColor=0A0E1A&logo=javascript&logoColor=00FF9F" alt="JavaScript"/>
+  <img src="https://img.shields.io/badge/Apex-00FF9F?style=flat-square&labelColor=0A0E1A" alt="Apex"/>
+  <img src="https://img.shields.io/badge/React-00FF9F?style=flat-square&labelColor=0A0E1A&logo=react&logoColor=00FF9F" alt="React"/>
+</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/AWS-BD93F9?style=flat-square&labelColor=0A0E1A" alt="AWS"/>
+  <img src="https://img.shields.io/badge/Databricks-BD93F9?style=flat-square&labelColor=0A0E1A&logo=databricks&logoColor=BD93F9" alt="Databricks"/>
+  <img src="https://img.shields.io/badge/Salesforce-BD93F9?style=flat-square&labelColor=0A0E1A" alt="Salesforce"/>
 </p>
 
 <p align="center">
-  <a href="https://github.com/eabhijith/eabhijith/blob/main/AGENTS.md">How to work with me →</a>
+  <a href="https://github.com/eabhijith/eabhijith/blob/main/AGENTS.md">
+    <img src="https://img.shields.io/badge/How%20to%20work%20with%20me-00D4FF?style=for-the-badge&labelColor=0A0E1A" alt="How to work with me"/>
+  </a>
 </p>
 
 <h3 align="center">Currently working on</h3>
 
 <p align="center">
-  <strong>personal AI OS</strong> — file-based agent memory, git-backed, portable<br/>
-  <strong>archify</strong> — diagram renderer, architecture as code
+  <code>personal AI OS</code> &nbsp;<sub>file-based agent memory, git-backed, portable</sub><br/>
+  <code>archify</code> &nbsp;<sub>diagram renderer, architecture as code</sub>
 </p>
 
 <p align="center"><img src="https://raw.githubusercontent.com/eabhijith/eabhijith/main/dividers/nodes.svg" width="100%" alt=""/></p>

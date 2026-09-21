@@ -51,6 +51,30 @@ export const CAPABILITIES = [
   "▸ AWS · Databricks · Salesforce",
 ];
 
+// ── Stack badges ──────────────────────────────────────────────────────────────
+// Same three groups as CAPABILITIES, rendered as badge rows by
+// readme/sections/intro.mjs. One accent colour per row gives the block rhythm.
+// `logo` is a shields.io slug; omit it where simple-icons has no mark
+// (aws and salesforce were removed upstream).
+export const STACK = [
+  { accent: "cyan", items: [
+    { name: "Pydantic-AI", logo: "pydantic" },
+    { name: "LangGraph",   logo: "langchain" },
+    { name: "Bedrock" },
+  ]},
+  { accent: "green", items: [
+    { name: "Python",     logo: "python" },
+    { name: "JavaScript", logo: "javascript" },
+    { name: "Apex" },
+    { name: "React",      logo: "react" },
+  ]},
+  { accent: "violet", items: [
+    { name: "AWS" },
+    { name: "Databricks", logo: "databricks" },
+    { name: "Salesforce" },
+  ]},
+];
+
 // ── Brand colors ──────────────────────────────────────────────────────────────
 // Change these and every SVG/README rebuilds with the new palette
 export const COLORS = {

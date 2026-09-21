@@ -1,7 +1,10 @@
 /**
  * readme/sections/now.mjs
  * "Currently working on" — the highest-signal plain-text section.
- * Content lives in brand.mjs (NOW). Entries gain a link once `url` is set.
+ *
+ * Project names render as <code> chips: GitHub gives inline code a tinted
+ * background, which is the only way to make text stand out without CSS.
+ * Content lives in brand.mjs (NOW); entries gain a link once `url` is set.
  */
 import { NOW } from "../../brand.mjs";
 
@@ -11,8 +14,9 @@ export function render() {
   if (!NOW.length) return "";
 
   const items = NOW.map(({ name, note, url }) => {
-    const label = url ? `<a href="${url}">${esc(name)}</a>` : `<strong>${esc(name)}</strong>`;
-    return `  ${label} — ${esc(note)}`;
+    const chip = `<code>${esc(name)}</code>`;
+    const label = url ? `<a href="${url}">${chip}</a>` : chip;
+    return `  ${label} &nbsp;<sub>${esc(note)}</sub>`;
   }).join("<br/>\n");
 
   return `<h3 align="center">Currently working on</h3>
