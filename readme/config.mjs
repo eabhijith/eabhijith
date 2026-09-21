@@ -8,6 +8,7 @@ export const SECTIONS = [
   { id: "card",     enabled: true  },
   { id: "badges",   enabled: true  },
   { id: "intro",    enabled: true  },
+  { id: "now",      enabled: true  },
   { id: "pipeline", enabled: true  },
   { id: "stats",    enabled: true  },
   { id: "snake",    enabled: true  },

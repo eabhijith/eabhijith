@@ -38,6 +38,13 @@
   <a href="https://github.com/eabhijith/eabhijith/blob/main/AGENTS.md">How to work with me →</a>
 </p>
 
+<h3 align="center">Currently working on</h3>
+
+<p align="center">
+  <strong>personal AI OS</strong> — file-based agent memory, git-backed, portable<br/>
+  <strong>archify</strong> — diagram renderer, architecture as code
+</p>
+
 <p align="center"><img src="https://raw.githubusercontent.com/eabhijith/eabhijith/main/dividers/nodes.svg" width="100%" alt=""/></p>
 
 <p align="center">

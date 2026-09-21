@@ -37,6 +37,13 @@ export const PROJECTS = [
   "archify — diagram renderer",
 ];
 
+// ── Currently working on ──────────────────────────────────────────────────────
+// Rendered by readme/sections/now.mjs. Add `url` once a project is public.
+export const NOW = [
+  { name: "personal AI OS",  note: "file-based agent memory, git-backed, portable" },
+  { name: "archify",         note: "diagram renderer, architecture as code" },
+];
+
 // ── Capabilities ──────────────────────────────────────────────────────────────
 export const CAPABILITIES = [
   "▸ Pydantic-AI · LangGraph · Bedrock",
