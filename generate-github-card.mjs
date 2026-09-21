@@ -315,12 +315,12 @@ function buildSvg(d) {
   <animate attributeName="opacity" dur="20s" repeatCount="indefinite" keyTimes="0;0.50;0.52;0.63;0.65;1" values="0;0;1;1;0;0"/>
   ${pkt34}
 </text>
-<text y="241" text-anchor="middle" class="pktlbl" fill="#7C3AED">
+<text y="241" text-anchor="middle" class="pktlbl" fill="#BD93F9">
   <animate attributeName="x" dur="20s" repeatCount="indefinite" keyTimes="0;0.65;0.80;1" values="936;936;1050;1050"/>
   <animate attributeName="opacity" dur="20s" repeatCount="indefinite" keyTimes="0;0.65;0.67;0.78;0.80;1" values="0;0;1;1;0;0"/>
   ${pkt45}
 </text>
-<text y="269" text-anchor="middle" class="pktlbl" fill="#7C3AED" opacity="0.6">
+<text y="269" text-anchor="middle" class="pktlbl" fill="#BD93F9" opacity="0.6">
   <animate attributeName="x" dur="20s" repeatCount="indefinite" keyTimes="0;0.80;0.95;1" values="1050;1050;210;210"/>
   <animate attributeName="opacity" dur="20s" repeatCount="indefinite" keyTimes="0;0.80;0.82;0.93;0.95;1" values="0;0;0.6;0.6;0;0"/>
   ${pktR}
@@ -336,7 +336,7 @@ function buildSvg(d) {
   </ellipse>
   <ellipse cx="122" cy="235" rx="17" ry="11" fill="rgba(255,255,255,0.22)" transform="rotate(-24 122 235)"/>
 </g>
-<g class="b1e" style="transform-origin:140px 255px">
+<g class="b1e">
   <rect x="122" y="245" width="11" height="22" rx="5" fill="#0A0E1A"/>
   <rect x="146" y="245" width="11" height="22" rx="5" fill="#0A0E1A"/>
 </g>
@@ -353,7 +353,7 @@ function buildSvg(d) {
     <ellipse cx="25" cy="25" rx="14" ry="9" fill="rgba(255,255,255,0.20)" transform="rotate(-24 25 25)"/>
   </g>
 </g>
-<g class="b2e" style="transform-origin:390px 255px">
+<g class="b2e">
   <rect x="372" y="248" width="10" height="14" rx="4" fill="#0A0E1A"/>
   <rect x="397" y="245" width="10" height="19" rx="4" fill="#0A0E1A"/>
 </g>
@@ -373,7 +373,7 @@ ${coachState === "thinking" ? `
     : `<g transform="translate(580,205)"><path d="${TEARDROP}" fill="#00FF9F" filter="url(#gg)"/><ellipse cx="24" cy="24" rx="13" ry="8" fill="rgba(255,255,255,0.20)" transform="rotate(-24 24 24)"/></g>`
   }
 </g>
-<g class="b3e" style="transform-origin:630px 255px">
+<g class="b3e">
   <rect x="613" y="247" width="10" height="20" rx="5" fill="#0A0E1A" transform="rotate(-15 618 257)"/>
   <rect x="637" y="247" width="10" height="20" rx="5" fill="#0A0E1A" transform="rotate(-15 642 257)"/>
 </g>
@@ -389,11 +389,11 @@ ${coachState === "thinking" ? `
     <ellipse cx="25" cy="24" rx="16" ry="10" fill="rgba(255,255,255,0.22)" transform="rotate(-24 25 24)"/>
   </g>
 </g>
-<g class="b4e" style="transform-origin:870px 255px">
+<g class="b4e">
   <rect x="853" y="247" width="10" height="20" rx="5" fill="#0A0E1A" transform="rotate(-15 858 257)"/>
   <rect x="877" y="247" width="10" height="20" rx="5" fill="#0A0E1A" transform="rotate(-15 882 257)"/>
 </g>
-<text x="870" y="334" text-anchor="middle" class="lbl" fill="#7C3AED">wiki</text>
+<text x="870" y="334" text-anchor="middle" class="lbl" fill="#BD93F9">wiki</text>
 <text x="870" y="349" text-anchor="middle" class="sub">persists to memory</text>
 
 <!-- ══════════════════════════════════════════════════
@@ -406,7 +406,7 @@ ${coachState === "thinking" ? `
     <ellipse cx="28" cy="36" rx="11" ry="7" fill="rgba(255,255,255,0.18)" transform="rotate(-24 28 36)"/>
   </g>
 </g>
-<g class="b5e" style="transform-origin:1062px 130px">
+<g class="b5e">
   <rect x="1045" y="122" width="9" height="13" rx="3" fill="#0A0E1A" transform="rotate(16 1050 128)"/>
   <rect x="1067" y="122" width="9" height="13" rx="3" fill="#0A0E1A" transform="rotate(16 1072 128)"/>
 </g>
@@ -415,7 +415,7 @@ ${coachState === "thinking" ? `
 
 <!-- bottom -->
 <line x1="40" y1="372" x2="1140" y2="372" stroke="#1E3A5F" stroke-width="0.5" opacity="0.4"/>
-<text x="590" y="393" text-anchor="middle" font-family="Courier New,monospace" font-size="10px" fill="#1E3A5F" letter-spacing="2px">abheos · github.pipeline · updated daily · ${new Date().toISOString().slice(0,10)}</text>
+<text x="590" y="393" text-anchor="middle" font-family="Courier New,monospace" font-size="10px" fill="#94A3B8" letter-spacing="2px">abheos · github.pipeline · updated daily · ${new Date().toISOString().slice(0,10)}</text>
 </svg>`;
 }
 
