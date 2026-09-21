@@ -342,7 +342,7 @@ function buildSvg(d) {
 </g>
 <circle cx="183" cy="295" r="6" fill="#00FF9F" stroke="#0A0E1A" stroke-width="2"/>
 <text x="140" y="334" text-anchor="middle" class="lbl" fill="#00D4FF">harvester</text>
-<text x="140" y="349" text-anchor="middle" class="sub">blob · fetches</text>
+<text x="140" y="349" text-anchor="middle" class="sub">fetches GitHub data</text>
 
 <!-- ══════════════════════════════════════════════════
      BOT 2 — ARCHIFY — HEXAGON — amber — cx=390
@@ -358,7 +358,7 @@ function buildSvg(d) {
   <rect x="397" y="245" width="10" height="19" rx="4" fill="#0A0E1A"/>
 </g>
 <text x="390" y="334" text-anchor="middle" class="lbl" fill="#FF6B00">archify</text>
-<text x="390" y="349" text-anchor="middle" class="sub">hexagon · structures</text>
+<text x="390" y="349" text-anchor="middle" class="sub">structures diagrams</text>
 
 <!-- ══════════════════════════════════════════════════
      BOT 3 — COACH — TEARDROP — green — cx=630
@@ -378,7 +378,7 @@ ${coachState === "thinking" ? `
   <rect x="637" y="247" width="10" height="20" rx="5" fill="#0A0E1A" transform="rotate(-15 642 257)"/>
 </g>
 <text x="630" y="334" text-anchor="middle" class="lbl" fill="#00FF9F">coach</text>
-<text x="630" y="349" text-anchor="middle" class="sub">teardrop · ${coachState === "done" ? "trend ↑ done" : "trend ↓ thinking"}</text>
+<text x="630" y="349" text-anchor="middle" class="sub">${coachState === "done" ? "trend ↑ on track" : "trend ↓ reviewing"}</text>
 
 <!-- ══════════════════════════════════════════════════
      BOT 4 — WIKI — SQUIRCLE — violet — cx=870
@@ -394,7 +394,7 @@ ${coachState === "thinking" ? `
   <rect x="877" y="247" width="10" height="20" rx="5" fill="#0A0E1A" transform="rotate(-15 882 257)"/>
 </g>
 <text x="870" y="334" text-anchor="middle" class="lbl" fill="#7C3AED">wiki</text>
-<text x="870" y="349" text-anchor="middle" class="sub">squircle · persists</text>
+<text x="870" y="349" text-anchor="middle" class="sub">persists to memory</text>
 
 <!-- ══════════════════════════════════════════════════
      BOT 5 — ENFORCER — TRIANGLE — red — top cx=1062,cy=130
@@ -411,7 +411,7 @@ ${coachState === "thinking" ? `
   <rect x="1067" y="122" width="9" height="13" rx="3" fill="#0A0E1A" transform="rotate(16 1072 128)"/>
 </g>
 <text x="1062" y="200" text-anchor="middle" class="lbl" fill="#FF4444">enforcer</text>
-<text x="1062" y="215" text-anchor="middle" class="sub">triangle · guards</text>
+<text x="1062" y="215" text-anchor="middle" class="sub">guards quality</text>
 
 <!-- bottom -->
 <line x1="40" y1="372" x2="1140" y2="372" stroke="#1E3A5F" stroke-width="0.5" opacity="0.4"/>
