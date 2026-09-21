@@ -14,7 +14,7 @@
 // ── Identity ─────────────────────────────────────────────────────────────────
 export const USERNAME    = "eabhijith";
 export const DISPLAY_NAME = "Abhijith Eanuga";
-export const ROLE        = "Senior AI & Automation Specialist";
+export const ROLE        = "AI Engineer";
 export const BASE        = "Berlin, Germany";
 export const MISSION     = "Multi-Agent · LLM Orchestration";
 export const STATUS      = "DEPLOYED · ACTIVE";

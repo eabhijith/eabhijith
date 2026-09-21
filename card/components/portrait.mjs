@@ -5,8 +5,12 @@ import { color, font, text as textSize } from "../../ds/tokens.mjs";
 import { leftPanel, circle, scan } from "../../ds/layout.mjs";
 import { panelBox, panelTitle } from "../../ds/components.mjs";
 import { PORTRAIT } from "../config.mjs";
+import { ROLE, BASE } from "../../brand.mjs";
 import fs   from "node:fs";
 import path from "node:path";
+
+// Portrait subtitle — driven by brand.mjs
+const SUBTITLE = `${ROLE.replace("&", "&amp;")} · ${BASE.split(",")[0].trim()}`;
 
 // Export scan for info-panel.mjs
 export const SCAN = {
@@ -97,5 +101,5 @@ export function buildPortrait(theme, tspanFile) {
   <!-- Subtitle: circle.subY=${circle.subY} < panel bottom ${b} ✓ -->
   <text x="${cx}" y="${circle.subY}" text-anchor="middle"
     font-family="${font.mono}" font-size="${textSize.xs}px"
-    fill="${ring1}" opacity="0.4" letter-spacing="1px">Senior AI &amp; Automation Specialist · Berlin</text>`;
+    fill="${ring1}" opacity="0.4" letter-spacing="1px">${SUBTITLE}</text>`;
 }

@@ -11,7 +11,6 @@
 
 import fs from "node:fs";
 import path from "node:path";
-import { createCanvas } from "node:canvas";   // only needed for regen
 import { CARD, PORTRAIT } from "./config.mjs";
 import { buildDefs }      from "./components/defs.mjs";
 import { buildTitlebar }  from "./components/titlebar.mjs";
@@ -59,27 +58,6 @@ async function regenAscii() {
   console.log(`portrait-tspans.txt written (${tspans.length} rows)`);
 }
 
-// ── SVG assembler ─────────────────────────────────────────────────────────────
-function buildCard(theme) {
-  const { width, height, rx } = CARD;
-  const t_obj = (await import("./config.mjs")).THEMES[theme];
-
-  const parts = [
-    `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">`,
-    buildDefs(theme),
-    `<rect width="${width}" height="${height}" rx="${rx}" fill="url(#bgGrad)"/>`,
-    buildTitlebar(theme),
-    `<g transform="translate(0,38)">`,
-    buildPortrait(theme, "portrait-tspans.txt"),
-    buildInfoPanel(theme),
-    `</g>`,
-    buildBorder(theme),
-    `</svg>`,
-  ];
-
-  return parts.join("\n");
-}
-
 // ── main ──────────────────────────────────────────────────────────────────────
 async function main() {
   const args = process.argv.slice(2);
@@ -94,8 +72,6 @@ async function main() {
   }
 
   for (const theme of ["dark", "light"]) {
-    // buildCard uses top-level await — wrap properly
-    const { THEMES } = await import("./config.mjs");
     const svg = buildCardSync(theme);
     const out = path.join(ROOT, `${theme}.svg`);
     fs.writeFileSync(out, svg, "utf8");

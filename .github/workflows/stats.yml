@@ -14,66 +14,32 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Stats card (with token)
-        run: |
-          curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-            "https://github-readme-stats-five-psi-40.vercel.app/api?username=eabhijith&show_icons=true&bg_color=0A0E1A&title_color=00D4FF&text_color=CBD5E1&icon_color=00FF9F&border_color=1E3A5F&count_private=true&include_all_commits=true" \
-            -o dist/stats.svg
-          # Fallback: build a minimal stats SVG from GitHub API directly
-          if grep -q "Maximum retries\|went wrong\|unavailable" dist/stats.svg 2>/dev/null; then
-            echo "Stats endpoint failed, building from GitHub API..."
-            COMMITS=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-              "https://api.github.com/search/commits?q=author:eabhijith" | python3 -c "import json,sys; d=json.load(sys.stdin); print(d.get('total_count','--'))")
-            REPOS=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-              "https://api.github.com/users/eabhijith" | python3 -c "import json,sys; d=json.load(sys.stdin); print(d.get('public_repos','--'))")
-            FOLLOWERS=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-              "https://api.github.com/users/eabhijith" | python3 -c "import json,sys; d=json.load(sys.stdin); print(d.get('followers','--'))")
-            cat > dist/stats.svg << SVGEOF
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 495 195" width="495" height="195">
-  <rect width="495" height="195" rx="6" fill="#0A0E1A" stroke="#1E3A5F" stroke-width="1"/>
-  <text x="25" y="35" font-family="'Segoe UI',monospace" font-size="15px" font-weight="700" fill="#00D4FF">eabhijith's GitHub Stats</text>
-  <line x1="25" y1="45" x2="470" y2="45" stroke="#1E3A5F" stroke-width="0.8"/>
-  <text x="25" y="80"  font-family="monospace" font-size="13px" fill="#CBD5E1">⚡ Total Public Repos:</text>
-  <text x="330" y="80"  font-family="monospace" font-size="13px" fill="#00FF9F" font-weight="700">${REPOS}</text>
-  <text x="25" y="108" font-family="monospace" font-size="13px" fill="#CBD5E1">👥 Followers:</text>
-  <text x="330" y="108" font-family="monospace" font-size="13px" fill="#00FF9F" font-weight="700">${FOLLOWERS}</text>
-  <text x="25" y="136" font-family="monospace" font-size="13px" fill="#CBD5E1">🌍 Location:</text>
-  <text x="330" y="136" font-family="monospace" font-size="13px" fill="#00FF9F" font-weight="700">Berlin, Germany</text>
-  <text x="25" y="164" font-family="monospace" font-size="13px" fill="#CBD5E1">🏢 Company:</text>
-  <text x="330" y="164" font-family="monospace" font-size="13px" fill="#00FF9F" font-weight="700">Zalando SE</text>
-</svg>
-SVGEOF
-          fi
-          echo "Stats: $(wc -c < dist/stats.svg) bytes"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
-      - name: Top langs card (with token)
-        run: |
-          curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-            "https://github-readme-stats-five-psi-40.vercel.app/api/top-langs?username=eabhijith&layout=compact&bg_color=0A0E1A&title_color=00D4FF&text_color=CBD5E1&border_color=1E3A5F&langs_count=8" \
-            -o dist/langs.svg
-          if grep -q "Maximum retries\|went wrong\|unavailable" dist/langs.svg 2>/dev/null; then
-            cat > dist/langs.svg << 'SVGEOF'
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 195" width="300" height="195">
-  <rect width="300" height="195" rx="6" fill="#0A0E1A" stroke="#1E3A5F" stroke-width="1"/>
-  <text x="25" y="35" font-family="'Segoe UI',monospace" font-size="14px" font-weight="700" fill="#00D4FF">Most Used Languages</text>
-  <line x1="25" y1="45" x2="275" y2="45" stroke="#1E3A5F" stroke-width="0.8"/>
-  <text x="25" y="75"  font-family="monospace" font-size="12px" fill="#CBD5E1">● Python</text><rect x="130" y="63" width="80" height="8" rx="4" fill="#3776AB"/>
-  <text x="25" y="100" font-family="monospace" font-size="12px" fill="#CBD5E1">● JavaScript</text><rect x="130" y="88" width="65" height="8" rx="4" fill="#F7DF1E"/>
-  <text x="25" y="125" font-family="monospace" font-size="12px" fill="#CBD5E1">● TypeScript</text><rect x="130" y="113" width="50" height="8" rx="4" fill="#3178C6"/>
-  <text x="25" y="150" font-family="monospace" font-size="12px" fill="#CBD5E1">● Apex</text><rect x="130" y="138" width="40" height="8" rx="4" fill="#00A1E0"/>
-  <text x="25" y="175" font-family="monospace" font-size="12px" fill="#CBD5E1">● Shell</text><rect x="130" y="163" width="30" height="8" rx="4" fill="#89E051"/>
-</svg>
-SVGEOF
-          fi
-          echo "Langs: $(wc -c < dist/langs.svg) bytes"
+      - name: Generate stats, langs and trophy cards
+        env:
+          GH_USERNAME: eabhijith
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OUTPUT_DIR: dist
+        run: node generate-stats.mjs
 
       - name: Streak card
         run: |
-          curl -sL "https://streak-stats.demolab.com/?user=eabhijith&background=0A0E1A&ring=00D4FF&fire=FF6B00&currStreakLabel=00D4FF&sideLabels=00FF9F&dates=CBD5E1&border=1E3A5F" \
-            -o dist/streak.svg
-          echo "Streak: $(wc -c < dist/streak.svg) bytes"
+          set -euo pipefail
+          tmp=$(mktemp)
+          if curl -sfL --max-time 30 \
+            "https://streak-stats.demolab.com/?user=eabhijith&background=0A0E1A&ring=00D4FF&fire=FF6B00&currStreakLabel=00D4FF&sideLabels=00FF9F&dates=CBD5E1&border=1E3A5F" \
+            -o "$tmp" && [ -s "$tmp" ] && ! grep -qiE "maximum retries|went wrong|unavailable" "$tmp"; then
+            mv "$tmp" dist/streak.svg
+            echo "Streak updated: $(wc -c < dist/streak.svg) bytes"
+          else
+            echo "::warning::Streak endpoint unavailable — keeping previous dist/streak.svg"
+            rm -f "$tmp"
+          fi
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: update stats cards"
-          file_pattern: "dist/stats.svg dist/langs.svg dist/streak.svg"
+          file_pattern: "dist/stats.svg dist/langs.svg dist/streak.svg dist/trophy.svg"

@@ -17,6 +17,7 @@ import { DIVIDERS }    from "./divider.mjs";
 const RENDERERS = {
   card:     (await import("./sections/card.mjs"    )).render,
   badges:   (await import("./sections/badges.mjs"  )).render,
+  intro:    (await import("./sections/intro.mjs"   )).render,
   pipeline: (await import("./sections/pipeline.mjs")).render,
   stats:    (await import("./sections/stats.mjs"   )).render,
   snake:    (await import("./sections/snake.mjs"   )).render,
@@ -28,6 +29,7 @@ const RENDERERS = {
 const BETWEEN = {
   card:     DIVIDERS.flow,
   badges:   "",            // badges sit directly under card
+  intro:    DIVIDERS.nodes,
   pipeline: DIVIDERS.nodes,
   stats:    DIVIDERS.nodes,
   snake:    DIVIDERS.reverse,

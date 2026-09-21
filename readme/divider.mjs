@@ -8,9 +8,9 @@ const RAW = `https://raw.githubusercontent.com/${USERNAME}/${USERNAME}/main/divi
 
 export const DIVIDERS = {
   // Packets travel left → right (cyan→green→amber)
-  flow:    `<p align="center"><img src="${RAW}/flow.svg" width="100%"/></p>\n`,
+  flow:    `<p align="center"><img src="${RAW}/flow.svg" width="100%" alt=""/></p>\n`,
   // Pulsing connected nodes (all brand colors)
-  nodes:   `<p align="center"><img src="${RAW}/nodes.svg" width="100%"/></p>\n`,
+  nodes:   `<p align="center"><img src="${RAW}/nodes.svg" width="100%" alt=""/></p>\n`,
   // Packets travel right → left (amber→green→cyan)
-  reverse: `<p align="center"><img src="${RAW}/reverse.svg" width="100%"/></p>\n`,
+  reverse: `<p align="center"><img src="${RAW}/reverse.svg" width="100%" alt=""/></p>\n`,
 };

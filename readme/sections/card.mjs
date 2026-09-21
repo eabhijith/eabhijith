@@ -5,7 +5,8 @@
 export function render() {
   return `<a href="https://github.com/eabhijith/eabhijith">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/eabhijith/eabhijith/main/dark.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/eabhijith/eabhijith/main/dark.svg"/>
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/eabhijith/eabhijith/main/light.svg"/>
     <img alt="Abhijith Eanuga" src="https://raw.githubusercontent.com/eabhijith/eabhijith/main/light.svg" width="100%"/>
   </picture>
 </a>
