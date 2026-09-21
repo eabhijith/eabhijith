@@ -12,11 +12,11 @@ jobs:
   stats:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Generate stats, langs and trophy cards
         env:
@@ -46,7 +46,7 @@ jobs:
             rm -f "$tmp"
           fi
 
-      - uses: stefanzweifel/git-auto-commit-action@v5
+      - uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "chore: update stats cards"
           file_pattern: "dist/stats.svg dist/langs.svg dist/streak.svg dist/trophy.svg dist/activity.svg dist/github-agents.svg"

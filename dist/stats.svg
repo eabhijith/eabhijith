@@ -3,9 +3,9 @@
   <text x="25" y="32" font-family="'Segoe UI',monospace" font-size="15px" font-weight="700" fill="#00D4FF">Abhijith Eanuga · GitHub Stats</text>
   <line x1="25" y1="43" x2="470" y2="43" stroke="#1E3A5F" stroke-width="0.8"/>
   <text x="25" y="70" font-family="monospace" font-size="13px" fill="#CBD5E1">Total Commits</text>
-  <text x="400" y="70" font-family="monospace" font-size="13px" font-weight="700" fill="#00FF9F">31</text>
+  <text x="400" y="70" font-family="monospace" font-size="13px" font-weight="700" fill="#00FF9F">39</text>
   <text x="25" y="94" font-family="monospace" font-size="13px" fill="#CBD5E1">Contributions</text>
-  <text x="400" y="94" font-family="monospace" font-size="13px" font-weight="700" fill="#00FF9F">98</text>
+  <text x="400" y="94" font-family="monospace" font-size="13px" font-weight="700" fill="#00FF9F">106</text>
   <text x="25" y="118" font-family="monospace" font-size="13px" fill="#CBD5E1">Pull Requests</text>
   <text x="400" y="118" font-family="monospace" font-size="13px" font-weight="700" fill="#00FF9F">6</text>
   <text x="25" y="142" font-family="monospace" font-size="13px" fill="#CBD5E1">Issues</text>
