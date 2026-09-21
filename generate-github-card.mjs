@@ -32,7 +32,7 @@ query($login: String!) {
         }
       }
     }
-    repositories(first: 50, ownerAffiliations: OWNER, privacy: PUBLIC) {
+    repositories(first: 50, ownerAffiliations: OWNER, privacy: PUBLIC, isFork: false) {
       nodes {
         name
         stargazerCount

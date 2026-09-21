@@ -1,8 +1,8 @@
 name: Generate GitHub Agents Card
 
+# Daily regeneration happens in stats.yml so every card is built from one
+# API snapshot. This workflow covers manual runs and generator edits.
 on:
-  schedule:
-    - cron: "0 6 * * *"
   workflow_dispatch: {}
   push:
     paths:
