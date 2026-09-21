@@ -51,8 +51,6 @@
   <img src="https://raw.githubusercontent.com/eabhijith/eabhijith/main/dist/github-agents.svg" width="100%" alt="GitHub Agents Pipeline"/>
 </p>
 
-<p align="center"><img src="https://raw.githubusercontent.com/eabhijith/eabhijith/main/dividers/nodes.svg" width="100%" alt=""/></p>
-
 <p align="center">
   <img src="https://raw.githubusercontent.com/eabhijith/eabhijith/main/dist/stats.svg" width="48%" alt="GitHub Stats"/>
   <img src="https://raw.githubusercontent.com/eabhijith/eabhijith/main/dist/streak.svg" width="48%" alt="Streak Stats"/>
@@ -61,8 +59,6 @@
   <img src="https://raw.githubusercontent.com/eabhijith/eabhijith/main/dist/langs.svg" width="48%" alt="Top Languages"/>
   <img src="https://raw.githubusercontent.com/eabhijith/eabhijith/main/dist/trophy.svg" width="48%" alt="Trophies"/>
 </p>
-
-<p align="center"><img src="https://raw.githubusercontent.com/eabhijith/eabhijith/main/dividers/nodes.svg" width="100%" alt=""/></p>
 
 <p align="center">
   <picture>

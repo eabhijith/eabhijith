@@ -32,8 +32,8 @@ const BETWEEN = {
   badges:   "",            // badges sit directly under card
   intro:    "",            // intro flows straight into "now"
   now:      DIVIDERS.nodes,
-  pipeline: DIVIDERS.nodes,
-  stats:    DIVIDERS.nodes,
+  pipeline: "",            // pipeline flows straight into stats
+  stats:    "",            // stats flows straight into snake
   snake:    DIVIDERS.reverse,
   heatmap:  DIVIDERS.flow,
   footer:   "",
