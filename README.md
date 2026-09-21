@@ -74,8 +74,6 @@
   </picture>
 </p>
 
-<p align="center"><img src="https://raw.githubusercontent.com/eabhijith/eabhijith/main/dividers/reverse.svg" width="100%" alt=""/></p>
-
 <p align="center">
   <img src="https://raw.githubusercontent.com/eabhijith/eabhijith/main/dist/github-jet.svg" width="100%" alt="Jet Heatmap"/>
 </p>

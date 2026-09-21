@@ -36,7 +36,7 @@ const BETWEEN = {
   pipeline: "",            // pipeline flows straight into stats
   stats:    "",            // stats flows straight into activity
   activity: DIVIDERS.nodes,
-  snake:    DIVIDERS.reverse,
+  snake:    "",            // snake and jet are both contribution views
   heatmap:  DIVIDERS.flow,
   footer:   "",
 };
