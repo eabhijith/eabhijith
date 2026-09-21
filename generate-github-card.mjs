@@ -169,11 +169,11 @@ function buildSvg(d) {
 
   <style>
     .lbl{font-family:"JetBrains Mono","Fira Code",monospace;font-size:11px;letter-spacing:1px;font-weight:700}
-    .sub{font-family:"JetBrains Mono","Fira Code",monospace;font-size:9px;letter-spacing:0.5px;fill:#334155}
+    .sub{font-family:"JetBrains Mono","Fira Code",monospace;font-size:11px;letter-spacing:0.5px;fill:#94A3B8}
     .ptitle{font-family:"Courier New",monospace;font-size:11px;fill:#00D4FF;letter-spacing:2px;opacity:0.6}
     .pktlbl{font-family:"Courier New",monospace;font-size:9px;fill:#00D4FF;letter-spacing:0.5px}
     .stat{font-family:"JetBrains Mono",monospace;font-size:13px;font-weight:700}
-    .statlbl{font-family:"Courier New",monospace;font-size:9px;fill:#334155;letter-spacing:1px}
+    .statlbl{font-family:"Courier New",monospace;font-size:11px;fill:#94A3B8;letter-spacing:1px}
     .b1,.b1e,.b2,.b2h,.b2e,.b3,.b3e,.b4,.b4e,.b5,.b5e,.sl,.sr{transform-box:fill-box;transform-origin:50% 50%}
 
     /* HARVESTER — blob — cyan — idle→working loop */
