@@ -75,13 +75,13 @@
 <!-- ── STAT STRIP ─────────────────────────────────────────────────── -->
 <g transform="translate(50,48)">
   <!-- commits -->
-  <text x="0"   y="20" class="stat" fill="#00D4FF">103</text>
+  <text x="0"   y="20" class="stat" fill="#00D4FF">104</text>
   <text x="0"   y="34" class="statlbl">contributions</text>
   <!-- streak -->
   <text x="160" y="20" class="stat" fill="#00FF9F">2d</text>
   <text x="160" y="34" class="statlbl">streak</text>
   <!-- trend -->
-  <text x="300" y="20" class="stat" fill="#00FF9F">↑ 300%</text>
+  <text x="300" y="20" class="stat" fill="#00FF9F">↑ 325%</text>
   <text x="300" y="34" class="statlbl">7d trend</text>
   <!-- stars -->
   <text x="460" y="20" class="stat" fill="#FF6B00">1★</text>
@@ -170,7 +170,7 @@
 <text y="241" text-anchor="middle" class="pktlbl" fill="#00D4FF">
   <animate attributeName="x" dur="20s" repeatCount="indefinite" keyTimes="0;0.20;0.35;1" values="210;210;324;324"/>
   <animate attributeName="opacity" dur="20s" repeatCount="indefinite" keyTimes="0;0.20;0.22;0.33;0.35;1" values="0;0;1;1;0;0"/>
-  103 contribs
+  104 contribs
 </text>
 <text y="241" text-anchor="middle" class="pktlbl" fill="#FF6B00">
   <animate attributeName="x" dur="20s" repeatCount="indefinite" keyTimes="0;0.35;0.50;1" values="452;452;566;566"/>
@@ -180,7 +180,7 @@
 <text y="241" text-anchor="middle" class="pktlbl" fill="#00FF9F">
   <animate attributeName="x" dur="20s" repeatCount="indefinite" keyTimes="0;0.50;0.65;1" values="694;694;808;808"/>
   <animate attributeName="opacity" dur="20s" repeatCount="indefinite" keyTimes="0;0.50;0.52;0.63;0.65;1" values="0;0;1;1;0;0"/>
-  trend: up 300%
+  trend: up 325%
 </text>
 <text y="241" text-anchor="middle" class="pktlbl" fill="#BD93F9">
   <animate attributeName="x" dur="20s" repeatCount="indefinite" keyTimes="0;0.65;0.80;1" values="936;936;1050;1050"/>
