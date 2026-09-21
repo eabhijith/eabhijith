@@ -37,6 +37,13 @@ export const PORTRAIT = {
   rows:          46,
   lineH:         9.2,
   fontSize:      8,
+  // Horizontal nudge for the ASCII portrait inside the clip circle.
+  // Measured ink spans x=52..444 (centre 248); the circle interior is
+  // x=64..448 (centre 256), so the art sat 8px left of centre and clipped
+  // unevenly. +8 centres the ink, giving a symmetric 4px trim each side.
+  // There are no blank columns on the right, so NEGATIVE values cut real
+  // portrait content on the left and expose bare circle on the right.
+  offsetX:       8,
   useTextLength: false,
   scanDur:       "3.5s",
 };

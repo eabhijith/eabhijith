@@ -56,6 +56,7 @@
 
   <!-- Portrait: ASCII clipped to circle -->
   <g clip-path="url(#portraitClip)">
+    <g transform="translate(8,0)">
     <text x="0" y="0"
       font-family="'Courier New', Consolas, monospace" font-size="8px"
       letter-spacing="-0.2px" fill="url(#asciiGrad)"><tspan x="44" y="66" textLength="400" lengthAdjust="spacingAndGlyphs">               .:.:::..:.::::...:--=:-              </tspan>
@@ -105,6 +106,7 @@
 <tspan x="44" y="470" textLength="400" lengthAdjust="spacingAndGlyphs">            %%%%%%*%+:.:++++*#*#%###%@###           </tspan>
 <tspan x="44" y="480" textLength="400" lengthAdjust="spacingAndGlyphs">              %%%%##*:. -===+++%%##%%%#             </tspan>
     </text>
+    </g>
   </g>
 
   <!-- Scan sweep (loop) -->
@@ -147,13 +149,13 @@
     <animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite"/>
   </circle>
 
-  <!-- Name: circle.nameY=456, inside panel bottom 548 ✓ -->
-  <text x="256" y="456" text-anchor="middle"
+  <!-- Name: circle.nameY=492, inside panel bottom 548 ✓ -->
+  <text x="256" y="492" text-anchor="middle"
     font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="15px"
     fill="#00D4FF" font-weight="700" letter-spacing="2px">Abhijith Eanuga</text>
 
-  <!-- Subtitle: circle.subY=472 < panel bottom 548 ✓ -->
-  <text x="256" y="472" text-anchor="middle"
+  <!-- Subtitle: circle.subY=510 < panel bottom 548 ✓ -->
+  <text x="256" y="510" text-anchor="middle"
     font-family="'Courier New', Consolas, monospace" font-size="9px"
     fill="#00D4FF" opacity="0.4" letter-spacing="1px">AI Engineer · Berlin</text>
 

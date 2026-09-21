@@ -47,10 +47,12 @@ export function buildPortrait(theme, tspanFile) {
 
   <!-- Portrait: ASCII clipped to circle -->
   <g clip-path="url(#portraitClip)">
+    <g transform="translate(${PORTRAIT.offsetX ?? 0},0)">
     <text x="0" y="0"
       font-family="${font.ascii}" font-size="${PORTRAIT.fontSize}px"
       letter-spacing="-0.2px" fill="url(#asciiGrad)">${tspans}
     </text>
+    </g>
   </g>
 
   <!-- Scan sweep (loop) -->

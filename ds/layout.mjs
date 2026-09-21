@@ -52,15 +52,23 @@ export const rightPanel = {
 
 // ── Portrait circle ───────────────────────────────────────────────────────────
 // r=192 → circle top=48 (below title at y=40), bottom=432
-// labels: nameY=456, subY=472 → inside panel bottom=548 ✓
+// Two decorative rings sit outside the border: a pulsing ring that reaches
+// r+24 and a rotating dashed ring at r+28. Labels must clear the OUTER ring,
+// not the border — measuring from `bottom` put the name baseline at 456, where
+// the dashed ring still spans x=214..298 and cut straight through the text.
 export const circle = {
   r:   192,
+  ringPulseMax: 24,                                // pulsing ring peak offset
+  ringDashed:   28,                                // rotating dashed ring offset
   get cx()     { return leftPanel.cx; },           // 256
   get cy()     { return leftPanel.lineY + G + this.r; }, // 40+8+192=240
   get top()    { return this.cy - this.r; },       // 48
   get bottom() { return this.cy + this.r; },       // 432
-  get nameY()  { return this.bottom + G * 3; },    // 456
-  get subY()   { return this.nameY + G * 2; },     // 472
+  // Outermost painted pixel of the whole portrait assembly.
+  get ringOuter()  { return this.r + Math.max(this.ringPulseMax, this.ringDashed); }, // 220
+  get ringBottom() { return this.cy + this.ringOuter; },  // 460
+  get nameY()  { return this.ringBottom + G * 4; },       // 492
+  get subY()   { return this.nameY + G * 2 + 2; },        // 502
 };
 
 // ── Scan line ─────────────────────────────────────────────────────────────────
