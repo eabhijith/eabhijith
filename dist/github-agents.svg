@@ -75,13 +75,13 @@
 <!-- ── STAT STRIP ─────────────────────────────────────────────────── -->
 <g transform="translate(50,48)">
   <!-- commits -->
-  <text x="0"   y="20" class="stat" fill="#00D4FF">115</text>
+  <text x="0"   y="20" class="stat" fill="#00D4FF">117</text>
   <text x="0"   y="34" class="statlbl">contributions</text>
   <!-- streak -->
   <text x="160" y="20" class="stat" fill="#00FF9F">0d</text>
   <text x="160" y="34" class="statlbl">streak</text>
   <!-- trend -->
-  <text x="300" y="20" class="stat" fill="#00FF9F">↑ 600%</text>
+  <text x="300" y="20" class="stat" fill="#00FF9F">↑ 650%</text>
   <text x="300" y="34" class="statlbl">7d trend</text>
   <!-- stars -->
   <text x="460" y="20" class="stat" fill="#FF6B00">1★</text>
@@ -170,7 +170,7 @@
 <text y="241" text-anchor="middle" class="pktlbl" fill="#00D4FF">
   <animate attributeName="x" dur="20s" repeatCount="indefinite" keyTimes="0;0.20;0.35;1" values="210;210;324;324"/>
   <animate attributeName="opacity" dur="20s" repeatCount="indefinite" keyTimes="0;0.20;0.22;0.33;0.35;1" values="0;0;1;1;0;0"/>
-  115 contribs
+  117 contribs
 </text>
 <text y="241" text-anchor="middle" class="pktlbl" fill="#FF6B00">
   <animate attributeName="x" dur="20s" repeatCount="indefinite" keyTimes="0;0.35;0.50;1" values="452;452;566;566"/>
@@ -180,7 +180,7 @@
 <text y="241" text-anchor="middle" class="pktlbl" fill="#00FF9F">
   <animate attributeName="x" dur="20s" repeatCount="indefinite" keyTimes="0;0.50;0.65;1" values="694;694;808;808"/>
   <animate attributeName="opacity" dur="20s" repeatCount="indefinite" keyTimes="0;0.50;0.52;0.63;0.65;1" values="0;0;1;1;0;0"/>
-  trend: up 600%
+  trend: up 650%
 </text>
 <text y="241" text-anchor="middle" class="pktlbl" fill="#BD93F9">
   <animate attributeName="x" dur="20s" repeatCount="indefinite" keyTimes="0;0.65;0.80;1" values="936;936;1050;1050"/>
@@ -277,5 +277,5 @@
 
 <!-- bottom -->
 <line x1="40" y1="372" x2="1140" y2="372" stroke="#1E3A5F" stroke-width="0.5" opacity="0.4"/>
-<text x="590" y="393" text-anchor="middle" font-family="Courier New,monospace" font-size="10px" fill="#94A3B8" letter-spacing="2px">abheos · github.pipeline · updated daily · 2026-09-24</text>
+<text x="590" y="393" text-anchor="middle" font-family="Courier New,monospace" font-size="10px" fill="#94A3B8" letter-spacing="2px">abheos · github.pipeline · updated daily · 2026-09-25</text>
 </svg>
